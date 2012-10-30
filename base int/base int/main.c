@@ -6,6 +6,7 @@
 #include "math.h"
 #include "ctype.h"
 #include "stdlib.h"
+#include <locale.h>
 
 #define NUM_LAB 100
 #define LAB_LEN 10
@@ -93,6 +94,7 @@ void unary(), arith();
 
 int main(int argc, char *argv[])
 {
+  setlocale(LC_ALL, "Russian");
   char in[80];
   int answer;
   char *p_buf;
