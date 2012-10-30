@@ -25,3 +25,16 @@
 1351589472 c:\users\vatslav\desktop\small_basic\functions.h
 	<string.h>
 
+1351455808 source:c:\users\vatslav\documents\github\smallbasic_interpritator\sb\main.cpp
+	"stdio.h"
+	"setjmp.h"
+	"math.h"
+	"ctype.h"
+	"stdlib.h"
+	<locale.h>
+	"Functions.h"
+	<conio.h>
+
+1351592146 c:\users\vatslav\documents\github\smallbasic_interpritator\sb\functions.h
+	<string.h>
+

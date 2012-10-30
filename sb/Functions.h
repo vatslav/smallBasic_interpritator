@@ -172,7 +172,7 @@ char get_token()
     return (token_type = DELIMITER);
   }
 
-  if(strchr("+-^/%=;(),><", *prog)){ /* разделитель */
+  if(strchr("+-^/*%=;(),><", *prog)){ /* разделитель */ ///добавили *
     *temp=*prog;
     prog++; /* переход на следующую позицию */
     temp++;
@@ -366,7 +366,9 @@ switch(o) {
     *r = *r+*h;
     break;
   case '*':
-    *r = *r * *h;
+    ex = *h;
+
+    *r = (*r) * ex;
     break;
   case '/':
     *r = (*r)/(*h);
@@ -463,7 +465,7 @@ void print()
       }
     }
     else if(*token==','); /* ничего не делать */
-    else if(tok!=EOL && tok!=FINISHED)  serror(0);
+    else if(tok!=EOL && tok!=FINISHED)  serror(0); ///здесь вылает ошибка на *
   }
   while (*token == ';' || *token == ',');
 
