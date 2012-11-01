@@ -1,0 +1,41 @@
+print ""
+print ""
+
+PRINT "Демонстрация возможностей языка Small Basic"
+PRINT "Эта инструкция демонстрирует Print"
+PRINT " "
+
+PRINT "Демонстрация операторов FOR, Next, Input и арифметики"
+INPUT "введите натуральное число ", y
+
+FOR X = 0 TO y
+ PRINT "X = ",X," X/2+1 = ",X/2+1," X*X-1 = ",X^2-1
+NEXT
+INPUT "Продолжим? ",f
+PRINT ""
+PRINT ""
+PRINT "Демонстрация операторов GoSub, GoTo, If "
+GOSUB 300
+PRINT ""
+PRINT ""
+PRINT "Сейчас сработает GoTo"
+GOTO 200
+
+ 
+ 
+300 PRINT "Сработал оператор GOSUB"
+PRINT ""
+PRINT ""
+INPUT "Для демонстрации If введите любое число ",H 
+IF H<0 then PRINT "H=",H, ".  ", H, "<0"
+IF H>0 then PRINT "H=",H, ".  ", H, ">0"
+IF H=0 then PRINT "H=",H, ".  ", H, "=0"
+
+RETURN
+
+200 PRINT "Оператор GOTO cработал  . " 
+PRINT ""
+PRINT ""
+INPUT "Нажмите любую клавишу для демонстрации оператора END и заверешния работы теста ",f
+END
+

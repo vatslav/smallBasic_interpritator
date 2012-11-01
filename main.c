@@ -59,7 +59,7 @@ struct commands { /* keyword lookup table */
   "gosub", GOSUB,
   "return", RETURN,
   "end", END,
-  "", END  /* mark end of table */
+  "", END  /* mark end of table */ ///зачем он нужен??? просто }.  Опять старая нотация?
 };
 
 char token[80];

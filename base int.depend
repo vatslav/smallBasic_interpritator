@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1351808132 source:c:\users\vatslav\documents\github\smallbasic_interpritator\base int\base int\main.c
+	"stdio.h"
+	"setjmp.h"
+	"math.h"
+	"ctype.h"
+	"stdlib.h"
+	<locale.h>
+
