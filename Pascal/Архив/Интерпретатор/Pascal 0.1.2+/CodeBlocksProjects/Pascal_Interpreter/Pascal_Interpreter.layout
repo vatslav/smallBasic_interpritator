@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="..\..\assignment.h" open="0" top="0" tabpos="3">
+		<Cursor position="139" topLine="0" />
+	</File>
+	<File name="..\..\compound_operator.h" open="0" top="0" tabpos="5">
+		<Cursor position="254" topLine="6" />
+	</File>
+	<File name="..\..\description_part.h" open="0" top="0" tabpos="7">
+		<Cursor position="6727" topLine="165" />
+	</File>
+	<File name="..\..\expressions.h" open="1" top="0" tabpos="2">
+		<Cursor position="7973" topLine="241" />
+	</File>
+	<File name="..\..\get_token.h" open="0" top="0" tabpos="3">
+		<Cursor position="2287" topLine="44" />
+	</File>
+	<File name="..\..\global_defines.h" open="0" top="0" tabpos="5">
+		<Cursor position="2181" topLine="36" />
+	</File>
+	<File name="..\..\globals.h" open="0" top="0" tabpos="0">
+		<Cursor position="255" topLine="75" />
+	</File>
+	<File name="..\..\if.h" open="0" top="0" tabpos="4">
+		<Cursor position="1590" topLine="82" />
+	</File>
+	<File name="..\..\input_output.h" open="0" top="0" tabpos="2">
+		<Cursor position="7546" topLine="129" />
+	</File>
+	<File name="..\..\main.c" open="0" top="0" tabpos="1">
+		<Cursor position="981" topLine="34" />
+	</File>
+	<File name="..\..\operator.h" open="0" top="0" tabpos="6">
+		<Cursor position="1661" topLine="0" />
+	</File>
+	<File name="..\..\repeat.h" open="0" top="0" tabpos="0">
+		<Cursor position="1124" topLine="15" />
+	</File>
+	<File name="..\..\variables.h" open="1" top="0" tabpos="0">
+		<Cursor position="22518" topLine="692" />
+	</File>
+	<File name="..\..\while.h" open="0" top="0" tabpos="0">
+		<Cursor position="102" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

@@ -1,0 +1,7 @@
+
+Сделать bool getArrayElement( int* shift, struct variable* var ) -> через неё легко реализуется int* getIntegerArrayValue( char*name ) и float* getRealArrayValue( char*name ); Подсистема description_part.h - доделать.
+
+Протестировать AddArrayVariable ( в области корректного выделения памяти под данные ) 
+
+
+

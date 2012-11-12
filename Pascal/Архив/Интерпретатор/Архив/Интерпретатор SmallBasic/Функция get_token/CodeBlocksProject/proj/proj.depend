@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1318271954 source:/home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/РџСЂРёРјРµСЂ SmallBasic/test/Р¤СѓРЅРєС†РёСЏ get_token/get_token.cpp
+	"preambule.h"
+
+1318271944 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/РџСЂРёРјРµСЂ SmallBasic/test/Р¤СѓРЅРєС†РёСЏ get_token/preambule.h
+	<math.h>
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<cstring>
+
+1318307566 source:c:\users\student\documents\Ёжик 5\7 СЕМЕСТР\ТФЯ\Функция get_token\Функция get_token\get_token.cpp
+	"preambule.h"
+
+1318268344 c:\users\student\documents\Ёжик 5\7 СЕМЕСТР\ТФЯ\Функция get_token\Функция get_token\preambule.h
+	<math.h>
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<cstring>
+
+1318309990 source:z:\ФИПМ\7 семестр\ТВП и С\Интерпретатор smallbasic\Функция get_token\get_token.cpp
+	"preambule.h"
+
+1318268344 z:\ФИПМ\7 семестр\ТВП и С\Интерпретатор smallbasic\Функция get_token\preambule.h
+	<math.h>
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<cstring>
+

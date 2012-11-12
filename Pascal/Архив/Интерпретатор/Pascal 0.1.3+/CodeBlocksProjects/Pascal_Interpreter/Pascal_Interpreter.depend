@@ -1,0 +1,377 @@
+# depslib dependency file v1.0
+1323708500 source:f:\пстгу\предметы\твп и с\интерпретатор\pascal\main.c
+	"operator.h"
+	"variables.h"
+	"description_part.h"
+
+1323708500 on_part.h"
+
+1323702174 f:\пстгу\предметы\твп и с\интерпретатор\pascal\operator.h
+	"get_token.h"
+	"assignment.h"
+	"compound_operator.h"
+	"if.h"
+	"while.h"
+	"repeat.h"
+	"input_output.h"
+
+1323702174 put.h"
+
+1323210600 f:\пстгу\предметы\твп и с\интерпретатор\pascal\get_token.h
+	"globals.h"
+	"string_functions.h"
+	"variables.h"
+	"global_defines.h"
+
+1321949552 fines.h"
+
+1321949552 f:\пстгу\предметы\твп и с\интерпретатор\pascal\globals.h
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"global_defines.h"
+
+1321369320 f:\пстгу\предметы\твп и с\интерпретатор\pascal\global_defines.h
+
+1321368316 f:\пстгу\предметы\твп и с\интерпретатор\pascal\string_functions.h
+	<string.h>
+
+1323715706 
+
+1323715870 f:\пстгу\предметы\твп и с\интерпретатор\pascal\variables.h
+	"global_defines.h"
+	"globals.h"
+	<string.h>
+	"get_token.h"
+
+1323701252 .h"
+
+1323711552 f:\пстгу\предметы\твп и с\интерпретатор\pascal\assignment.h
+	"operator.h"
+	"expressions.h"
+
+1323711552 ns.h"
+
+1323715706 f:\пстгу\предметы\твп и с\интерпретатор\pascal\expressions.h
+	"global_defines.h"
+	"globals.h"
+	"get_token.h"
+	"variables.h"
+	<math.h>
+
+1323120762 f:\пстгу\предметы\твп и с\интерпретатор\pascal\compound_operator.h
+	"operator.h"
+
+1323120762 h"
+
+1323702154 f:\пстгу\предметы\твп и с\интерпретатор\pascal\if.h
+	"operator.h"
+
+1323120762 f:\пстгу\предметы\твп и с\интерпретатор\pascal\while.h
+	"operator.h"
+
+1323120762 f:\пстгу\предметы\твп и с\интерпретатор\pascal\repeat.h
+	"globals.h"
+	"get_token.h"
+	"operator.h"
+
+1323386424 f:\пстгу\предметы\твп и с\интерпретатор\pascal\input_output.h
+
+1323701252 f:\пстгу\предметы\твп и с\интерпретатор\pascal\description_part.h
+	"global_defines.h"
+	"globals.h"
+	"variables.h"
+
+1323727925 source:/home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/main.c
+	"operator.h"
+	"variables.h"
+	"description_part.h"
+
+1323724633 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/operator.h
+	"get_token.h"
+	"assignment.h"
+	"compound_operator.h"
+	"if.h"
+	"while.h"
+	"repeat.h"
+	"for.h"
+	"input_output.h"
+
+1323728126 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/get_token.h
+	"globals.h"
+	"string_functions.h"
+	"variables.h"
+	"global_defines.h"
+
+1323727767 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/globals.h
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"global_defines.h"
+
+1321562625 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/global_defines.h
+
+1323726429 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/string_functions.h
+	<string.h>
+
+1323726005 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/variables.h
+	"global_defines.h"
+	"globals.h"
+	<string.h>
+	"get_token.h"
+
+1323722173 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/assignment.h
+	"operator.h"
+	"expressions.h"
+
+1323722173 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/expressions.h
+	"global_defines.h"
+	"globals.h"
+	"get_token.h"
+	"variables.h"
+	<math.h>
+
+1323116893 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/compound_operator.h
+	"operator.h"
+
+1323722173 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/if.h
+	"operator.h"
+
+1323116948 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/while.h
+	"operator.h"
+
+1323116971 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/repeat.h
+	"globals.h"
+	"get_token.h"
+	"operator.h"
+
+1323381679 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/input_output.h
+
+1323726065 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/description_part.h
+	"global_defines.h"
+	"globals.h"
+	"variables.h"
+
+1323724678 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/for.h
+
+1323728362 source:f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\main.c
+	"operator.h"
+	"variables.h"
+	"description_part.h"
+
+1323725346 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\operator.h
+	"get_token.h"
+	"assignment.h"
+	"compound_operator.h"
+	"if.h"
+	"while.h"
+	"repeat.h"
+	"for.h"
+	"input_output.h"
+
+1323728362 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\get_token.h
+	"globals.h"
+	"string_functions.h"
+	"variables.h"
+	"global_defines.h"
+
+1323728362 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\globals.h
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"global_defines.h"
+
+1321365720 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\global_defines.h
+
+1323728362 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\string_functions.h
+	<string.h>
+
+1323755366 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\variables.h
+	"global_defines.h"
+	"globals.h"
+	<string.h>
+	"get_token.h"
+
+1323707952 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\assignment.h
+	"operator.h"
+	"expressions.h"
+
+1323756184 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\expressions.h
+	"global_defines.h"
+	"globals.h"
+	"get_token.h"
+	"variables.h"
+	<math.h>
+
+1323117162 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\compound_operator.h
+	"operator.h"
+
+1323698554 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\if.h
+	"operator.h"
+
+1323117162 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\while.h
+	"operator.h"
+
+1323117162 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\repeat.h
+	"globals.h"
+	"get_token.h"
+	"operator.h"
+
+1323725346 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\for.h
+
+1323382824 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\input_output.h
+
+1323725346 f:\ПСТГУ\Предметы\ТВП и С\Интерпретатор\pascal\description_part.h
+	"global_defines.h"
+	"globals.h"
+	"variables.h"
+
+1323728362 source:z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\main.c
+	"operator.h"
+	"variables.h"
+	"description_part.h"
+
+1323725346 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\operator.h
+	"get_token.h"
+	"assignment.h"
+	"compound_operator.h"
+	"if.h"
+	"while.h"
+	"repeat.h"
+	"for.h"
+	"input_output.h"
+
+1323728362 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\get_token.h
+	"globals.h"
+	"string_functions.h"
+	"variables.h"
+	"global_defines.h"
+
+1323728362 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\globals.h
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"global_defines.h"
+
+1321365720 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\global_defines.h
+
+1323728362 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\string_functions.h
+	<string.h>
+
+1323755366 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\variables.h
+	"global_defines.h"
+	"globals.h"
+	<string.h>
+	"get_token.h"
+
+1323707952 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\assignment.h
+	"operator.h"
+	"expressions.h"
+
+1323756184 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\expressions.h
+	"global_defines.h"
+	"globals.h"
+	"get_token.h"
+	"variables.h"
+	<math.h>
+
+1323117162 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\compound_operator.h
+	"operator.h"
+
+1323698554 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\if.h
+	"operator.h"
+
+1323117162 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\while.h
+	"operator.h"
+
+1323117162 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\repeat.h
+	"globals.h"
+	"get_token.h"
+	"operator.h"
+
+1323725346 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\for.h
+
+1323382824 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\input_output.h
+
+1323725346 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Интерпретатор\pascal 0.1.3+\description_part.h
+	"global_defines.h"
+	"globals.h"
+	"variables.h"
+
+1323731962 source:c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\main.c
+	"operator.h"
+	"variables.h"
+	"description_part.h"
+
+1323728946 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\operator.h
+	"get_token.h"
+	"assignment.h"
+	"compound_operator.h"
+	"if.h"
+	"while.h"
+	"repeat.h"
+	"for.h"
+	"input_output.h"
+
+1323731962 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\get_token.h
+	"globals.h"
+	"string_functions.h"
+	"variables.h"
+	"global_defines.h"
+
+1323731962 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\globals.h
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"global_defines.h"
+
+1321369320 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\global_defines.h
+
+1323731962 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\string_functions.h
+	<string.h>
+
+1323758966 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\variables.h
+	"global_defines.h"
+	"globals.h"
+	<string.h>
+	"get_token.h"
+
+1323711552 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\assignment.h
+	"operator.h"
+	"expressions.h"
+
+1323759784 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\expressions.h
+	"global_defines.h"
+	"globals.h"
+	"get_token.h"
+	"variables.h"
+	<math.h>
+
+1323120762 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\compound_operator.h
+	"operator.h"
+
+1323702154 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\if.h
+	"operator.h"
+
+1323120762 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\while.h
+	"operator.h"
+
+1323120762 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\repeat.h
+	"globals.h"
+	"get_token.h"
+	"operator.h"
+
+1323728946 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\for.h
+
+1323386424 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\input_output.h
+
+1323728946 c:\users\vatslav\documents\github\smallbasic_interpritator\pascal\архив\интерпретатор\pascal 0.1.3+\description_part.h
+	"global_defines.h"
+	"globals.h"
+	"variables.h"
+
