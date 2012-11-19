@@ -1,0 +1,5 @@
+"const abg%=5" 
+ERROR! Uncorrect IDENTIFIER or OPERATOR name
+
+"const abgsdfsdfsdfsdfs=5"
+ERROR! name of variable > 8

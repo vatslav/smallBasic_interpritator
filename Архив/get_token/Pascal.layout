@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="get_token.h" open="1" top="0" tabpos="2">
+		<Cursor position="826" topLine="0" />
+	</File>
+	<File name="global_data.h" open="1" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="globals.h" open="1" top="0" tabpos="6">
+		<Cursor position="2634" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="95" topLine="0" />
+	</File>
+	<File name="mathematica.h" open="1" top="0" tabpos="4">
+		<Cursor position="244" topLine="0" />
+	</File>
+	<File name="variables.h" open="1" top="1" tabpos="5">
+		<Cursor position="28887" topLine="902" />
+	</File>
+</CodeBlocks_layout_file>

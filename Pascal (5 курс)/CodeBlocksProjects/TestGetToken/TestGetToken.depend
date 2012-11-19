@@ -1,0 +1,147 @@
+# depslib dependency file v1.0
+1321947406 source:f:\пстгу\предметы\твп и с\интерпретатор\pascal\test_get_token.c
+	<stdio.h>
+	"get_token.h"
+	"variables.h"
+
+1321947122 .h"
+
+1321371404 f:\пстгу\предметы\твп и с\интерпретатор\pascal\get_token.h
+	"globals.h"
+	"string_functions.h"
+	"variables.h"
+	"global_defines.h"
+
+1321945952 fines.h"
+
+1321945952 f:\пстгу\предметы\твп и с\интерпретатор\pascal\globals.h
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"global_defines.h"
+
+1321365720 f:\пстгу\предметы\твп и с\интерпретатор\pascal\global_defines.h
+
+1321364716 f:\пстгу\предметы\твп и с\интерпретатор\pascal\string_functions.h
+	<string.h>
+
+1321364716 
+
+1321947122 f:\пстгу\предметы\твп и с\интерпретатор\pascal\variables.h
+	"global_defines.h"
+	"globals.h"
+	<string.h>
+	"get_token.h"
+
+1323728165 source:/home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/test_get_token.c
+	<stdio.h>
+	"get_token.h"
+	"expressions.h"
+	"variables.h"
+
+1323728126 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/get_token.h
+	"globals.h"
+	"string_functions.h"
+	"variables.h"
+	"global_defines.h"
+
+1323727767 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/globals.h
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"global_defines.h"
+
+1321562625 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/global_defines.h
+
+1323726429 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/string_functions.h
+	<string.h>
+
+1323726005 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/variables.h
+	"global_defines.h"
+	"globals.h"
+	<string.h>
+	"get_token.h"
+
+1323722173 /home/and/Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»/Р›РњР” Lin РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹/РџРЎРўР“РЈ/РџСЂРµРґРјРµС‚С‹/РўР’Рџ Рё РЎ/РРЅС‚РµСЂРїСЂРµС‚Р°С‚РѕСЂ/Pascal/expressions.h
+	"global_defines.h"
+	"globals.h"
+	"get_token.h"
+	"variables.h"
+	<math.h>
+
+1323728362 source:c:\users\Олег\desktop\Архив\Интерпретатор\pascal 0.1.3+\test_get_token.c
+	<stdio.h>
+	"get_token.h"
+	"expressions.h"
+	"variables.h"
+
+1323728362 c:\users\Олег\desktop\Архив\Интерпретатор\pascal 0.1.3+\get_token.h
+	"globals.h"
+	"string_functions.h"
+	"variables.h"
+	"global_defines.h"
+
+1323728362 c:\users\Олег\desktop\Архив\Интерпретатор\pascal 0.1.3+\globals.h
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"global_defines.h"
+
+1321365720 c:\users\Олег\desktop\Архив\Интерпретатор\pascal 0.1.3+\global_defines.h
+
+1323728362 c:\users\Олег\desktop\Архив\Интерпретатор\pascal 0.1.3+\string_functions.h
+	<string.h>
+
+1323755366 c:\users\Олег\desktop\Архив\Интерпретатор\pascal 0.1.3+\variables.h
+	"global_defines.h"
+	"globals.h"
+	<string.h>
+	"get_token.h"
+
+1323756184 c:\users\Олег\desktop\Архив\Интерпретатор\pascal 0.1.3+\expressions.h
+	"global_defines.h"
+	"globals.h"
+	"get_token.h"
+	"variables.h"
+	<math.h>
+
+1323728362 source:c:\users\student\documents\вацлав\Интерпретатор\pascal (5 курс)\test_get_token.c
+	<stdio.h>
+	"get_token.h"
+	"expressions.h"
+	"variables.h"
+
+1323728362 c:\users\student\documents\вацлав\Интерпретатор\pascal (5 курс)\get_token.h
+	"globals.h"
+	"string_functions.h"
+	"variables.h"
+	"global_defines.h"
+
+1323728362 c:\users\student\documents\вацлав\Интерпретатор\pascal (5 курс)\globals.h
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"global_defines.h"
+
+1321365720 c:\users\student\documents\вацлав\Интерпретатор\pascal (5 курс)\global_defines.h
+
+1323728362 c:\users\student\documents\вацлав\Интерпретатор\pascal (5 курс)\string_functions.h
+	<string.h>
+
+1353047372 c:\users\student\documents\вацлав\Интерпретатор\pascal (5 курс)\variables.h
+	"global_defines.h"
+	"globals.h"
+	<string.h>
+	"get_token.h"
+
+1353050299 c:\users\student\documents\вацлав\Интерпретатор\pascal (5 курс)\expressions.h
+	"global_defines.h"
+	"globals.h"
+	"get_token.h"
+	"variables.h"
+	<math.h>
+

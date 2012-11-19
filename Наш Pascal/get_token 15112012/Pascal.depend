@@ -1,0 +1,73 @@
+# depslib dependency file v1.0
+1352657402 source:d:\Универ\7 семестр\ТВПиС\pascal\main.cpp
+	<iostream>
+	"get_token.h"
+
+1352656221 d:\Универ\7 семестр\ТВПиС\pascal\get_token.h
+	<string.h>
+	<stdio.h>
+
+1352657404 source:c:\users\student\desktop\get_token\main.cpp
+	<iostream>
+	"get_token.h"
+
+1352815080 c:\users\student\desktop\get_token\get_token.h
+	<string.h>
+	<stdio.h>
+
+1352657404 source:f:\get_token 13112012\main.cpp
+	<iostream>
+	"get_token.h"
+
+1352815082 f:\get_token 13112012\get_token.h
+	<string.h>
+	<stdio.h>
+
+1352991674 source:c:\users\Олег\desktop\get_token 13112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+
+1352990503 c:\users\Олег\desktop\get_token 13112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1352990377 c:\users\Олег\desktop\get_token 13112012\globals.h
+	<string.h>
+
+1352993573 source:c:\users\Олег\desktop\Интерпретатор\get_token 15112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+
+1352990503 c:\users\Олег\desktop\Интерпретатор\get_token 15112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1352990377 c:\users\Олег\desktop\Интерпретатор\get_token 15112012\globals.h
+	<string.h>
+
+1353049734 source:c:\users\student\documents\вацлав\Интерпретатор\Наш pascal\get_token 15112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+
+1353051528 c:\users\student\documents\вацлав\Интерпретатор\Наш pascal\get_token 15112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1353051131 c:\users\student\documents\вацлав\Интерпретатор\Наш pascal\get_token 15112012\globals.h
+	<string.h>
+
+1353049384 source:z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Наш pascal\get_token 15112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+
+1353049359 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Наш pascal\get_token 15112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1353049501 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Наш pascal\get_token 15112012\globals.h
+	<string.h>
+

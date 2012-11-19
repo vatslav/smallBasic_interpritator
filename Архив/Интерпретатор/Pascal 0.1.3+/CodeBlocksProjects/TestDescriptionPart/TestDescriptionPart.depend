@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1322865605 source:/home/and/Рабочий стол/ЛМД Lin Мои документы/ПСТГУ/Предметы/ТВП и С/Интерпретатор/Pascal/test_description_part.c
+	"variables.h"
+	"description_part.h"
+
+1322865565 /home/and/Рабочий стол/ЛМД Lin Мои документы/ПСТГУ/Предметы/ТВП и С/Интерпретатор/Pascal/variables.h
+	"global_defines.h"
+	"globals.h"
+	<string.h>
+	"get_token.h"
+
+1321562625 /home/and/Рабочий стол/ЛМД Lin Мои документы/ПСТГУ/Предметы/ТВП и С/Интерпретатор/Pascal/global_defines.h
+
+1321562625 /home/and/Рабочий стол/ЛМД Lin Мои документы/ПСТГУ/Предметы/ТВП и С/Интерпретатор/Pascal/globals.h
+	<ctype.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"global_defines.h"
+
+1322863317 /home/and/Рабочий стол/ЛМД Lin Мои документы/ПСТГУ/Предметы/ТВП и С/Интерпретатор/Pascal/get_token.h
+	"globals.h"
+	"string_functions.h"
+	"variables.h"
+	"global_defines.h"
+
+1321562625 /home/and/Рабочий стол/ЛМД Lin Мои документы/ПСТГУ/Предметы/ТВП и С/Интерпретатор/Pascal/string_functions.h
+	<string.h>
+
+1322865795 /home/and/Рабочий стол/ЛМД Lin Мои документы/ПСТГУ/Предметы/ТВП и С/Интерпретатор/Pascal/description_part.h
+	"global_defines.h"
+	"globals.h"
+	"variables.h"
+

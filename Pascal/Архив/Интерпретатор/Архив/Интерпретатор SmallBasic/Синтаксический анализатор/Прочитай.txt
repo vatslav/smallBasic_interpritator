@@ -1,8 +1,0 @@
-calculatorSmallBasic - интерпретатор без вывода информации о работе на экран.
-
-TRACEcalculatorSmallBasic - интерпретатор с выводом информации о вызываемых функци€х.
-
-
-preambule.h - файл с объ€влениеми необходимых переменных и функций.
-
-CBprojTrace - проект CodeBlocks, включающий файлы TRACEcalculatorSmallBasic и preambule.h

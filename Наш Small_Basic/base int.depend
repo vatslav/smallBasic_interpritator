@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1351620794 source:c:\users\vatslav\documents\github\smallbasic_interpritator\base int\base int\main.c
+	"stdio.h"
+	"setjmp.h"
+	"math.h"
+	"ctype.h"
+	"stdlib.h"
+	<locale.h>
+
+1351585838 source:k:\scylla\”нивер\7 семестр\“¬ѕи—\small basic\base int\base int\main.c
+	"stdio.h"
+	"setjmp.h"
+	"math.h"
+	"ctype.h"
+	"stdlib.h"
+	<locale.h>
+
+1351585838 source:c:\users\ќлег\desktop\base int\base int\main.c
+	"stdio.h"
+	"setjmp.h"
+	"math.h"
+	"ctype.h"
+	"stdlib.h"
+	<locale.h>
+

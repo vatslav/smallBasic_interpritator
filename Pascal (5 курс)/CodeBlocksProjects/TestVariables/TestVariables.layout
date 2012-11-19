@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="..\..\expressions.h" open="0" top="0" tabpos="0">
+		<Cursor position="150" topLine="0" />
+	</File>
+	<File name="..\..\get_token.h" open="0" top="0" tabpos="3">
+		<Cursor position="5946" topLine="123" />
+	</File>
+	<File name="..\..\test_variables.c" open="0" top="0" tabpos="2">
+		<Cursor position="2115" topLine="61" />
+	</File>
+	<File name="..\..\variables.h" open="0" top="0" tabpos="1">
+		<Cursor position="19370" topLine="568" />
+	</File>
+</CodeBlocks_layout_file>
