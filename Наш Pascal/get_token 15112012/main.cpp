@@ -3,16 +3,16 @@
 #include "get_token.h"
 
 using namespace std;
-
 int main()
-{/**@function функция для тестирования
+{/**@function main функция для тестирования
     содержит текст, которые передается в цикле в get_token и тот обрабатывает его
     после каждого вызова get_token происходит вывод на экран текущего состояния
     и ожадание ввода, для интерактивности*/
     setlocale (LC_ALL,"RUS");
+
     prog = "Program Test\n"
     "c:=3 "
-    "const a%=5, b=3;\n"
+    "{const a%=5, b=3;\n}"
     "var\n"
     "i,j:integer;\n"
     "y:array [1..a,1..b] of integer;\n"

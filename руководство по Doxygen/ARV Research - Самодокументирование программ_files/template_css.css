@@ -1,0 +1,612 @@
+/****
+author - rgb(raduga) http://mambasana.ru
+***/
+
+body,html {
+  padding          : 0;
+  margin           : 0;
+  margin-bottom    : 10px;
+  
+
+    }
+#body_bg{
+background     : url(../images/bg_top.jpg) #ffffff repeat-x top left;
+}
+.main { 
+  float            : left; 
+  width            : 100%;
+  margin           : 0; 
+  padding          : 0;
+}
+
+
+.mod {
+  background       : #FFFFFF;
+  width            : 2px;
+}
+
+td, tr, p, div {
+  font-family      : Arial, Verdana, Tahoma, Helvetica, sans-serif;
+  font-size        : 12px;
+  color            : #000000;
+}
+hr {
+  color            : #999999;
+  height           : 1px;
+  width            : 100%;
+}
+form {
+margin           : 0; 
+padding          : 0;
+}
+
+
+.leftrow {
+  width            : 169px;
+  height           : 100%;
+  margin-right     : 0;
+  background       : #f5f5f5;
+
+}
+.rightrow {
+  height           : 100%;
+  width            : 169px;
+  margin-left      : 0;
+  background       : #f5f5f5;
+
+ }
+.back_button {
+  color            : #999999;
+  font-family      : Tahoma, Arial, Verdana,  Helvetica, sans-serif;
+  font-size        : 11px;
+  font-weight      : normal;
+  padding-bottom   : 3px;
+  margin-right     : 4px;
+  float            : right;
+  line-height      : 20px;
+  }
+.button {
+  font-size        : 11px;
+  color            : #333333;
+  border           : 1px solid #999999;
+  margin           : 3px;
+  background-color : #EDEDED;
+  padding          : 2px !important;
+  padding          : 1px;
+
+  cursor           : pointer;
+}
+
+.inputbox {
+ color        : #000000;
+ background   : #ffffff;
+ border       : 1px solid #cccccc;
+ margin       : 3px;
+
+}
+
+
+.contact_email  {
+  width            : 100%;
+}
+.contact_email .inputbox {
+  width            : 345px;
+
+}
+table.moduletable {
+	margin           : 0 0 8px 0;
+	width            : 100%;
+      background       : #f5f5f5;
+      padding-bottom   : 2px;
+	}
+
+table.moduletable th {
+      
+    font-family          : Tahoma, Arial, Verdana,  Helvetica, sans-serif;
+	font-size          : 11px;
+	font-weight        : bold;
+	text-align         : left;
+	width              : 100%;
+      background-color   : #5B7696; 
+      color              : #f1f1f1;
+	padding            : 2px;
+      text-indent        : 10px;
+	line-height        : 15px;
+	    
+	}
+
+table.moduletable td {
+    padding-top: 2px;
+   
+    	}
+
+
+.sectiontableheader {
+  font-size        : 11px;
+  font-weight      : normal;
+  text-transform   : uppercase;
+  letter-spacing   : 1px;
+  color            : #f1f1f1;
+  background       : #5B7696; 
+  padding          : 1px;
+}
+
+
+.sectiontableentry1 {
+  vertical-align   : top;
+  padding          : 3px;
+  background       : none;
+  border-bottom    : 1px solid #ffffff;
+  line-height      : 25px;
+
+}
+.sectiontableentry2 {
+  vertical-align   : top;
+  padding          : 3px;
+  border-bottom    : 1px solid #ffffff;
+  background       : #e0e0e8;
+  line-height      : 25px;
+  }
+.sectiontableentry1 img{
+ padding-right: 4px !important;
+ padding-right: 2px;
+
+}
+.sectiontableentry2 img{
+ padding-right: 4px !important;
+ padding-right: 2px;
+
+}
+
+a.mainlevel  {
+ display           : block;
+ width             : auto;
+  margin           : 1px 0px;
+  padding          : 0;
+/**  font-size        : 12px; **/
+  background       : none;
+  text-indent      : 10px;
+}
+
+a.mainlevel:link, a.mainlevel:visited {
+  display          : block;
+/**  font-size        : 12px; **/
+  border           : 1px solid #cccccc;
+  background-color : #f1f1f1;
+  font-weight      : normal;
+  padding          : 2px 0;
+  color            : #666666;
+  font-weight      : bold;
+  text-indent      : 10px;
+}
+a.mainlevel:hover {
+  border       : 1px solid #cccccc;
+  background-color : #E0E0E8;
+/**  font-size        : 12px;  **/
+  font-weight      : normal;
+  color            : #666666;
+  text-decoration  : none;
+  text-indent      : 10px;
+}
+#active_menu {
+  color            : #000066;
+  border       : 1px solid #cccccc;
+  background-color : #E0E0E8;
+  font-weight      : bold;
+}
+a#active_menu:hover {
+  color            : #333333;
+}
+
+a:link, a:visited {
+/**  font-size        : 11px; **/
+  color            : #999999;
+  text-decoration  : none;
+  font-weight      : bold;
+}
+a:hover {
+/**  font-size        : 11px;  **/
+  color            : #3333ff;
+  text-decoration  : none;
+  font-weight      : bold;
+}
+a.category:link, a.category:visited {
+/**  font-size        : 11px;  **/
+  font-weight      : bold;
+}
+a.readon:link, a.readon:visited {
+  color            : #999999;
+  font-family      : Tahoma, Arial, Verdana, Helvetica, sans-serif;
+/** font-size        : 11px;  **/
+  background       : url(../images/readon.gif) no-repeat;
+  white-space      : normal;
+  font-weight      : bold;
+  padding          : 1px 0 3px 18px;
+  float            : right;
+  line-height      : 10px;
+  text-decoration  : underline;
+}
+a.readon:hover {
+  color            : #3333ff;
+  font-family      : Tahoma, Arial, Verdana, Helvetica, sans-serif;
+/**  font-size        : 11px;  **/
+  background       : url(../images/readon.gif) no-repeat;
+  white-space      : normal;
+  font-weight      : bold;
+  padding          : 1px 0 3px 18px;
+  line-height      : 10px;
+  text-decoration  : underline;
+}
+ul {
+  margin           : 2px;
+  padding-left     : 10px;
+  list-style       : none;
+}
+li {
+  
+  line-height      : 15px;
+  padding-left     : 10px;
+  padding-top      : 0;
+  background-image : url(../images/strelka.gif) ;
+  background-repeat: no-repeat;
+  background-position: 0px 5px;
+}
+table.contenttoc {
+  border           : 1px solid #dcdcdc;
+  background       : #F1F1F1;
+  padding          : 5px;
+  margin-left      : 2px;
+  margin-bottom    : 2px;
+}
+.pagenavcounter {
+  font-size        : 10px;
+  color            : #0066CC;
+}
+.pagenavbar {
+  border-top       : 1px solid #999999;
+  padding          : 2px;
+}
+.pagenav {
+  font-weight      : bold;
+  }
+a.pagenav:link, a.pagenav:visited {
+/**  font-size        : 11px;  **/
+  color            : #999999;
+  text-decoration  : none;
+}
+a.pagenav:hover {
+/**  font-size        : 11px;  **/
+  color            : #3333ff;
+  text-decoration  : none;
+}
+.date {
+  font-size        : 10px;
+  font-weight      : bold;
+  color            : #707070;
+  padding-right    : 10%;
+}
+.small {
+  font-size        : 10px;
+  color            : #333333;
+}
+.smalldark {
+  font-size        : 10px;
+  color            : #333333;
+}
+.createdate, .modifydate {
+  float            : left;
+  font-size        : 10px;
+  color            : #666666;
+  font-weight      : bold;
+
+  
+}
+.content_vote {
+  font-size        : 10px;
+  height           : 22px;
+  padding-top      : 2px;
+  padding-bottom   : 2px;
+}
+.content_rating {
+  font-size        : 10px;
+  color            : #999999;
+}
+.pathway {
+  font-size        : 11px;
+  color            : #333333;
+  padding-left     : 6%;
+}
+a.pathway:link, a.pathway:visited {
+/**  font-size        : 11px;  **/
+  padding-left     : 0;
+}
+a.pathway:hover {
+/**  font-size        : 11px;  **/
+  padding-left     : 0;
+}
+
+table._none{
+  padding          : 0;
+  border-collapse  : collapse;
+  border-spacing   : 0;
+  margin-bottom    : 0px;
+  margin-top    : 0px;
+}
+
+table._none td{
+margin: 0;
+padding: 0;
+padding-top: 0px;
+padding-bottom: 0px;
+}
+
+table.content{
+  width            : 100%;
+  padding          : 0;
+  border-collapse  : collapse;
+  border-spacing   : 0;
+  margin-bottom    : 10px;
+}
+table.contentpane {
+  width            : 100%;
+  border-spacing   : 0;
+  padding-left     : 5px;
+  padding-right    : 5px;
+  margin-bottom    : 5px;
+}
+table.contentpaneopen {
+  width            : 100%;
+  border-spacing   : 0;
+  padding-left     : 5px;
+  padding-right    : 5px;
+  margin-bottom    : 5px;
+}
+.poll {
+	color : #333333;
+	line-height : 12px;
+	font-weight: normal;
+      
+}
+
+.pollstableborder{
+  border-color     : #999999;
+}
+.contentheading,.componentheading {
+  border-bottom    : 1px solid #000066;
+  font-size        : 13px;
+  font-weight      : bold;
+  line-height      : 16px;
+  text-transform   : uppercase;
+  text-align       : left;
+  text-indent      : 0;
+  color            : #000066;
+  width            : 100%;
+  padding          : 1px;
+  margin: 3px 0px;
+  }
+
+
+.ontab {
+  border-left      : 1px solid #666666;
+  text-align       : center;
+  font-weight      : bold;
+  color            : #333333;
+  padding          : 5px;
+  cursor           : pointer;
+  line-height      : 30px;
+}
+.offtab {
+  border-left      : 1px solid #666666;
+  text-align       : center;
+  color            : #999999;
+  font-weight      : normal;
+  padding          : 5px;
+  cursor           : pointer;
+  line-height      : 30px;
+}
+.tabpadding {
+ border-left       : 1px solid #666666;
+}
+
+.footer {
+  font-family      : Verdana, Arial, Helvetica, sans-serif;
+  font-size        : 10px;
+  color            : #666666;
+  font-weight      : bold;
+  height           : 31px;
+  border-top       : 1px solid #cccccc;
+
+ 
+ }
+.footer a:link, .footer a:visited {
+  font-size        : 10px;
+  color            : #666666;
+  text-decoration  : none;
+  font-weight      : bold;
+}
+.footer a:hover {
+  font-size        : 10px;
+  color            : #999999;
+  text-decoration  : none;
+  font-weight      : bold;
+}
+
+
+.lcol {
+   vertical-align   : top;
+   background       : #ffffff;
+   padding-top: 5px;
+   border-left       : 1px solid #cccccc;
+   padding-left: 3px;
+
+
+
+}
+.rcol {
+   vertical-align   : top;
+   background       : #ffffff;
+   padding-top: 5px;
+   border-right       : 1px solid #cccccc;
+   padding-right: 3px;
+
+
+
+}
+
+.pre {
+  background       : #ccffff;
+}
+
+.foot {
+  background       : none;
+  vertical-align   : top;
+  
+}
+
+
+.contentdescription { 
+  width          : auto !important;
+  margin         : 0;
+  padding        :  0;
+  padding-top    : 5px;
+  text-align     : left;
+}
+
+td.top1{
+margin: 0;
+padding:  0;
+height: 28px !important;
+height: 28px;
+padding-top:  2px !important;
+padding-top:  3px;
+background		: url(../images/shadow.jpg) #ffffff repeat-x top;
+
+}
+table.top2{
+background : #ffffff; 
+}
+
+.searchbox {
+  margin           : 0;
+  padding          : 0;
+  margin-top       : 13px;
+  margin-left      : 10px;
+  width            : 130px;
+  font-size        : 11px;
+  color            : #707070;
+  padding          : 2px !important;
+  padding          : 1px; 
+  border           : 1px solid #cccccc;
+  background       : none;
+  
+   }
+
+.sublevel {
+   font-family      : Tahoma, Verdana, Arial, Helvetica, sans-serif;
+   font-size        : 10px;
+   font-weight      : bold;
+   color            : #999999;
+   padding    	  : 3px 1px 3px 5px;
+   margin		  : 3px;
+}
+a.sublevel:link, a.sublevel:visited {
+  color		        : #999999;
+  text-decoration	: none;
+}
+a.sublevel:hover {
+  color            : #000066;
+  text-decoration  : none;
+}
+a.sublevel#active_menu  {
+	background      : transparent;
+	color           : #000066;
+	border          : 0px;
+      
+}
+
+td.logoheader {
+  margin: 0;
+  padding:  0;
+  background     : url(../images/header.jpg)  no-repeat bottom left;
+  height         : 65px;
+  width          : 100%;
+  
+ }
+td.topnav {
+  margin : 0px;
+  padding:  0px;
+  background     : url(../images/bg_top.jpg) repeat-x top left;
+  height         : 42px;
+  width          : 770px;
+  
+ }
+
+td.bgline {
+  margin : 0px;
+  padding:  0px;
+  background     : url(../images/s.gif) repeat-y;
+  width          : 7px;
+ }
+
+
+ #mainlevel-nav {
+  font-size        : 11px;
+  list-style       : none;
+  padding          : 0;
+  margin           : 0;
+  margin-left      : 1px;
+ 
+}
+
+#mainlevel-nav li {
+  float            : right;
+  display          : block;
+  list-style       : none;
+  background-image : none;
+  padding-left     : 2px;
+  padding-right    : 2px;
+  margin           : 0;
+  width            : auto !important;
+  font-size        : 11px;
+  line-height      : 28px;
+  white-space      : nowrap;
+  border-left      : 1px solid #cccccc;
+
+}
+#mainlevel-nav li a {
+  
+  padding-left     : 10px;
+  padding-right    : 10px;
+/**  font-size        : 11px; **/
+  color            : #000033;
+  text-decoration  : none;
+  
+}
+
+#mainlevel-nav li a:hover {
+/**  font-size        : 11px;  **/
+  color            : #999999;
+    
+}
+
+.blog_more {
+margin   : 10px 0 7px 7px;
+}
+.buttonheading {
+padding  : 0 2px;
+}
+
+.mosimage {
+  border     : 1px solid #dedede;
+  margin     : 5px;
+  padding-top:  3px;
+
+}
+
+.mosimage_caption {
+  margin-top: 3px;
+  padding   :  2px;
+  color     : #000066;
+  font-size : 10px;
+  background: #f1f1f1;
+}

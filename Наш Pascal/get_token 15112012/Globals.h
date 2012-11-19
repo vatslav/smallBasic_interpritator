@@ -5,15 +5,15 @@
 
 ///Типы лексем (token_type)
 
-   #define DELIMITER  1 //Разделитель: . , : ; ( ) [ ] \r \0
-   #define VARIABLE   2 //Переменная
-   #define CONSTANT   3 //Константа
-   #define OPERATOR   4 //Оператор: := + - * / = < > <= >= <> if thrn else for to downto read write writeln begin end
-   #define SYSTEM     5 //Служебное слово: program var const integer real array of true false
-   #define QUOTE      6 //Кавычки:
-   #define INTEGER    7 //Целое число: 15, -3
-   #define REAL       8 //Вещественное число: 35.35, -13.9
-   #define ERROR      9 //Ошибка
+   #define DELIMITER  1 ///Разделитель: . , : ; ( ) [ ] \r \0
+   #define VARIABLE   2 ///Переменная
+   #define CONSTANT   3 ///Константа
+   #define OPERATOR   4 ///Оператор: := + - * / = < > <= >= <> if thrn else for to downto read write writeln begin end
+   #define SYSTEM     5 ///Служебное слово: program var const integer real array of true false
+   #define QUOTE      6 ///Кавычки:
+   #define INTEGER    7 ///Целое число: 15, -3
+   #define REAL       8 ///Вещественное число: 35.35, -13.9
+   #define ERROR      9 ///Ошибка
 
 ///Внутренне представление лексем (tok)
 ///Если tok=0, то представления нет
@@ -32,7 +32,7 @@
 
    ///Операторы
 
-   #define ASSIGNMENT 19 //Оператор присваивания :=
+   #define ASSIGNMENT 19 ///Оператор присваивания :=
    #define IF         20
    #define THEN       21
    #define ELSE       22
@@ -47,8 +47,8 @@
 
    ///Оставшиеся разделители
 
-   #define EOL        17 //Конец строки: \n
-   #define FINISHED   18 //Конец файла (кода программы): \0
+   #define EOL        17 ///Конец строки: \n
+   #define FINISHED   18 ///Конец файла (кода программы): \0
 
 struct commands
 {
@@ -56,7 +56,7 @@ struct commands
     char tok;
 };
 
-//Служебные слова
+///Служебные слова
 struct commands SYSTEM_table[] =
 {
 	{ "program", PROGRAMM },
@@ -68,10 +68,10 @@ struct commands SYSTEM_table[] =
 	{ "of", OF },
 	{ "true", TRUE },
 	{ "false", FALSE },
-	{ "", 0 }//просто признак конца массива
+	{ "", 0 }///просто признак конца массива
 };
 
-//Операторы
+///Операторы
 struct commands OPERATORS_table[] =
 {
 	{ "if", IF },
@@ -88,16 +88,16 @@ struct commands OPERATORS_table[] =
 	{ "writeln", WRITELN },
 	{ "begin", BEGIN },
 	{ "end", END },
-	{ "", 0 }//просто признак конца массива
+	{ "", 0 }///просто признак конца массива
 };
 
-char token[80];
-char token_type, tok;
+char token[80]; ///строка, в которой содержится текущая  анализируемая строка
+char token_type, tok; ///тип токена и внутрение представление
 
-char *prog; /* содержит выражение для анализа */
-//jmp_buf e_buf; /* содержит среду для longjmp() */
+char *prog; /** содержит выражение для анализа */
+///jmp_buf e_buf; /** содержит среду для longjmp() */
 
-/* Возвращает 1, если "с" пробел или табуляция */
+/** Возвращает 1, если "с" пробел или табуляция */
 bool iswhite(char c)
 {
   if(c == ' ' || c == '\t' || c == '\n' || c == '\r')
@@ -106,7 +106,7 @@ bool iswhite(char c)
      return 0;
 }
 
-/* Возвращает "истину", если "c" разделитель */
+/** Возвращает "истину", если "c" разделитель */
 bool isdelim(char c)
 {
 	if(strchr(".,:;()[]+-*/<>=\r\n\t ", c) || c == 0)
@@ -115,44 +115,48 @@ bool isdelim(char c)
 		return 0;
 }
 
-/* Возвращает "истину", если "c" является чем-то из { a..z, A..Z, 0..9, "_" } */
+/** is_good_name
+Если имя хорошие, то истина Возвращает "истину", если "c" является чем-то из { a..z, A..Z, 0..9, "_" }
+@param char c - символ, из части имени лексемы
+@return true если "c" является чем-то из { a..z, A..Z, 0..9, "_" }, false - иначе*/
 bool is_good_name (char c)
 {
     return (isalpha(c) or isdigit(c) or c == '_' );
 }
 
-/* Поиск соответствия внутреннего формата для
-   текущей лексемы в таблицах лексем.
+/**@fucntion look_up
+Поиск соответствия внутреннего формата для текущей лексемы в таблицах лексем.
 */
 char look_up(char *s, char *token_type)
 {
   register int i;
   char *p;
 
-  /* преобразование к нижнему регистру */
+  /** преобразование к нижнему регистру */
   p = s;
   while(*p) { *p = tolower(*p); p++; }
 
-  //Поиск лексемы среди служебных слов
+  ///Поиск лексемы среди служебных слов
   for( i = 0; *SYSTEM_table[i].command; i++ )
     if( !strcmp(SYSTEM_table[i].command, s) )
     {
-        *token_type = SYSTEM; //Тип "СЛЕЖЕБНОЕ СЛОВО"
+        *token_type = SYSTEM; ///Тип "СЛЕЖЕБНОЕ СЛОВО"
         return SYSTEM_table[i].tok;
     }
 
-  //Поиск лексемы среди операторов
+  ///Поиск лексемы среди операторов
   for( i = 0; *OPERATORS_table[i].command; i++ )
     if( !strcmp( OPERATORS_table[i].command, s ) )
     {
-        *token_type = OPERATOR; //Тип "ОПЕРАТОР"
+        *token_type = OPERATOR; ///Тип "ОПЕРАТОР"
         return OPERATORS_table[i].tok;
     }
   *token_type = 0;
-  return 0; /* нераспознанная команда */
+  return 0; /** нераспознанная команда */
 }
 
-
+/**@function typeToName
+возвращает человеское имя по внутреннему представлению для наглядной демонстрации в тестах*/
 char * typeToName(int param)
 {
   switch (param)

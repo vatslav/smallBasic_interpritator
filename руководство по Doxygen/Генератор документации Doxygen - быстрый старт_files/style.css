@@ -1,0 +1,777 @@
+#jc h4 {
+	color		: #555;
+	background-color: inherit;
+	font		: bold 12px Helvetica, Arial, Sans-Serif;
+	text-align	: left;
+	border-bottom	: 1px solid #ddd;
+	padding-left	: 0;
+	margin-bottom	: 10px;
+}
+
+#jc h4 a {
+	text-decoration	: none;
+	border		: none;
+	margin		: 0;
+	padding		: 0;
+}
+
+#jc h4 img {
+	padding		: 0 0 2px 2px;
+	border		: none;
+	vertical-align	: middle;
+}
+
+#jc p.message {
+	color		: #777;
+	background-color: inherit;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	text-align	: center;
+	text-decoration	: none;
+	text-transform	: none;
+	text-indent	: 0;
+}
+
+#jc_busy {
+	display		: none;
+	width		: auto;
+	text-align	: center;
+}
+
+#comments {
+	margin		: 0;
+	padding		: 0;
+	text-align	: left;
+	text-decoration	: none;
+	text-transform	: none;
+	text-indent	: 0;
+}
+
+#comments a {
+	color		: #888;
+	background-color: inherit;
+	font-weight	: normal;
+	text-decoration	: none;
+	border-bottom	: 1px dotted #999;
+}
+
+#comments a:active, #comments a:focus, #comments a:hover {
+	color		: #777;
+	background-color: inherit;
+	text-decoration	: none;
+}
+
+#comments a.comment-anchor, 
+#comments a.comment-anchor:active, 
+#comments a.comment-anchor:focus, 
+#comments a.comment-anchor:hover {
+	color		: #777;
+	background-color: inherit;
+	text-decoration	: none;
+	border		: none;
+}
+
+#comments a[rel*=external] {
+	color		: #777;
+	background-color: inherit;
+	background	: url(images/jc_link.gif) no-repeat center right;
+	padding		: 0 10px 0 0;
+	margin		: 0 2px 0 2px;
+	border-bottom	: 1px dotted #999;
+}
+
+#comments a[rel*=external]:hover {
+	color		: #cc0000;
+	background-color: inherit;
+	background	: url(images/jc_link.gif) no-repeat center right;
+	padding		: 0 10px 0 0;
+	margin		: 0 2px 0 2px;
+}
+
+#comments div {
+	margin		: 0;
+	padding		: 0;
+}
+
+#comments span.comment-author {
+	color		: #3c452d;
+	background-color: inherit;
+	font		: bold 1em Verdana, Arial, Sans-Serif;
+	margin		: 0;
+	padding		: 0;
+}
+
+#comments span.comment-author a {
+	border-bottom	: none;
+}
+
+#comments span.comment-homepage a {
+	border-bottom	: none;
+}
+
+#comments span.comment-ip {
+	color		: #999;
+	background-color: inherit;
+	font		: normal 9px Verdana, Arial, Sans-Serif;
+	margin		: 0;
+	padding		: 0;
+}
+#comments span.comment-ip a {
+	color		: #999;
+	background-color: inherit;
+}
+
+#comments .comment-avatar {
+	float		: left;
+	margin		: 5px 10px 5px 0;
+}
+
+#comments .comment-avatar img {
+	width		: 32px;
+	height		: 32px;
+}
+
+#comments span.comment-date {
+	font		: normal 9px Verdana, Arial, Sans-Serif;
+	color		: #999;
+	background-color: inherit;
+	display		: inline;
+	margin		: 0 0 0 0;
+	padding		: 0 0 0 12px;
+	background	: url(images/jc_date.gif) no-repeat center left;
+}
+
+#comments span.comment-time {
+	font		: normal 9px Verdana, Arial, Sans-Serif;
+	color		: #999;
+	background-color: inherit;
+	display		: inline;
+	margin		: 0 2px 0 2px;
+	padding		: 0 0 0 12px;
+	background	: url(images/jc_time.gif) no-repeat center left;
+}
+
+#comments span.comment-body {
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	color		: #777;
+	background-color: inherit;
+	display: block;
+	margin		: 0;
+	padding		: 2px 0;
+}
+
+#comments span.hidden {
+	color		: #777;
+	background-color: inherit;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	text-align	: left;
+	display		: block;
+	margin		: 5px 0;
+	padding		: 8px;
+	border		: 1px dashed #aaa;
+}
+
+#comments span.quote {
+	float		: right;
+	cursor		: pointer;
+	padding		: 8px;
+	margin		: 0;
+	background	: url(images/jc_quote.gif) no-repeat center left;
+}
+
+#comments div.quote {
+	color		: #777;
+	background-color: inherit;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	margin		: 0;
+	padding		: 0 0 0 15px;
+}
+
+#comments div.quotetop {
+	color		: #777;
+	background-color: inherit;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	margin		: 0;
+	padding		: 0;
+}
+
+#comments div.quotebody {
+	color		: #777;
+	background-color: inherit;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	text-align	: left;
+	margin		: 5px 0;
+	padding		: 8px;
+	border		: 1px dashed #aaa;
+}
+
+#comments p.toolbar {
+	color		: #ccc;
+	background-color: inherit;
+	border-top	: 1px solid #ccc; 
+	margin		: 0;
+	padding		: 5px 0 0 0;
+}
+
+#comments span.email {
+	color		: #444;
+	background-color: inherit;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	text-decoration : none;
+	white-space	: normal;
+	margin		: 0;
+	padding		: 0;
+	line-height	: 10px;
+	cursor		: pointer;
+	border-bottom	: 1px dotted #999;
+}
+#comments span.emailactive {
+	color		: #cc0000;
+	background-color: inherit;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	text-decoration	: none;
+	white-space	: normal;
+	margin		: 0;
+	padding		: 0;
+	line-height	: 10px;
+	cursor		: pointer;
+	border-bottom	: 1px dotted #999;
+}
+
+#comments span.toolbar {
+	color		: #777;
+	background-color: inherit;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	white-space	: normal;
+	border		: 1px solid #ccc;
+	width		: 120px;
+	margin		: 0 2px 0 0;
+	padding		: 1px 3px 3px 5px;
+	line-height	: 10px;
+	cursor		: pointer;
+}
+
+#comments p.toolbar img{
+	cursor		: pointer;
+}
+
+#comments span.activetoolbar {
+	color		: #777;
+	background-color: #ffffe0;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	width		: 120px;
+	white-space	: normal;
+	border		: 1px solid #aaa;
+	margin		: 0 2px 0 0;
+	padding		: 1px 3px 3px 5px;
+	line-height	: 10px;
+	cursor	: pointer;
+}
+
+#comments ol.commentlist {
+	padding		: 0;
+	list-style-image: none;
+	list-style-type	: none;
+}
+
+#comments ol.commentlist li.even {
+	color		: #3c452d;
+	background-color: #f6f6f6;
+	background-image: none;
+	font		: bold 1em Verdana, Arial, Sans-Serif;
+	list-style	: none;
+	list-style-image: none;
+	margin-left	: 30px !important;
+	margin-left	: 0;
+	margin-bottom	: 5px;
+	padding		: 3px 5px 5px 10px;
+	width		: auto !important;
+	width		: 95%;
+	border-left	: 10px solid #ccc;
+	border-top	: 1px solid #ccc;
+}
+
+#comments ol.commentlist li.odd {
+	color		: #3c452d;
+	background-color: #fff;
+	background-image: none;
+	font		: bold 1em Verdana, Arial, Sans-Serif;
+	list-style	: none;
+	list-style-image: none;
+	margin-left	: 30px !important;
+	margin-left	: 0;
+	margin-bottom	: 5px;
+	padding		: 3px 5px 5px 10px;
+	width		: auto !important;
+	width		: 95%;
+	border-left	: 10px solid #ccc;
+	border-top	: 1px solid #ccc;
+}
+
+#comments p {
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	margin		: 5px 5px 5px 0;
+	padding		: 0;
+	text-decoration	: none; 
+	text-transform	: none;
+	text-indent	: 0;
+}
+
+#comments ol.commentlist li ul {
+	margin		: 0;
+	padding		: 20px;
+}
+
+#comments ol.commentlist li ul li {
+	color		: #3c452d;
+	background-color: inherit;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	padding		: 0;
+	margin		: 0;
+	width		: auto !important;
+	width		: 100%;
+	border		: none;
+}
+
+#comments ol.commentlist li ol {
+	margin		: 0;
+	padding		: 20px;
+}
+
+#comments ol.commentlist li ol li {
+	color		: #3c452d;
+	background-color: inherit;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	padding		: 0;
+	margin		: 0;
+	width		: auto !important;
+	width		: 100%;
+	border		: none;
+}
+
+#comments p img{
+	padding		: 4px 0 4px 0;
+}
+
+#comments span.email img, 
+#comments span.emailactive img {
+	padding		: 0;
+}
+
+#comments-form {
+	text-align	: left;
+	text-decoration	: none;
+	text-transform	: none;
+	text-indent	: 0;
+}
+
+#comments-form p {
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	margin-left	: 30px !important;
+	margin-left	: 30px;
+	margin-top	: 0;
+	margin-bottom	: 2px;
+	padding		: 0;
+	text-align	: left;
+	text-decoration	: none;
+	text-transform	: none;
+	text-indent	: 0;
+}
+
+#comments-form div.comments-policy {
+	color		: #777;
+	background-color: inherit;
+	border		: 1px dotted #ccc;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	margin-left	: 30px !important;
+	margin-left	: 30px;
+	margin-top	: 5px;
+	margin-bottom	: 5px;
+	padding		: 5px 2px;
+	text-align	: left;
+	text-decoration	: none;
+	text-transform	: none;
+	text-indent	: 0;
+}
+
+#comments-form div.comments-policy ol,
+#comments-form div.comments-policy ul {
+	margin		: 0;
+	padding		: 5px 0 0 20px;
+	line-height	: 5px;
+}
+
+#comments-form div.comments-policy ol li,
+#comments-form div.comments-policy ul li {
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	margin		: 0;
+	padding		: 0;
+	border		: none;
+	line-height	: 5px;
+}
+
+#comments-form img.bbcode {
+	padding		: 0;
+	margin		: 3px 0 0 0;
+	border		: none;
+	cursor		: pointer;
+}
+
+#comments-form img.smile {
+	margin		: 0 3px 3px 0;
+	padding		: 0;
+	border		: none;
+	cursor		: pointer;
+}
+
+#comments-form img.captcha {
+	padding		: 0;
+	margin		: 0 0 3px 0;
+	border		: 1px solid #ccc;
+}
+
+#comments-form span.captcha {
+	padding		: 0 0 0 12px;
+	color		: #777;
+	background	: url(images/jc_refreshg.gif) no-repeat 0 2px;
+	cursor		: pointer;
+}
+
+#comments-form label {
+	color		: #777;
+	background-color: inherit;
+	font		: normal 0.9em Verdana, Arial, Sans-Serif;
+	padding		: 2px 2px 2px 0;
+	vertical-align	: 50% !important;
+	vertical-align	: middle;
+}
+
+#comments-form input {
+	color		: #444;
+	background-color: inherit;
+	font		: bold 0.9em Verdana, Arial, Sans-Serif;
+	width		: 170px;
+	padding		: 2px;
+	margin-bottom	: 2px;
+	border		: 1px solid #ccc;
+}
+
+#comments-form input.button {
+	color		: #444;
+	background-color: inherit;
+	font		: bold 0.9em Verdana, Arial, Sans-Serif;
+	width		: 170px;
+	padding		: 2px;
+	margin-bottom	: 4px;
+	border		: 1px solid #ccc;
+}
+
+#comments-form input.checkbox {
+	width		: 16px;
+	padding		: 0;
+	margin		: 0 0 5px 0;
+	border		: none;
+}
+
+#comments-form input.selected {
+	color		: #777;
+	background-color: #ffffe0;
+	border		: 1px solid #ccc;
+}
+
+#comments-form input.error {
+	border		: 1px solid #f00;
+}
+
+#comments-form input.captcha {
+	color		: #444;
+	background-color: inherit;
+	font		: bold 0.9em Verdana, Arial, Sans-Serif;
+	width		: 116px;
+	padding		: 2px;
+	margin		: 3px 0 5px 0;
+	border		: 1px solid #ccc;
+}
+
+#comments-form input.captcha-selected {
+	color		: #777;
+	background-color: #ffffe0;
+	width		: 116px;
+	padding		: 2px;
+	margin		: 3px 0 5px 0;
+	border		: 1px solid #ccc;
+}
+
+#comments-form input.captcha-error {
+	width		: 116px;
+	padding		: 2px;
+	margin		: 3px 0 5px 0;
+	border		: 1px solid #f00;
+}
+
+#comments-form textarea {
+	color		: #444;
+	background-color: inherit;
+	font		: bold 0.9em Verdana, Arial, Sans-Serif;
+	max-width	: 450px !important;
+	width		: 400px;
+	padding		: 2px;
+	margin		: 0;
+	border		: 1px solid #ccc;
+}
+
+#comments-form textarea.selected {
+	color		: #777;
+	background-color: #ffffe0;
+	border		: 1px solid #ccc;
+}
+
+#comments-form textarea.error {
+	border		: 1px solid #f00;
+}
+
+#comments-form span.translit {
+	color		: #777;
+	background-color: inherit;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	margin		: 0;
+	padding		: 0;
+	text-decoration	: none;
+	line-height	: 16px;
+}
+
+#comments-form span.translitstatus {
+	color		: #777;
+	background-color: inherit;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	margin		: 0;
+	padding		: 0;
+	line-height	: 16px;
+	cursor		: pointer;
+	text-decoration	: none;
+	border-bottom	: 1px dotted #999;
+}
+
+#comments-footer {
+	color		: #ccc;
+	background-color: inherit;
+	font		: normal 9px Verdana, Arial, Sans-Serif;
+	border-top	: 1px solid #ccc;
+	padding-top	: 1px;
+	margin-top	: 4px;
+	text-align	: right;
+}
+
+#comments-footer a {
+	color		: #ccc;
+	background-color: inherit;
+	font		: normal 9px Verdana, Arial, Sans-Serif;
+	text-decoration	: none;
+	text-transform	: none;
+	text-indent	: 0;
+	padding		: 0;
+	margin		: 0;
+	border		: none;
+}
+
+body #nav-bottom {
+	line-height	: 19px !important;
+	line-height	: 17px;
+	height		: auto !important;
+}
+
+div#nav-bottom {
+	position	: relative;
+	z-index		: 2;
+	width		: 100%;
+	margin		: 10px 0 0 0;
+	padding		: 0;
+	background	: url(images/jc_dot.gif) repeat-x top left;
+	line-height	: 19px !important;
+	line-height	: 17px;
+	height		: auto !important;
+}
+
+#nav-bottom span {
+	color		: #777;
+	background-color: inherit;
+	font-size	: 10px;
+	font-family	: Arial, sans-serif;
+	margin		: 0 2px;
+	height		: 15px;
+	padding		: 2px 8px;
+	cursor		: pointer;
+	vertical-align	: top; 
+}
+
+#nav-bottom span.page {
+	color		: #777;
+	background-color: #eee;
+	border		: 1px solid #d6dadd;
+}
+
+#nav-bottom span.hoverpage {
+	color		: #777;
+	background-color: #e8e9ea;
+	border		: 1px solid #d6dadd;
+}
+
+#nav-bottom span.activepage {
+	color		: inherit;
+	background-color: white;
+	border-bottom	: 1px solid #d6dadd;
+	border-left	: 1px solid #d6dadd;
+	border-right	: 1px solid #d6dadd;
+	border-top	: 1px solid white;
+}
+
+body #nav-top {
+	line-height	: 19px !important;
+	line-height	: 17px;
+	height		: auto !important;
+}
+
+div#nav-top {
+	position	: relative;
+	z-index		: 2;
+	width		: 100%;
+	margin-top	: 10px;
+	background	: url(images/jc_dot.gif) repeat-x bottom;
+	line-height	: 19px !important;
+	line-height	: 17px;
+	height		: auto !important;
+}
+
+#nav-top span {
+	color		: #777;
+	background-color: inherit;
+	font-size	: 10px;
+	font-family	: Arial, sans-serif;
+	height		: 15px;
+	margin		: 0 2px;
+	padding		: 2px 8px;
+	cursor		: pointer;
+	vertical-align	: bottom;
+}
+
+#nav-top span.page {
+	color		: inherit;
+	background-color: #eee;
+	border		: 1px solid #d6dadd;
+		
+}
+
+#nav-top span.hoverpage {
+	color		: inherit;
+	background-color: #e8e9ea;
+	border		: 1px solid #d6dadd;
+		
+}
+
+#nav-top span.activepage {
+	color		: inherit;
+	background-color: #fff;
+	border-top	: 1px solid #d6dadd;
+	border-left	: 1px solid #d6dadd;
+	border-right	: 1px solid #d6dadd;
+	border-bottom	: 1px solid white;
+}
+
+div.comments-quick-edit form {
+	margin		: 0 !important;
+	padding		: 0;
+}
+
+div.comments-quick-edit p {
+	font-family	: Verdana, Arial, Sans-Serif;
+	margin		: 0 !important;
+	padding		: 0;
+	text-decoration	: none;
+	text-transform	: none;
+	text-indent	: 0;
+}
+
+div.comments-quick-edit textarea {
+	color		: #444;
+	background-color: inherit;
+	font		: bold 0.9em Verdana, Arial, Sans-Serif;
+	max-width	: 400px !important;
+	width		: 400px;
+	padding		: 1px;
+	margin		: 1px 5px 1px 0;
+	border		: 1px solid #ccc;
+}
+
+div.comments-quick-edit textarea.selected {
+	color		: #777;
+	background-color: #ffffe0;
+	border		: 1px solid #ccc;
+}
+
+div.comments-quick-edit textarea.error {
+	border		: 1px solid #f00;
+}
+
+div.comments-quick-edit input {
+	color		: #777;
+	background-color: #eee;
+	margin		: 2px 0 3px 0;
+	padding		: 0 2px;
+	width		: auto;
+	border		: 1px solid #ccc;
+	text-decoration	: none;
+	text-transform	: none;
+	text-indent	: 0;
+	text-align	: center;
+	line-height	: 10px;
+	cursor		: pointer;
+}
+
+.comment-link {
+	padding		: 0 0 5px 14px;
+	background	: url(images/jc_comments.gif) no-repeat 0 3px;
+}
+
+.readmore-link {
+	padding		: 0 0 5px 14px;
+	background	: url(images/jc_readmore.gif) no-repeat 0 3px;
+}
+
+div#comments-rss {
+	margin		: 5px 0 0 30px;
+	padding		: 0;	
+	text-align	: left;
+	text-decoration	: none;
+	text-transform	: none;
+	text-indent	: 0;
+}
+
+#comments-rss a, 
+#comments-rss a:active, 
+#comments-rss a:focus, 
+#comments-rss a:hover {
+	color		: #777;
+	background-color: inherit;
+	background	: url(images/jc_rss.gif) no-repeat center left;
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	padding		: 0 0 0 12px;
+	margin		: 0 0 0 2px;
+	border		: none;
+}
+
+#comments span.refresh {
+	color		: #cc0000;
+	background-color: inherit;
+	background	: url(images/jc_refresh.gif) no-repeat center left;
+	padding		: 0 10px 0 0;
+	margin		: 0 2px;
+	width 		: 14px;
+	cursor		: pointer;
+}
+
+#comments-form-link a.comments-form-link {
+	font		: normal 1em Verdana, Arial, Sans-Serif;
+	margin		: 5px 0 0 32px;
+	padding		: 0 0 0 14px;
+	background	: url(images/jc_comments.gif) no-repeat 0 3px;
+	border		: none;
+}

@@ -1,0 +1,469 @@
+<!--?xml version="1.0"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title>microsin - Генератор документации Doxygen - быстрый старт</title>
+<meta name="description" content="Описывается, как быстро начать использовать Doxygen для генерации документации.">
+<meta name="keywords" content="Doxygen, conf, install, doxywizard">
+<meta name="Generator" content="Joomla! - Авторские права (C) 2005-2007 OSM. Все права защищены.">
+<meta name="robots" content="index, follow">
+<link href="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/javascript" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/proofreader.js"></script>
+<script language="JavaScript" type="text/javascript" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/xajax.js"></script>
+<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
+	function pr_setup() {
+		xajaxRequestUri='http://microsin.ru/index2.php?option=com_proofreader&task=sendmistake&no_html=1';
+		xajaxWaitCursor=true;
+		xajaxDefinedPost=1;
+		xajaxDebug=false;
+		xajaxStatusMessages=false;
+		xajaxDefinedGet=0;
+	}
+
+	function addEvent(element, eventType, functionName) {
+		if (element.addEventListener) {
+			element.addEventListener(eventType, functionName, false);
+			return true;
+		} else if (element.attachEvent) {
+			var r = element.attachEvent('on' + eventType, functionName);
+			return r;
+		} else {
+			element['on' + eventType] = functionName;
+		}
+	}
+
+	function addDivWindow() {
+		var x=document.createElement("div");
+		x.id='MistWindow';
+		x.style.position='absolute';
+		x.style.display='none';
+		x.style.width='375px';
+		x.style.height='380px';
+		x.style.top='50px';
+		x.style.left='50px';
+		x.style.zIndex=2;
+		document.body.appendChild(x);
+	}
+
+
+var xajaxRequestUri='http://microsin.ru/index2.php?option=com_proofreader&task=sendmistake&no_html=1';
+var xajaxWaitCursor=true;
+var xajaxDefinedPost=1;
+var xajaxDebug=false;
+var xajaxStatusMessages=false;
+var xajaxDefinedGet=0;
+var PReader_cur_page = "http://microsin.ru/index.php?option=com_content&task=view&id=1218&Itemid=44"; var pr_alt = false;  var pr_shift = true;  var pr_ctrl = false; 
+addEvent(window, 'load',  addDivWindow);
+addEvent(window, 'load',  keyPressInit);
+// ]]></script>
+<link rel="alternate" type="application/rss+xml" title="Генератор документации Doxygen - быстрый старт" href="http://microsin.ru/index2.php?option=com_jcomments&amp;task=rss&amp;object_id=1218&amp;object_group=com_content&amp;no_html=1">
+<!-- base href="http://microsin.ru/" -->
+	<link rel="shortcut icon" href="http://microsin.ru/favicon.ico">
+	  <link href="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/template_css.css" rel="stylesheet" type="text/css">
+  <!-- <link rel="shortcut icon" href="http://microsin.ru/images/favicon.ico" /> -->
+  <link rel="shortcut gif" href="http://microsin.ru/images/favicon16x16-8b.gif">
+<style id="ya_share_style" type="text/css">.b-share-popup-wrap{z-index:1073741823;position:absolute;width:500px}.b-share-popup{position:absolute;z-index:1073741823;border:1px solid #888;background:#FFF;color:#000}.b-share-popup-wrap .b-share-popup_down{top:0}.b-share-popup-wrap .b-share-popup_up{bottom:0}.b-share-popup-wrap_state_hidden{position:absolute!important;top:-9999px!important;right:auto!important;bottom:auto!important;left:-9999px!important;visibility:hidden!important}.b-share-popup,x:nth-child(1){border:0;padding:1px!important}@media all and (resolution = 0dpi){.b-share-popup,x:nth-child(1),x:-o-prefocus{padding:0!important;border:1px solid #888}}.b-share-popup__i{display:-moz-inline-box;display:inline-block;padding:5px 0!important;overflow:hidden;vertical-align:top;white-space:nowrap;visibility:visible;background:#FFF;-webkit-box-shadow:0 2px 9px rgba(0,0,0,0.6);-moz-box-shadow:0 2px 9px rgba(0,0,0,0.6);box-shadow:0 2px 9px rgba(0,0,0,0.6)}.b-share-popup__item{font:1em/1.25em Arial,sans-serif;display:block;padding:5px 15px!important;white-space:nowrap;background:#FFF}.b-share-popup__item,a.b-share-popup__item:link,a.b-share-popup__item:visited{text-decoration:none!important;border:0!important}a.b-share-popup__item{cursor:pointer}a.b-share-popup__item .b-share-popup__item__text{display:inline;text-decoration:underline;color:#1a3dc1}a.b-share-popup__item:hover{word-spacing:0}a.b-share-popup__item:hover .b-share-popup__item__text{color:#F00;cursor:pointer}.b-share-popup__icon{display:-moz-inline-box;display:inline-block;margin:-3px 0 0 0;padding:0 5px 0 0!important;vertical-align:middle}.b-share-popup__icon_input{width:21px;height:16px;margin-top:-6px;padding:0!important}.b-share-popup__icon__input{margin-right:0;margin-left:2px;vertical-align:top}.b-share-popup__spacer{display:block;padding-top:10px!important}.b-share-popup__header{font:86%/1em Verdana,sans-serif;display:block;padding:10px 15px 5px 15px!important;color:#999}.b-share-popup__header_first{padding-top:5px!important}.b-share-popup__input{font:86%/1em Verdana,sans-serif;display:block;padding:5px 15px!important;color:#999;text-align:left}.b-share-popup__input__input{font:1em/1em Verdana,sans-serif;display:block;width:10px;margin:5px 0 0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;resize:none;text-align:left;direction:ltr}.b-share-popup_down .b-share-popup_with-link .b-share-popup__input_link{position:absolute;top:5px;right:0;left:0}.b-share-popup_up .b-share-popup_with-link .b-share-popup__input_link{position:absolute;right:0;bottom:5px;left:0}.b-share-popup_down .b-share-popup_with-link{padding-top:55px!important}.b-share-popup_up .b-share-popup_with-link{padding-bottom:55px!important}.b-share-popup_down .b-share-popup_expandable .b-share-popup__main{padding-bottom:25px!important}.b-share-popup_up .b-share-popup_expandable .b-share-popup__main{padding-top:25px!important}.b-share-popup_down .b-share-popup_yandexed{padding-bottom:10px!important}.b-share-popup_up .b-share-popup_yandexed{padding-top:10px!important}.b-share-popup__yandex{position:absolute;right:4px;bottom:2px;font:78.125%/1em Verdana,sans-serif;padding:3px!important;background:transparent}a.b-share-popup__yandex:link,a.b-share-popup__yandex:visited{color:#c6c5c5;text-decoration:none}a.b-share-popup__yandex:link:hover,a.b-share-popup__yandex:visited:hover{color:#F00;text-decoration:underline}.b-share-popup_up .b-share-popup__yandex{top:2px;bottom:auto}.b-share-popup_expandable .b-share-popup__yandex{right:auto;left:4px}.b-share-popup_to-right .b-share-popup_expandable .b-share-popup__yandex{right:4px;left:auto}.b-share-popup__expander .b-share-popup__item{position:absolute;bottom:5px;font:86%/1em Verdana,sans-serif;margin:10px 0 0;padding:5px 10px!important;cursor:pointer;color:#999;background:transparent}.b-share-popup_to-right,.b-share-popup_to-right .b-share-popup__expander{direction:rtl}.b-share-popup_to-right .b-share-popup__expander .b-share-popup__icon{padding:0 0 0 5px!important}.b-share-popup_up .b-share-popup__expander .b-share-popup__item{top:-5px;bottom:auto}.b-share-popup__expander .b-share-popup__item:hover .b-share-popup__item__text{text-decoration:underline}.b-share-popup__expander .b-ico_action_rarr,.b-share-popup_to-right .b-share-popup__expander .b-ico_action_larr,.b-share-popup_full .b-share-popup__expander .b-ico_action_larr,.b-share-popup_to-right .b-share-popup_full .b-share-popup__expander .b-ico_action_rarr,.b-share-popup__expander .b-share-popup__item__text_collapse,.b-share-popup_full .b-share-popup__item__text_expand{display:none}.b-share-popup_to-right .b-share-popup__expander .b-ico_action_rarr,.b-share-popup_full .b-share-popup__item__text_collapse,.b-share-popup_full .b-share-popup__expander .b-ico_action_rarr,.b-share-popup_to-right .b-share-popup_full .b-share-popup__expander .b-ico_action_larr{display:inline}.b-ico_action_rarr,.b-ico_action_larr{width:8px;height:7px;border:0}.b-share-popup__main,.b-share-popup__extra{direction:ltr;vertical-align:bottom;text-align:left}.b-share-popup_down .b-share-popup__main,.b-share-popup_down .b-share-popup__extra{vertical-align:top}.b-share-popup__main{display:-moz-inline-stack;display:inline-block}.b-share-popup__extra{display:none;margin:0 -10px 0 0}.b-share-popup_full .b-share-popup__extra{display:-moz-inline-stack;display:inline-block}.b-share-popup_to-right .b-share-popup__extra{margin:0 0 0 -10px}.b-share-popup__tail{position:absolute;width:21px;height:10px;margin:0 0 0 -11px}.b-share-popup_down .b-share-popup__tail{top:-10px;background:url(//yandex.st/share/static/b-share-popup_down__tail.gif) 0 0 no-repeat}.b-share-popup_up .b-share-popup__tail{bottom:-10px;background:url(//yandex.st/share/static/b-share-popup_up__tail.gif) 0 0 no-repeat}.b-share-popup_down .b-share-popup__tail,x:nth-child(1){top:-9px;background-image:url(//yandex.st/share/static/b-share-popup_down__tail.png)}.b-share-popup_up .b-share-popup__tail,x:nth-child(1){bottom:-9px;background-image:url(//yandex.st/share/static/b-share-popup_up__tail.png)}@media all and (resolution = 0dpi){.b-share-popup_down .b-share-popup__tail,x:nth-child(1),x:-o-prefocus{top:-10px;background-image:url(//yandex.st/share/static/b-share-popup_down__tail.gif)}.b-share-popup_up .b-share-popup__tail,x:nth-child(1),x:-o-prefocus{bottom:-10px;background-image:url(//yandex.st/share/static/b-share-popup_up__tail.gif)}}.b-share-popup .b-share-popup_show_form_mail,.b-share-popup .b-share-popup_show_form_html{padding:0!important}.b-share-popup .b-share-popup_show_form_mail .b-share-popup__main,.b-share-popup .b-share-popup_show_form_html .b-share-popup__main,.b-share-popup .b-share-popup_show_form .b-share-popup__main,.b-share-popup .b-share-popup_show_form_mail .b-share-popup__extra,.b-share-popup .b-share-popup_show_form_html .b-share-popup__extra,.b-share-popup .b-share-popup_show_form .b-share-popup__extra{height:15px;padding:0!important;overflow:hidden;visibility:hidden}.b-share-popup_show_form_mail .b-share-popup__expander,.b-share-popup_show_form_html .b-share-popup__expander,.b-share-popup_show_form .b-share-popup__expander,.b-share-popup_show_form_mail .b-share-popup__input_link,.b-share-popup_show_form_html .b-share-popup__input_link,.b-share-popup_show_form .b-share-popup__input_link{display:none}.b-share-popup__form{position:relative;display:none;overflow:hidden;padding:5px 0 0!important;margin:0 0 -15px;white-space:normal}.b-share-popup_show_form_mail .b-share-popup__form_mail,.b-share-popup_show_form_html .b-share-popup__form_html,.b-share-popup_show_form .b-share-popup__form{display:block}.b-share-popup__form__link{font:86%/1.4545em Verdana,sans-serif;float:left;display:inline;padding:5px!important;margin:0 0 5px 10px;text-decoration:underline;cursor:pointer;color:#1a3dc1}.b-share-popup__form__button{font:86%/1.4545em Verdana,sans-serif;float:left;display:inline;margin:5px 0 0 15px}.b-share-popup__form__close{font:86%/1.4545em Verdana,sans-serif;float:right;display:inline;padding:5px!important;margin:0 10px 5px 0;cursor:pointer;color:#999}a.b-share-popup__form__link:hover,a.b-share-popup__form__close:hover{text-decoration:underline;color:#F00}.b-share-popup_font_fixed .b-share-popup__item{font-size:12.8px}.b-share-popup_font_fixed .b-share-popup__header,.b-share-popup_font_fixed .b-share-popup__input,.b-share-popup_font_fixed .b-share-popup__expander .b-share-popup__item,.b-share-popup_font_fixed .b-share-popup__form__link,.b-share-popup_font_fixed .b-share-popup__form__button,.b-share-popup_font_fixed .b-share-popup__form__close{font-size:11px}.b-share-popup_font_fixed .b-share-popup__yandex{font-size:10px}.b-share-form-button{font:86%/17px Verdana,Arial,sans-serif;display:-moz-inline-box;display:inline-block;position:relative;height:19px;margin:0 3px;padding:0 4px;cursor:default;white-space:nowrap;text-decoration:none!important;color:#000!important;border:none;outline:none;background:url(//yandex.st/share/static/b-share-form-button.png) 0 -20px repeat-x}.b-share-form-button:link:hover,.b-share-form-button:visited:hover{color:#000!important}.b-share-form-button__before,.b-share-form-button__after{position:absolute;width:3px;height:19px;background:url(//yandex.st/share/static/b-share-form-button.png)}.b-share-form-button__before{margin-left:-7px}.b-share-form-button__after{margin-left:4px;background-position:-3px 0}.b-share-form-button::-moz-focus-inner{border:none}button.b-share-form-button .b-share-form-button__before,button.b-share-form-button .b-share-form-button__after{margin-top:-1px}@-moz-document url-prefix(){button.b-share-form-button .b-share-form-button__after{margin-top:-2px;margin-left:6px}button.b-share-form-button .b-share-form-button__before{margin-top:-2px;margin-left:-9px}}SPAN.b-share-form-button:hover,.b-share-form-button_state_hover{background-position:0 -60px}SPAN.b-share-form-button:hover .b-share-form-button__before,.b-share-form-button_state_hover .b-share-form-button__before{background-position:0 -40px}SPAN.b-share-form-button:hover .b-share-form-button__after,.b-share-form-button_state_hover .b-share-form-button__after{background-position:-3px -40px}.b-share-form-button_state_pressed,.b-share-form-button_state_pressed .b-share-form-button_share{background-position:0 -100px!important}.b-share-form-button_state_pressed .b-share-form-button__before{background-position:0 -80px!important}.b-share-form-button_state_pressed .b-share-form-button__after{background-position:-3px -80px!important}button.b-share-form-button_state_pressed{overflow:visible}.b-share-form-button_icons{position:relative;padding:0;background-position:0 -20px!important}.b-share-form-button_icons .b-share-form-button__before{left:0;margin-left:-3px;background-position:0 0!important}.b-share-form-button_icons .b-share-form-button__after{z-index:-1;margin-left:0;background-position:-3px 0!important}.b-share-form-button_icons .b-share__handle{padding:2px!important}.b-share-form-button_icons .b-share__handle_more{position:relative;padding-right:6px!important;margin-right:-4px}.b-share-form-button_icons .b-share-icon{opacity:.5;background-image:url(//yandex.st/share/static/b-share-icon_size_14.png)}.b-share-form-button_icons A.b-share__handle:hover .b-share-icon{opacity:1}.b-share{font:86%/1.4545em Arial,sans-serif;display:-moz-inline-box;display:inline-block;padding:1px 3px 1px 4px!important;vertical-align:middle}.b-share .b-share-form-button{font-size:1em}.b-share__text .b-share-icon{margin:0 5px 0 0;border:none}.b-share__text{margin-right:5px}.b-share__handle{float:left;cursor:pointer;text-align:left;text-decoration:none!important;height:16px;padding:5px 3px 5px 2px!important;cursor:pointer;text-align:left;text-decoration:none!important}.b-share__handle_cursor_default{cursor:default}.b-share__handle .b-share-form-button{margin-top:-2px}.b-share__hr{display:none;float:left;width:1px;height:26px;margin:0 3px 0 2px}a.b-share__handle:hover .b-share__text{text-decoration:underline;color:#F00}.b-share_bordered{padding:0 2px 0 3px!important;border:1px solid #e4e4e4;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}.b-share_bordered .b-share__hr{display:inline;background:#e4e4e4}.b-share_link{margin:-8px 0}a.b-share_link{margin:0}.b-share_link .b-share__text{text-decoration:underline;color:#1a3dc1}.b-share-form-button_share{padding-left:26px!important;vertical-align:top}.b-share-form-button_share .b-share-form-button__before{margin-left:-29px}.b-share-form-button_share .b-share-form-button__icon{position:absolute;width:20px;height:17px;margin:1px 0 0 -23px;background:url(//yandex.st/share/static/b-share-form-button_share__icon.png) 0 0 no-repeat}.b-share-pseudo-link{border-bottom:1px dotted;cursor:pointer;text-decoration:none!important}.b-share_font_fixed{font-size:11px}.b-share__handle_more{font-size:9px;margin-top:-1px;color:#7b7b7b}A.b-share__handle_more:hover{color:#000}.b-share__group{float:left}.b-share-icon{float:left;display:inline;overflow:hidden;width:16px;height:16px;padding:0!important;vertical-align:top;border:0;background:url(//yandex.st/share/static/b-share-icon.png) 0 99px no-repeat}.b-share-icon_vkontakte,.b-share-icon_custom{background-position:0 0}.b-share-icon_yaru,.b-share-icon_yaru_photo,.b-share-icon_yaru_wishlist{background-position:0 -17px}.b-share-icon_lj{background-position:0 -34px}.b-share-icon_twitter{background-position:0 -51px}.b-share-icon_facebook{background-position:0 -68px}.b-share-icon_moimir{background-position:0 -85px}.b-share-icon_friendfeed{background-position:0 -102px}.b-share-icon_mail{background-position:0 -119px}.b-share-icon_html{background-position:0 -136px}.b-share-icon_postcard{background-position:0 -153px}.b-share-icon_odnoklassniki{background-position:0 -170px}.b-share-icon_blogger{background-position:0 -187px}.b-share-icon_greader{background-position:0 -204px}.b-share-icon_delicious{background-position:0 -221px}.b-share-icon_gbuzz{background-position:0 -238px}.b-share-icon_linkedin{background-position:0 -255px}.b-share-icon_myspace{background-position:0 -272px}.b-share-icon_evernote{background-position:0 -289px}.b-share-icon_digg{background-position:0 -306px}.b-share-icon_juick{background-position:0 -324px}.b-share-icon_moikrug{background-position:0 -341px}.b-share-icon_yazakladki{background-position:0 -358px}.b-share-icon_liveinternet{background-position:0 -375px}.b-share-icon_tutby{background-position:0 -392px}.b-share-icon_diary{background-position:0 -409px}.b-share-icon_gplus{background-position:0 -426px}.b-share-icon_pocket{background-position:0 -443px}.b-share-icon_surfingbird{background-position:0 -460px}.b-share-icon_pinterest{background-position:0 -477px}.b-share_theme_dark .b-share-icon{background:url(//yandex.st/share/static/b-share-icons__theme_dark.png) 99px 0 no-repeat}.b-share_theme_dark .b-share-icon_odnoklassniki{background-position:-4px -3px}.b-share_theme_dark .b-share-icon_vkontakte{background-position:-24px -3px}.b-share_theme_dark .b-share-icon_twitter{background-position:-44px -3px}.b-share_theme_dark .b-share-icon_facebook{background-position:-64px -3px}.b-share_theme_dark .b-share-icon_lj{background-position:-85px -3px}.b-share_theme_dark .b-share-icon_yaru{background-position:-105px -3px}.b-share_theme_dark .b-share-popup .b-share-icon_odnoklassniki,.b-share_theme_dark .b-share-icon_odnoklassniki:hover{background-position:-4px -28px}.b-share_theme_dark .b-share-popup .b-share-icon_vkontakte,.b-share_theme_dark .b-share-icon_vkontakte:hover{background-position:-24px -28px}.b-share_theme_dark .b-share-popup .b-share-icon_twitter,.b-share_theme_dark .b-share-icon_twitter:hover{background-position:-44px -28px}.b-share_theme_dark .b-share-popup .b-share-icon_facebook,.b-share_theme_dark .b-share-icon_facebook:hover{background-position:-64px -28px}.b-share_theme_dark .b-share-popup .b-share-icon_lj,.b-share_theme_dark .b-share-icon_lj:hover{background-position:-85px -28px}.b-share_theme_dark .b-share-popup .b-share-icon_yaru,.b-share_theme_dark .b-share-icon_yaru:hover{background-position:-105px -28px}.b-share_theme_dark .b-share__text{color:#fff}.b-share_theme_dark .b-share-form-button_share .b-share-form-button__icon{background-image:url("//yandex.st/share/static/b-share-form-button_share__icon_dark.png")}.b-share_theme_dark .b-share-form-button{color:#fff!important;opacity:.8}.b-share_theme_dark .b-share__handle:hover .b-share-form-button,.b-share_theme_dark .b-share-form-button:hover{opacity:1;cursor:pointer}.b-share_theme_dark .b-share-form-button,.b-share_theme_dark .b-share-form-button__before,.b-share_theme_dark .b-share-form-button__after{background:transparent}.b-share_theme_dark .b-share-popup__i{background-color:#333;border-radius:10px;-webkit-box-shadow:0 2px 9px rgba(255,255,255,0.6);-moz-box-shadow:0 2px 9px rgba(255,255,255,0.6);box-shadow:0 2px 9px rgba(255,255,255,0.6)}.b-share_theme_dark .b-share__text{color:#AAA}.b-share_theme_dark .b-share-popup{color:#AAA;border-radius:10px;background-color:#333;background-color:rgba(50,50,50,0.3)}.b-share_theme_dark .b-share-popup__item{background:transparent;color:#ccc}.b-share_theme_dark .b-share-popup .b-share-popup__item__text{color:#ccc}</style></head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0">
+<a name="top" id="top"></a>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" width="780">
+    <tbody><tr height="20">
+      <td>&nbsp;</td>
+      <td width="100%">&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td background="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/shad_left.gif" valign="top">
+      <img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/shad_top_left.gif" border="0" height="17" width="11"></td>
+      <td valign="top" width="100%">
+      <table bgcolor="#000000" border="0" cellspacing="1" width="100%">
+        <tbody><tr>
+          <td width="100%">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody><tr>
+                <td class="pathway" align="left" valign="center"><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/arrow.png" hspace="5"><span class="pathway"><a href="http://microsin.ru/" class="pathway">Главная</a> <img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/arrow.png" alt="arrow"> <a href="http://microsin.ru/content/section/5/44/" class="pathway">Программирование</a> <img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/arrow.png" alt="arrow"> <a href="http://microsin.ru/content/category/5/26/44/" class="pathway">AVR</a> <img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/arrow.png" alt="arrow">   Генератор документации Doxygen - быстрый старт </span></td>
+                <td class="pathway" align="right" valign="center">Monday, November 19 2012&nbsp;&nbsp;</td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+        <tr height="80">
+          <td background="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/logo_bar_back.gif" bgcolor="#54647A" width="100%"><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/logo_bar_logo.jpg" border="0"></td>
+        </tr>
+        <tr>
+          <td background="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/but_bar_back.gif" bgcolor="#AFC6DB" width="100%">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td width="2"><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/but_bar_divider.gif"></td><td align="center" width="20%"><a class="buttonbar" href="http://microsin.ru/index.php?option=com_frontpage&amp;Itemid=1">Главная</a></td><td width="2"><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/but_bar_divider.gif"></td><td align="center" width="20%"><a class="buttonbar" href="http://microsin.ru/index.php?option=com_content&amp;task=view&amp;id=383&amp;Itemid=45">Контакты</a></td><td width="2"><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/but_bar_divider.gif"></td><td align="center" width="20%"><a class="buttonbar" href="http://microsin.ru/index.php?option=com_content&amp;task=section&amp;id=4&amp;Itemid=43">Администрирование</a></td><td width="2"><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/but_bar_divider.gif"></td><td align="center" width="20%"><a class="buttonbar" href="http://microsin.ru/index.php?option=com_content&amp;task=section&amp;id=5&amp;Itemid=44">Программирование</a></td><td width="2"><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/but_bar_divider.gif"></td><td align="center" width="20%"><a class="buttonbar" href="http://microsin.ru/index.php?option=com_weblinks&amp;catid=15&amp;Itemid=34">Ссылки</a></td><td width="2"><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/but_bar_divider.gif"></td></tr></tbody></table>          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFFFF" width="100%">
+          <table style="border-collapse: collapse" id="AutoNumber1" border="0" cellpadding="4" cellspacing="0" width="100%">
+            <tbody><tr>
+              <!-- LEFT Modules -->
+                                <td bgcolor="#F0F0F0" valign="top" width="150">
+                    <div class="modules">
+                    		<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				<noindex><table border="0">
+	<tbody>
+		<tr>
+			<td><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/UK-flag-ico.png" alt="UK-flag-ico.png" title="English site version" align="bottom"></td>
+			<td><a href="http://translate.google.ru/translate?hl=ru&amp;sl=ru&amp;tl=en&amp;u=http%3A%2F%2Fmicrosin.ru%2F">English Version</a></td>
+		</tr>
+		<tr>
+			<td><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/GERMAN-flag-ico.png" alt="GERMAN-flag-ico.png" title="Die deutsche Version der Webseite" align="bottom"></td>
+			<td><a href="http://translate.google.ru/translate?hl=ru&amp;sl=ru&amp;tl=de&amp;u=http%3A%2F%2Fmicrosin.ru%2F">Die deutsche Version</a></td>
+		</tr>
+	</tbody>
+</table></noindex>			</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				<!--<a href=http://microsin.ru/index.php?option=com_xmap&sitemap=1>  Карта сайта  </a>-->
+<table border="0">
+	<tbody>
+		<tr>
+			<td><a href="http://microsin.ru/index.php?option=com_rd_rss&amp;id=3" target="_self"></a><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/map.gif" alt="map.gif" title="карта сайта" style="margin: 5px" class="jce_tooltip" align="bottom">
+			</td>
+			<td><a target="_self" href="http://microsin.ru/index.php?option=com_xmap&amp;sitemap=1">карта сайта</a>
+			</td>
+		</tr>
+	</tbody>
+</table>			</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				
+<form action="index.php?option=com_search" method="get">
+	<div class="search">
+		<input name="searchword" id="mod_search_searchword" maxlength="20" alt="search" class="inputbox" size="26" value="поиск..." onblur="if(this.value=='') this.value='поиск...';" onfocus="if(this.value=='поиск...') this.value='';" type="text">	</div>
+
+	<input name="option" value="com_search" type="hidden">
+	<input name="Itemid" value="" type="hidden">	
+</form>			</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+				<th valign="top">
+					нашли опечатку?				</th>
+			</tr>
+					<tr>
+			<td>
+				<p align="justify">
+Пожалуйста, сообщите об этом - просто выделите ошибочное слово или фразу и нажмите <strong>Shift Enter</strong>.
+</p>
+			</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+				<th valign="top">
+					Поделиться:				</th>
+			</tr>
+					<tr>
+			<td>
+				<!-- http://api.yandex.ru/share/ -->
+<script type="text/javascript" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/share.js" charset="utf-8"></script> <div class="yashare-auto-init" data-yasharel10n="ru" data-yasharetype="none" data-yasharequickservices="vkontakte,facebook,twitter,moimir,lj,yaru,friendfeed"><span class="b-share"><a rel="nofollow" target="_blank" title="ВКонтакте" class="b-share__handle b-share__link" href="http://share.yandex.ru/go.xml?service=vkontakte&amp;url=http%3A%2F%2Fmicrosin.ru%2Fcontent%2Fview%2F1218%2F44%2F&amp;title=microsin%20-%20%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82" data-service="vkontakte"><span class="b-share-icon b-share-icon_vkontakte"></span></a><a rel="nofollow" target="_blank" title="Facebook" class="b-share__handle b-share__link" href="http://share.yandex.ru/go.xml?service=facebook&amp;url=http%3A%2F%2Fmicrosin.ru%2Fcontent%2Fview%2F1218%2F44%2F&amp;title=microsin%20-%20%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82" data-service="facebook"><span class="b-share-icon b-share-icon_facebook"></span></a><a rel="nofollow" target="_blank" title="Twitter" class="b-share__handle b-share__link" href="http://share.yandex.ru/go.xml?service=twitter&amp;url=http%3A%2F%2Fmicrosin.ru%2Fcontent%2Fview%2F1218%2F44%2F&amp;title=microsin%20-%20%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82" data-service="twitter"><span class="b-share-icon b-share-icon_twitter"></span></a><a rel="nofollow" target="_blank" title="Мой Мир" class="b-share__handle b-share__link" href="http://share.yandex.ru/go.xml?service=moimir&amp;url=http%3A%2F%2Fmicrosin.ru%2Fcontent%2Fview%2F1218%2F44%2F&amp;title=microsin%20-%20%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82" data-service="moimir"><span class="b-share-icon b-share-icon_moimir"></span></a><a rel="nofollow" target="_blank" title="LiveJournal" class="b-share__handle b-share__link" href="http://share.yandex.ru/go.xml?service=lj&amp;url=http%3A%2F%2Fmicrosin.ru%2Fcontent%2Fview%2F1218%2F44%2F&amp;title=microsin%20-%20%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82" data-service="lj"><span class="b-share-icon b-share-icon_lj"></span></a><a rel="nofollow" target="_blank" title="Я.ру" class="b-share__handle b-share__link" href="http://share.yandex.ru/go.xml?service=yaru&amp;url=http%3A%2F%2Fmicrosin.ru%2Fcontent%2Fview%2F1218%2F44%2F&amp;title=microsin%20-%20%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82" data-service="yaru"><span class="b-share-icon b-share-icon_yaru"></span></a><a rel="nofollow" target="_blank" title="FriendFeed" class="b-share__handle b-share__link" href="http://share.yandex.ru/go.xml?service=friendfeed&amp;url=http%3A%2F%2Fmicrosin.ru%2Fcontent%2Fview%2F1218%2F44%2F&amp;title=microsin%20-%20%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82" data-service="friendfeed"><span class="b-share-icon b-share-icon_friendfeed"></span></a></span></div>			</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+							</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				<script type="text/javascript"><!--
+google_ad_client = "pub-0017271818132240";
+/* 120x90, создано 01.04.09 */
+google_ad_slot = "3220443019";
+google_ad_width = 120;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:120px"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:120px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" vspace="0" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="90" scrolling="no" width="120"></iframe></ins></ins>			</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				<noindex>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/stat/microsin.ru/' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t15.2;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><a href="http://www.liveinternet.ru/stat/microsin.ru/" target="_blank"><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/hit.gif" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" border="0" height="31" width="88"></a><!--/LiveInternet-->
+</noindex>
+			</td>
+		</tr>
+		</tbody></table>
+		<br> <!-- это для отступа от последнего модуля -->
+                    </div>
+                  </td>
+                                <td valign="top">
+              <!-- Top Modules -->
+                            				<table class="contentpaneopen">
+			<tbody><tr>
+								<td class="contentheading" width="100%">
+					Генератор документации Doxygen - быстрый старт									</td>
+								<td class="buttonheading" align="right" width="100%">
+					<a href="http://microsin.ru/index2.php?option=com_content&amp;task=view&amp;id=1218&amp;pop=1&amp;page=0&amp;Itemid=44" target="_blank" onclick="window.open('http://microsin.ru/index2.php?option=com_content&amp;task=view&amp;id=1218&amp;pop=1&amp;page=0&amp;Itemid=44','win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" title="Версия для печати">
+						<img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/printButton.png" alt="Версия для печати" name="Версия для печати" align="middle" border="0"></a>
+				</td>
+							</tr>
+			</tbody></table>
+			
+		<table class="contentpaneopen">
+					<tbody><tr>
+				<td colspan="2" align="left" valign="top" width="70%">
+					<span class="small">
+						 Написал microsin					</span>
+					&nbsp;&nbsp;
+				</td>
+			</tr>
+						<tr>
+				<td colspan="2" class="createdate" valign="top">
+					20.11.2010				</td>
+			</tr>
+					<tr>
+			<td colspan="2" valign="top">
+				<p><b>Doxygen</b> - популярный генератор документации на основе 
+исходных текстов. Что такое Doxygen, очень хорошо написано в Википедии, 
+поэтому в статье я расскажу только о том, как быстро установить и начать
+ использовать Doxygen. </p>
+
+<p>Итак, процесс по шагам:</p><p><b>1</b>. Качаем по ссылке [1], 
+доступны версии для Linux i386,&nbsp; Mac OS X 10.6 (Snow Leopard), Mac 
+OS X 10.4 (Tiger), Windows XP/Vista/7, а также исходники (Doxygen 
+распространяется под лицензией GPL).</p><p><b>2</b>. Запускаем <b>doxygen-1.7.2-setup.exe</b>.
+ Отвечаем на несложные традиционные вопросы инсталлятора (можно тупо 
+жать Next). После инсталляции появится папка c:\Program Files\doxygen\, 
+где и находится вся система Doxygen, документация по ней, и утилиты.</p><p><b>3</b>. Запускаем c:\Program Files\doxygen\bin\<b>doxywizard.exe</b>.
+ Это программа, которая позволяет упростить создание и использование 
+конфигурационного файла для создания документации (Doxygen GUI 
+frontend). <br><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/doxygen001.PNG" alt="doxygen001.PNG" title="doxygen001.PNG" style="width: 650px; height: 576px; margin: 5px" class="jce_tooltip" align="bottom" height="576" width="650"><br><b></b></p><p><b>4</b>.
+ Предположим, что нам нужно создать документацию к каким-то исходникам. В
+ этом примере я буду делать документацию к проекту LUFA 
+100807\Demos\Device\ClassDriver\VirtualSerial\. Теперь нужно посмотреть,
+ есть ли в каталоге с исходниками готовая конфигурация Doxygen. Обычно 
+такой файл называется Doxygen.conf или Doxyfile, и имеет примерно такое 
+содержание: "# Doxyfile 1.6.2 # This file describes the settings ...". В
+ моем случае папка с исходниками VirtualSerial уже содержала готовый 
+конфигурационный файл Doxygen.conf. Теперь в программе меню 
+doxywizard.exe выбрать File -&gt; Open... -&gt; файл <b>Doxygen.conf</b>. <br><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/doxygen002.PNG" alt="doxygen002.PNG" title="doxygen002.PNG" style="width: 650px; height: 576px; margin: 5px" class="jce_tooltip" align="bottom" height="576" width="650"></p><p><b>5</b>. Теперь осталось перейти на закладку Run и нажать на кнопку Run doxygen:<br><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/doxygen003.PNG" alt="doxygen003.PNG" title="doxygen003.PNG" style="width: 650px; height: 576px; margin: 5px" class="jce_tooltip" align="bottom" height="576" width="650"></p><p>Если
+ во время компиляции документации в текстах исходников встретятся 
+ошибки, то они будут выведены в поле вывода "Output produced by 
+doxygen". В сообщениях указаны номера строк, где найдены ошибки. 
+Нумерация строк в сообщениях "tag without matching" может не совпадать 
+со строками, где эти ошибки имеются на самом деле.</p><p>Запуск 
+генерации документации можно также провести из командной строки вводом 
+команды (config-file имя файла конфигурации doxygen):</p><p><span style="font-family: 'courier new', courier" class="Apple-style-span">doxygen &lt;config-file&gt;</span>&nbsp;</p><p>В
+ моем примере в папке VirtualSerial\Documentation\html\ появятся файлы в
+ формате html. Начинать просмотр документации нужно с файла 
+VirtualSerial\Documentation\html\index.html.<br><a href="http://microsin.ru/images/stories/programming/doxygen004.PNG" target="_self"><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/doxygen004.PNG" alt="doxygen004.PNG" title="doxygen004.PNG" style="width: 400px; height: 419px; margin: 5px" class="jce_tooltip" align="bottom" height="419" width="400"></a> </p><p>Если
+ конфигурационного файла нет, то можно вручную сгенерить конфигурацию. 
+Нужно выполнить, как минимум, следующие шаги (для примера 
+VirtualSerial):</p><p><b>Закладка Wizard -&gt; Project</b>:<br>- в поле 
+"Step 1: Specify the working directory from which doxygen will run" 
+указать путь до каталога проекта. В моем случае это c:\aaa2\LUFA 
+100807\Demos\Device\ClassDriver\VirtualSerial\<br>- в поле "Project name:" укажите имя проекта (LUFA Library - Virtual Serial Device Demo).<br>- в поле "Project version or id:" укажите версию проекта (0.0.0).<br>- в поле "Source code directory:" укажите ./<br>- в поле "Destination directory:" укажите ./Documentation/<br>- если Ваш проект содержит подпапки с исходниками, поставьте галочку "Scan recursiVely".</p><p><b>Закладка Wizard -&gt; Mode</b>:<br>- Select the desired extraction mode: -&gt; All Entities.<br>- Select programming language to optimize the results for -&gt; Optimize for C or PHP output</p><p><b>Закладка Wizard -&gt; Output</b> (выберем на этот раз формат <b>RTF</b>):<br>- убираем галочку HTML<br>- убираем галочку LaTeX<br>- ставим галочку Rich Text Format (RTF)</p><p><b>Закладка Wizard -&gt; Diagrams</b>:<br>- Diagrams to generate -&gt; No diagrams</p><p><b>Закладка Run</b>:<br>- нажимаем кнопку Run Doxugen. В результате получим файл единственный файл VirtualSerial\Documentation\rtf\refman.rtf.</p><p>Полученный файл конфигурации можно сохранить для дальнейшего использования (File -&gt; Save as... -&gt; Doxyfile). </p><p>[<b>Проблема правильной обработки кодировки русского языка</b>]</p><p>По умолчанию Doxygen генерирует html-текст в кодировке <b>UTF-8</b>
+ (используется мета-тег &lt;meta http-equiv="Content-Type" 
+content="text/xhtml;charset=UTF-8"/&gt;), и предполагает, что входной 
+формат текста тоже UTF-8. С такими настройками поставляются большинство 
+кофигов Doxygen. При попытке сгенерировать с таким конфигом 
+html-документацию из текстового формата <b>windows-1251</b> (с таком 
+формате имеется большинство файлов исходников, содержащих русскоязычные 
+комментарии), на выходе получается html-файл, который отображается всеми
+ браузерами с кракозябрами. Эти кракозябры исчезнут, если вручную 
+переключить браузер из кодировки UTF-8 в кодировку windows-1251. Это, 
+конечно, не решение проблемы - возникает неудобство, так как необходимо 
+постоянно переключаться в кодировку windows-1251. Заставить doxygen 
+генерировать тег с charset=windows-1251 невозможно. Однако проблема 
+фиксится довльно просто - достаточно в конфигурационном файле doxygen 
+указать правильную кодировку входного файла - вместо кодировки UTF-8 
+указать кодировку windows-1251. Делается это правкой переменной конфига <b>INPUT_ENCODING</b>:</p><p><span style="font-family: 'courier new', courier"><span style="color: #339966"># раньше тут было указано INPUT_ENCODING = UTF-8</span><br>INPUT_ENCODING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = windows-1251</span></p><p>Кроме
+ того, если нужно правильно распознать русский текст, который есть в 
+файле Doxygen.conf (например, это может быть текст имени проекта 
+PROJECT_NAME и другие строки), то необходимо отредактировать переменную 
+конфига&nbsp;<b>DOXYFILE_ENCODING</b> (указать кодировку&nbsp;windows-1251):</p><p><span style="font-family: 'courier new', courier"><span style="color: #339966"># раньше тут было указано&nbsp;DOXYFILE_ENCODING = UTF-8<br></span>DOXYFILE_ENCODING &nbsp; &nbsp; &nbsp;= windows-1251&nbsp;</span></p><p>После
+ такого исправления html будет корректно генерироваться, и правильно 
+отображаться всеми браузерами, русский текст будет без кракозябр.</p><p>[<b>Экранирование специальных символов doxygen</b>]&nbsp;</p><p>Для
+ устранения предупреждений типа "имя_файла:номер_строки: warning: 
+explicit link request to 'define' could not be resolved" нужно применять
+ для экранирования спецсимволов обратный слеш '\' (backslash). Например,
+ так нужно экранировать символ # вместе с ключевым словом define:</p><p><span class="Apple-style-span" style="font-family: 'courier new', courier">тут текст \#define тут дальше текст</span></p><p>Это устранит предупреждения типа&nbsp;request to '...' could not be resolved.&nbsp;</p><p>[<b>Ссылки</b>]</p><p><b>1</b>. <a href="http://www.stack.nl/%7Edimitri/doxygen/download.html#latestsrc" target="_self">Отсюда можно скачать бинарники и исходники Doxygen</a>. <br><b>2</b>. <a href="http://depositfiles.com/files/dauqj5p4f" target="_self">Проект LUFA 100807 -&gt; Demos -&gt; Device -&gt; ClassDriver -&gt; VirtualSerial</a>, который использовался в статье (вместе с конфигами Dogygen и сгенерированной документацией).<br><b>3</b>. Дистрибутив <a href="http://depositfiles.com/files/b8tyzcbzg" target="_self">doxygen-1.7.2-setup.exe</a>.</p>			</td>
+		</tr>
+					<tr>
+				<td colspan="2" class="modifydate" align="left">
+					Последнее обновление ( 06.06.2011 )
+				</td>
+			</tr>
+					</tbody></table>
+
+		<span class="article_seperator">&nbsp;</span>
+
+		<br>
+
+
+<script type="text/javascript">
+var xajaxRequestUri='',xajaxDebug=false,xajaxStatusMessages=false,xajaxWaitCursor=true,xajaxDefinedGet=0,xajaxDefinedPost=1;
+function jc_setup(){xajaxRequestUri='http://microsin.ru/index2.php?option=com_jcomments&amp;Itemid=44&amp;no_html=1';xajaxDebug=false,xajaxStatusMessages=false,xajaxWaitCursor=true,xajaxDefinedGet=0,xajaxDefinedPost=1;
+xajax.loadingFunction=function(){xajax.$('jc_busy').style.display='block';};xajax.doneLoadingFunction=function(){xajax.$('jc_busy').style.display='none';}}
+</script>
+<script src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/xajax_002.js" type="text/javascript"></script>
+
+
+<script src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/jcomments.js" type="text/javascript"></script>
+
+<div id="jc">
+<div id="comments">
+	
+	
+</div>
+<div id="jc_busy"><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/jc_busy.gif" alt=""></div>
+
+        <br>
+	<h4>Добавить комментарий</h4>
+	<script language="JavaScript" type="text/javascript">
+		
+	</script>
+	<a id="addcomments" href="#addcomments"></a>
+	<form id="comments-form" name="comments-form" action="javascript:void(null);">
+	
+	
+	<p>
+		<input id="comments-form-name" name="name" maxlength="20" size="22" tabindex="1" onfocus="javascript:this.className='selected';" onblur="javascript:this.className='';" type="text">
+		<label for="comments-form-name">Имя (обязательное)</label>
+	</p>
+	
+	
+	<p> <input id="comments-form-homepage" name="homepage" size="22" tabindex="3" onfocus="javascript:this.className='selected';" onblur="javascript:this.className='';" type="text"> <label for="comments-form-homepage"> Сайт </label> </p>
+	<p>
+	<img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/laugh.gif" onclick="jc_smile(':D');" alt=":D"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/lol.gif" onclick="jc_smile(':lol:');" alt=":lol:"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/smile.gif" onclick="jc_smile(':-)');" alt=":-)"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/wink.gif" onclick="jc_smile(';-)');" alt=";-)"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/cool.gif" onclick="jc_smile('8)');" alt="8)"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/normal.gif" onclick="jc_smile(':-|');" alt=":-|"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/whistling.gif" onclick="jc_smile(':-*');" alt=":-*"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/redface.gif" onclick="jc_smile(':oops:');" alt=":oops:"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/sad.gif" onclick="jc_smile(':sad:');" alt=":sad:"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/cry.gif" onclick="jc_smile(':cry:');" alt=":cry:"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/surprised.gif" onclick="jc_smile(':o');" alt=":o"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/confused.gif" onclick="jc_smile(':-?');" alt=":-?"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/sick.gif" onclick="jc_smile(':-x');" alt=":-x"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/shocked.gif" onclick="jc_smile(':eek:');" alt=":eek:"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/sleeping.gif" onclick="jc_smile(':zzz');" alt=":zzz"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/tongue.gif" onclick="jc_smile(':P');" alt=":P"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/rolleyes.gif" onclick="jc_smile(':roll:');" alt=":roll:"><img class="smile" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/unsure.gif" onclick="jc_smile(':sigh:');" alt=":sigh:"><br>
+	
+		<textarea id="comments-form-comment" onchange="jc_changed(1000);jc_storeCaret(this);" onkeyup="jc_changed(1000);" onselect="jc_storeCaret(this);" onclick="jc_storeCaret(this);" name="comment" cols="65" rows="5" tabindex="4" onfocus="javascript:this.className='selected';" onblur="javascript:this.className='';" onkeypress="return jc_keypress(event);"></textarea>
+		
+			<br><label for="comments-form-comment">Осталось: &nbsp;<span id="comments-form-comment-length">1000</span>&nbsp; символов</label>
+		
+		
+	</p>
+	<p>
+	
+	<img class="captcha" id="comments-form-captcha-image" name="captcha-image" src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/index2.jpg" alt="Защитный код" height="60" width="120"><br> <span class="captcha" onclick="xajax.$('comments-form-captcha-image').src='http://microsin.ru/index2.php?option=com_jcomments&amp;task=captcha&amp;no_html=1&amp;ac=' + new String(Math.random())">Обновить</span><br> <input class="captcha" id="comments-form-captcha-refid" name="captcha-refid" size="5" tabindex="6" onfocus="javascript:this.className='captcha-selected';" onblur="javascript:this.className='captcha';" type="text"><br>
+	<input class="button" name="submit" value="Отправить (Ctrl+Enter)" tabindex="7" onclick="jc_sendComment();" type="button">
+	</p>
+	<input name="object_id" value="1218" type="hidden">
+	<input name="object_group" value="com_content" type="hidden">
+	</form>
+
+<div id="comments-footer" align="center"><a href="http://www.joomlatune.ru/" title="JComments" target="_blank">JComments</a></div>
+</div>
+<script type="text/javascript">
+function jc_addEvent(o,e,f){if(o.addEventListener){o.addEventListener(e,f,false);return true;}else if(o.attachEvent){var r=o.attachEvent("on"+e,f);return r;}else{return false;}}
+function jc_onload(){if(arguments.callee.done) return;arguments.callee.done=true;if(_timer){clearInterval(_timer);_timer=null;}
+if(xajaxLoaded){var l=document.location.href,i=l.lastIndexOf('#comment-');
+if(i!=0){var c=l.substring(i+9,l.length);if(!isNaN(c)){jc_showComment(c);}}
+
+}else{window.setTimeout(jc_onload,5000);}}
+if(document.addEventListener){document.addEventListener("DOMContentLoaded",jc_onload,false);}
+/*@cc_on @*/
+/*@if (@_win32)
+document.write("<script id=__ie_onload defer src=javascript:void(0)><\/script>");
+var script=document.getElementById("__ie_onload");script.onreadystatechange=function(){if(this.readyState=="complete"){jc_onload();}};
+/*@end @*/
+if(/WebKit/i.test(navigator.userAgent)){var _timer=setInterval(function(){if(/loaded|complete/.test(document.readyState)){jc_onload();}},10);}
+jc_addEvent(window,'load',jc_onload);
+</script>			<table style="margin-top: 25px;" align="center">
+			<tbody><tr>
+									<th class="pagenav_prev">
+						<a href="http://microsin.ru/content/view/1222/44/">
+							&lt; Пред.</a>
+					</th>
+										<td width="50">&nbsp;
+
+					</td>
+										<th class="pagenav_next">
+						<a href="http://microsin.ru/content/view/1217/44/">
+							След. &gt;</a>
+					</th>
+								</tr>
+			</tbody></table>
+						<div class="back_button">
+				<a href="javascript:history.go(-1)">
+					Назад</a>
+			</div>
+			              <!-- Bottom Modules -->
+              <p></p>
+              		<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				<!-- jumi [phpscr/120515garin-studio-code.php] -->
+<!--
+php
+$timeout = ini_get('default_socket_timeout');
+ini_set('default_socket_timeout', 3);
+echo @file_get_contents("http://stlinks.su/get_links.php?url=".urlencode($_SERVER['REQUEST_URI'])."&host=microsin.ru&charset=windows-1251");
+ini_set('default_socket_timeout', $timeout);
+-->
+
+<span class="microsinru"><div class="adv_bl"><div class="title">Выписка из егрп петербург</div><div class="text"><a href="http://baksprofi.ru/vipiska-egrp.html" target="_blank">выписка из егрп петербург</a></div><div class="host">baksprofi.ru</div></div><div class="adv_bl"><div class="title">Винтовые сваи?</div><div class="text">Что такое <a href="http://www.svaybur.ru/" target="_blank">винтовые сваи?</a> - подробная информация на сайте компании СвайБур</div><div class="host">www.svaybur.ru</div></div></span><!--1589223678396--><!--9c7ec26b--> 
+			</td>
+		</tr>
+		</tbody></table>
+		              </td>
+              <!-- RIGHT Modules -->
+                          </tr>
+          </tbody></table>
+          </td>
+        </tr>
+      </tbody></table>
+      </td>
+      <td background="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/shad_right.gif" valign="top">
+      <img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/shad_top_right.gif" border="0" height="17" width="11"></td>
+    </tr>
+    <tr>
+      <td><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/shad_bottom_left.gif" border="0" height="19" width="11"></td>
+      <td background="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/shad_bottom.gif" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody><tr>
+          <td>
+          <img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/shad_bottom_inner_left.gif" border="0" height="19" width="19"></td>
+          <td align="left"><a href="#top"><img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/top_of_page.gif" alt="Top of Page" border="0" vspace="5"></a></td>
+          <td align="right" width="100%"><!--закомментировано для устранения ошибки "File does not exist:
+           /home/microsig/public_html/images/poweredbyLong.gif"<img src="images/poweredbyLong.gif" width="169" height="8" vspace="5" border="0" alt="Powered by Mambo Open Source">--></td>  
+          <td>
+          <img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/shad_bottom_inner_right.gif" border="0" height="19" width="19"></td>
+        </tr>
+      </tbody></table>
+      </td>
+      <td>
+      <img src="%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20Doxygen%20-%20%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9%20%D1%81%D1%82%D0%B0%D1%80%D1%82_files/shad_bottom_right.gif" border="0" height="19" width="11"></td>
+    </tr>
+  </tbody></table>
+  <table align="center" border="0" cellpadding="3" cellspacing="0" width="780">
+    <tbody><tr>
+      <td align="center">
+        &nbsp;        <div align="center">
+	microsin © 2012 
+</div>
+<!--div align="center">
+	</div-->      </td>
+    </tr>
+  </tbody></table>
+
+<div style="position: absolute; display: none; width: 375px; height: 380px; top: 50px; left: 50px; z-index: 2;" id="MistWindow"></div></body></html>
+<!-- 1353336174 -->

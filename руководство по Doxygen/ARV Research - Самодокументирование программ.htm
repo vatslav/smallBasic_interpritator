@@ -1,0 +1,1710 @@
+<!--?xml version="1.0" encoding="windows-1251"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head> <title>ARV Research - Самодокументирование программ</title>
+<meta name="title" content="Самодокументирование программ">
+<meta name="author" content="ARV">
+<meta name="description" content="ARV Research - авторские разработки в области электроники, микроконтроллерах, программировании. Разработка на зкакз схем, устройств, программ. Полезная информация для радиолюбителей., Doxygen - удобная система автодокументирования программ на языке Си">
+<meta name="keywords" content="doxygen, программирование">
+<meta name="Generator" content="Joomla! - Авторские права &amp;copy; 2005 Open Source Matters. Все права защищены.">
+<meta name="robots" content="index, follow">
+<!-- base href="http://arv.radioliga.com/" -->
+	<link rel="shortcut icon" href="http://arv.radioliga.com/images/favicon.ico">
+	 <meta http-equiv="Content-Type" content="text/html; charset=windows-1251"> <link rel="stylesheet" href="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/template_css.css" type="text/css"> <link rel="shortcut icon" href="http://arv.radioliga.com/templates/biz_blue/favicon.ico">  <script src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/FvN5aNmnoIq40000ZhXhfme5XP6s3vu2bhBO-GC1aRbAZCS1auKDfC200W00_002" type="text/javascript"></script><script src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/FvN5aNmnoIq40000ZhXhfme5XP6s3vu2bhBO-GC1aRbAZCS1auKDfC200W002Axt" type="text/javascript"></script></head>  <body id="body_bg">       <table align="center" border="0" cellpadding="0" cellspacing="0" width="95%">          <tbody><tr>                <td align="left" valign="middle" width="169"> 				 			<form action="index.php" method="post" name="form">                                        <div>                         <input class="searchbox" name="searchword" size="20" value="Поиск..." onblur="if(this.value=='') this.value='Поиск...';" onfocus="if(this.value=='Поиск...') this.value='';" type="text"> 						 					                 				 </div> 				  <input name="option" value="search" type="hidden">                   </form>                    </td>  <td>&nbsp; </td>                  <td class="topnav" align="center" valign="bottom" width="601">                                           </td>                   </tr>   </tbody></table>     <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">         <tbody><tr>                  <td class="logoheader" align="center">&nbsp;  </td>                         </tr>   </tbody></table>        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">          <tbody><tr>                                            <td class="top1" width="100%"><span class="pathway"><a href="http://arv.radioliga.com/" class="pathway">Главная</a> <img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/arrow.png" alt="arrow" border="0"> <a href="http://arv.radioliga.com/content/blogsection/5/43/" class="pathway">Статьи</a> <img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/arrow.png" alt="arrow" border="0">   Самодокументирование программ </span></td>             <td class="top1">&nbsp;</td>                  <td class="top1" align="right" width="251"><div class="date"> 19.11.2012 г.</div></td>          </tr>    </tbody></table> 		 		 		   <table class="top2" align="center" border="0" cellpadding="0" cellspacing="0" width="95%">           <tbody><tr>                                <td class="lcol" valign="top">                  <div class="leftrow">                   		<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr align="left"><td><a href="http://arv.radioliga.com/component/option,com_frontpage/Itemid,1/" class="mainlevel">Главная</a></td></tr>
+<tr align="left"><td><a href="http://arv.radioliga.com/content/blogsection/4/39/" class="mainlevel">Проекты</a></td></tr>
+<tr align="left"><td><a href="http://arv.radioliga.com/content/blogsection/5/43/" class="mainlevel" id="active_menu">Статьи</a></td></tr>
+<tr align="left"><td><a href="http://arv.radioliga.com/content/section/6/49/" class="mainlevel">Начинающим</a></td></tr>
+<tr align="left"><td><a href="http://arv.radioliga.com/content/blogsection/1/38/" class="mainlevel">Архив новостей</a></td></tr>
+<tr align="left"><td><a href="http://arv.radioliga.com/component/option,com_weblinks/Itemid,23/" class="mainlevel">Ссылки</a></td></tr>
+<tr align="left"><td><a href="http://arv.radioliga.com/component/option,com_contact/Itemid,3/" class="mainlevel">Контакты</a></td></tr>
+<tr align="left"><td><a href="http://arv.radioliga.com/component/option,com_search/Itemid,5/" class="mainlevel">Поиск</a></td></tr>
+<tr align="left"><td><a href="http://arv.radioliga.com/component/option,com_remository/Itemid,27/" class="mainlevel">Файлы</a></td></tr>
+<tr align="left"><td><a href="http://arv.radioliga.com/component/option,com_fireboard/Itemid,52/" class="mainlevel">Форум</a></td></tr>
+<tr align="left"><td><a href="http://arv.radioliga.com/component/option,com_joomap/Itemid,53/" class="mainlevel">Карта сайта</a></td></tr>
+</tbody></table>			</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+				<th valign="top">
+					Авторизация				</th>
+			</tr>
+					<tr>
+			<td>
+					<form action="http://arv.radioliga.com/" method="post" name="login">
+		
+	<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td>
+			<label for="mod_login_username">
+				Пользователь			</label>
+			<br>
+			<input name="username" id="mod_login_username" class="inputbox" alt="username" size="10" type="text">
+			<br>
+			<label for="mod_login_password">
+				Пароль			</label>
+			<br>
+			<input id="mod_login_password" name="passwd" class="inputbox" size="10" alt="password" type="password">
+			<br>
+			<input name="remember" id="mod_login_remember" class="inputbox" value="yes" alt="Remember Me" type="checkbox">
+			<label for="mod_login_remember">
+				Запомнить			</label>
+			<br>
+			<input name="Submit" class="button" value="Войти" type="submit">
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<a href="http://arv.radioliga.com/component/option,com_registration/task,lostPassword/">
+			Забыли пароль?</a>
+		</td>
+	</tr>
+			<tr>
+			<td>
+				Ещё не зарегистрированы?				<a href="http://arv.radioliga.com/component/option,com_registration/task,register/">
+					Регистрация</a>
+			</td>
+		</tr>
+			</tbody></table>
+	
+	<input name="option" value="login" type="hidden">
+	<input name="op2" value="login" type="hidden">
+	<input name="lang" value="russian" type="hidden">
+	<input name="return" value="http://arv.radioliga.com/content/view/154/43/" type="hidden">
+	<input name="message" value="0" type="hidden">
+	<input name="force_session" value="1" type="hidden">
+	<input name="j297e56486cdd6af9ea6cbaa46b81e2f5" value="1" type="hidden">
+	</form>
+				</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+							</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				<div><!-- Яндекс.Директ -->
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 64353;
+yandex_site_bg_color = 'FFFFFF';
+yandex_stat_id = 2;
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'vertical';
+yandex_direct_limit = 4;
+yandex_direct_title_color = '999999';
+yandex_direct_url_color = '000000';
+yandex_direct_all_color = '999999';
+yandex_direct_text_color = '000000';
+yandex_direct_hover_color = '0000FF';
+yandex_direct_favicon = false;
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script><script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/context.js"></script><script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/context_static_r582.js" yandex_load_check="yes"></script><script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/64353.js"></script><style type="text/css">body .ya-partner .ya-partner__hidden {
+    display: none !important;
+}
+ .ya-partner {
+    font-size: 100% !important;
+    position: relative !important;
+    display: block !important;
+    overflow: hidden !important;
+    text-align: left !important;
+    line-height: normal !important;
+    border-radius: 4px 4px 4px 4px !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+}
+ .ya-partner__l-table, .ya-partner__l-tr, .ya-partner__l-td {
+    background: transparent none no-repeat scroll 0 0 !important;
+    border: none !important;
+    border-radius: none !important;
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    clear: none !important;
+    clip: auto !important;
+    color: inherit !important;
+    cursor: auto !important;
+    empty-cells: show !important;
+    float: none !important;
+    font: inherit !important;
+    height: auto !important;
+    letter-spacing: normal !important;
+    line-height: normal !important;
+    margin: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    outline: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    table-layout: auto !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-indent: 0 !important;
+    text-transform: none !important;
+    vertical-align: top !important;
+    visibility: visible !important;
+    white-space: normal !important;
+    width: auto !important;
+    word-spacing: normal !important;
+    z-index: auto !important;
+}
+ .ya-partner, .ya-partner__ads-l, .ya-partner__ads-l em, .ya-partner__ads-r, .ya-partner__item, .ya-partner__title-link-text, .ya-partner__text, .ya-partner__domain, .ya-partner__region, ya-partner__pic-container, ya-partner__pic, .ya-partner__list tbody, .ya-partner__list tr, .ya-partner__list td {
+    font-size: inherit !important;
+    font-style: normal !important;
+    text-indent: 0 !important;
+}
+ .ya-partner__pic-container {
+    display: block !important;
+    width: 100px !important;
+    height: 68px !important;
+    margin: 3px 0 !important;
+}
+ .ya-partner__item_piclayout_full .ya-partner__pic-container {
+    margin: 0.4em 0 !important;
+}
+ .ya-partner__item_piclayout_left .ya-partner__pic-container {
+    margin: 0.4em 0.4em 0 0 !important;
+}
+ .ya-partner__item_piclayout_partleft .ya-partner__pic-container {
+    margin: 0.4em 0.4em 0 0 !important;
+}
+ .ya-partner__item_piclayout_float .ya-partner__pic-container {
+    margin: 0.4em 0.4em 0 0 !important;
+    float: left !important;
+}
+ .ya-partner__item_piclayout_float .ya-partner__address, .ya-partner__item_piclayout_float .ya-partner__domain, .ya-partner__item_piclayout_float .ya-partner__region {
+    white-space: nowrap !important;
+}
+ .ya-partner__clearfix {
+    background: transparent none no-repeat scroll 0 0 !important;
+    border: none !important;
+    border-radius: none !important;
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    clear: both !important;
+    clip: auto !important;
+    color: inherit !important;
+    cursor: auto !important;
+    empty-cells: show !important;
+    float: none !important;
+    font: inherit !important;
+    height: 0 !important;
+    letter-spacing: normal !important;
+    line-height: 0 !important;
+    margin: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    outline: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    table-layout: auto !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-indent: 0 !important;
+    text-transform: none !important;
+    vertical-align: baseline !important;
+    visibility: visible !important;
+    white-space: normal !important;
+    width: auto !important;
+    word-spacing: normal !important;
+    z-index: auto !important;
+    font-size: 0 !important;
+    display: block !important;
+}
+ .ya-partner__pic:link, .ya-partner__pic:hover, .ya-partner__pic:visited {
+    background: transparent 0 0 no-repeat scroll !important;
+    border: none !important;
+    border-radius: none !important;
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    clear: none !important;
+    clip: auto !important;
+    color: inherit !important;
+    cursor: pointer !important;
+    empty-cells: show !important;
+    float: none !important;
+    font: inherit !important;
+    height: 68px !important;
+    letter-spacing: normal !important;
+    line-height: normal !important;
+    margin: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    outline: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    table-layout: auto !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-indent: 0 !important;
+    text-transform: none !important;
+    vertical-align: baseline !important;
+    visibility: visible !important;
+    white-space: normal !important;
+    width: 100px !important;
+    word-spacing: normal !important;
+    z-index: auto !important;
+    display: block !important;
+}
+ .ya-partner yatag {
+    text-align: left !important;
+    font-family: inherit !important;
+}
+ .ya-partner__list {
+    display: block !important;
+    line-height: normal !important;
+    font-size: inherit !important;
+    text-indent: 0 !important;
+}
+ .ya-partner__title-link, .ya-partner__address, .ya-partner__ads-link {
+    font-weight: normal !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    font-size: inherit !important;
+    background: none !important;
+    visibility: visible !important;
+    position: static !important;
+    text-indent: 0 !important;
+    display: inline !important;
+}
+ a.ya-partner__address:link, a.ya-partner__address:hover, a.ya-partner__address:visited {
+    text-decoration: underline !important;
+}
+ .ya-partner__address {
+    margin-right: 0.3em !important;
+}
+ a.ya-partner__ads-link:link, a.ya-partner__ads-link:hover, a.ya-partner__ads-link:visited {
+    text-decoration: none !important;
+    font-weight: normal !important;
+}
+ .ya-partner__ads-link em {
+    font-style: normal !important;
+}
+ .ya-partner__item {
+    border-radius: 4px 4px 4px 4px !important;
+    border: none !important;
+    padding: 0.2em 0.3em !important;
+    line-height: normal !important;
+}
+ body .ya-partner__item_pos_last {
+    margin-bottom: 0 !important;
+}
+ .ya-partner_ads_inner-up .ya-partner__item_pos_first, .ya-partner_ads_inner-up-down .ya-partner__item_pos_first, .ya-partner_ads_inner-down .ya-partner__item_pos_last {
+    border-radius: 0 4px 4px 4px !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__item_pos_last, .ya-partner_ads_inner-up-down .ya-partner__item_pos_last {
+    border-radius: 4px 4px 4px 0 !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__item_pos_first.ya-partner__item_pos_last {
+    border-radius: 4px 4px 4px 0 !important;
+}
+ .ya-partner__url {
+    font-size: 87% !important;
+    display: block !important;
+}
+ .ya-partner__hide-urls .ya-partner__list .ya-partner__url {
+    display: none !important;
+}
+ .ya-partner__warn {
+    font-size: 70% !important;
+    border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    -webkit-border-radius: 2px !important;
+    padding: 0.25em 0.3em 0.25em !important;
+    line-height: 1.1em !important;
+}
+ .ya-partner__ads {
+    white-space: nowrap !important;
+    font-size: 87% !important;
+}
+ .ya-partner__icon {
+    font: 0/0 a !important;
+    margin: 0 4px -2px 0 !important;
+    vertical-align:  baseline !important;
+    border: 0 !important;
+    display: inline !important;
+    width: auto !important;
+    float: none !important;
+}
+ .ya-partner__ads-link {
+    position: relative !important;
+    z-index: 10 !important;
+    margin-left: 5px !important;
+    line-height: normal !important;
+    white-space: nowrap !important;
+}
+ .ya-partner__ads-l {
+    display: inline-block !important;
+    position: relative !important;
+    margin-right: 10px !important;
+}
+ .ya-partner__ads-r {
+    display: inline-block !important;
+    margin-left: -5px !important;
+    padding: 0 0 0 10px !important;
+}
+ .ya-partner__ads-r .ya-partner__ads-link {
+    margin: 0 5px 0 0 !important;
+}
+ .ya-partner__ads-arrow {
+    font-size: 100% !important;
+    position: absolute !important;
+    z-index: 9 !important;
+    overflow: hidden !important;
+    width: 10px !important;
+    height: 100% !important;
+}
+ a.ya-partner__ads-link-r,a.ya-partner__ads-link-r:link,a.ya-partner__ads-link-r:hover,a.ya-partner__ads-link-r:visited,a.ya-partner__ads-link-r:active,a.ya-partner__ads-link-r:focus,a.ya-partner__ads-link-l,a.ya-partner__ads-link-l:link,a.ya-partner__ads-link-l:hover,a.ya-partner__ads-link-l:visited,a.ya-partner__ads-link-l:active,a.ya-partner__ads-link-l:focus {
+    font-weight: normal !important;
+}
+ a.ya-partner__title-link,a.ya-partner__title-link:link,a.ya-partner__title-link:hover,a.ya-partner__title-link:visited,a.ya-partner__title-link:active,a.ya-partner__title-link:focus {
+    font-weight: normal !important;
+    line-height: normal !important;
+    text-decoration: none !important;
+}
+ a.ya-partner__title-link .ya-partner__title-link-text,a.ya-partner__title-link .ya-partner__title-link-text:link,a.ya-partner__title-link .ya-partner__title-link-text:hover,a.ya-partner__title-link .ya-partner__title-link-text:visited,a.ya-partner__title-link .ya-partner__title-link-text:active,a.ya-partner__title-link .ya-partner__title-link-text:focus {
+    display: inline !important;
+    text-decoration: underline !important;
+}
+ .ya-partner__ads-arrow-i {
+    font: 0/0 a !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    margin-top: -20px !important;
+    border-style: solid !important;
+    border-width: 20px 0 20px 10px !important;
+    border-color: transparent #fff transparent transparent !important;
+    -moz-border-end-style: dotted !important;
+}
+ .ya-partner_ads-up .ya-partner__ads {
+    position: relative !important;
+    display: block !important;
+}
+ .ya-partner_ads-up .ya-partner__ads-l {
+    padding-bottom: 1px !important;
+    vertical-align: top !important;
+    border-radius: 4px 0 0 0 !important;
+    -moz-border-radius: 4px 0 0 0 !important;
+    -webkit-border-radius: 4px 0 0 0 !important;
+}
+ .ya-partner_ads-up .ya-partner__ads-r {
+    padding-bottom: 1px !important;
+    vertical-align: top !important;
+    border-radius: 0 0 4px 0 !important;
+    -moz-border-radius: 0 0 4px 0 !important;
+    -webkit-border-radius: 0 0 4px 0 !important;
+}
+ .ya-partner_ads-down .ya-partner__ads {
+    position: absolute !important;
+    bottom: 0 !important;
+}
+ .ya-partner_ads-down .ya-partner__list {
+    padding-bottom: 1em !important;
+}
+ .ya-partner_ads-down .ya-partner__ads-l {
+    border-radius: 0 0 0 3px !important;
+    -moz-border-radius: 0 0 0 3px !important;
+    -webkit-border-radius: 0 0 0 3px !important;
+}
+ .ya-partner_ads-down .ya-partner__ads-r {
+    border-radius: 0 4px 0 0 !important;
+    -moz-border-radius: 0 4px 0 0 !important;
+    -webkit-border-radius: 0 4px 0 0 !important;
+}
+ .ya-partner_ads_inner-up-down .ya-partner__list {
+    margin: 0 0 1em !important;
+}
+ .ya-partner_ads-up-down .ya-partner__list {
+    margin: 1em 0 !important;
+}
+ .ya-partner_ads_inner-up-down .ya-partner__ads-l, .ya-partner_ads-up-down .ya-partner__ads-l {
+    border-radius: 3px 0 0 0 !important;
+    -moz-border-radius: 3px 0 0 0 !important;
+    -webkit-border-radius: 3px 0 0 0 !important;
+}
+ .ya-partner_ads-up-down .ya-partner__ads-l {
+    position: absolute !important;
+    top: 0 !important;
+}
+ .ya-partner_ads-up-down .ya-partner__ads-link {
+    display: inline-block !important;
+    padding-bottom: 2px !important;
+}
+ .ya-partner_ads-up-down .ya-partner__ads-r .ya-partner__ads-link {
+    padding-bottom: 1px !important;
+}
+ .ya-partner_ads_inner-up-down .ya-partner__ads-r, .ya-partner_ads-up-down .ya-partner__ads-r {
+    position: absolute !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 0 4px 4px !important;
+    -moz-border-radius: 0 0 4px 4px !important;
+    -webkit-border-radius: 0 0 4px 4px !important;
+}
+ .ya-partner_ads_inner-up-down .ya-partner__ads-r {
+    left: 0 !important;
+}
+ .ya-partner_ads-up-down .ya-partner__ads-r {
+    border-radius: 0 0 3px 3px !important;
+    -moz-border-radius: 0 0 3px 3px !important;
+    -webkit-border-radius: 0 0 3px 3px !important;
+}
+ .ya-partner_ads_inner-up-down .ya-partner__ads-link, .ya-partner_ads-up-down .ya-partner__ads-link {
+    margin-left: 5px !important;
+}
+ .ya-partner_ads_inner-up .ya-partner__ads {
+    display: block !important;
+}
+ .ya-partner_ads_inner-up .ya-partner__ads-l, .ya-partner_ads_inner-up .ya-partner__ads-r {
+    vertical-align: top !important;
+}
+ .ya-partner_ads_inner-up .ya-partner__ads-l {
+    border-radius: 4px 0 0 0 !important;
+    -moz-border-radius: 4px 0 0 0 !important;
+    -webkit-border-radius: 4px 0 0 0 !important;
+}
+ .ya-partner_ads_inner-up .ya-partner__ads-r {
+    border-radius: 0 4px 0 0 !important;
+    -moz-border-radius: 0 4px 0 0 !important;
+    -webkit-border-radius: 0 4px 0 0 !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__ads {
+    display: block !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__ads-l {
+    border-radius: 0 0 0 4px !important;
+    -moz-border-radius: 0 0 0 4px !important;
+    -webkit-border-radius: 0 0 0 4px !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__ads-r {
+    border-radius: 0 0 4px 0 !important;
+    -moz-border-radius: 0 0 4px 0 !important;
+    -webkit-border-radius: 0 0 4px 0 !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__ads-link, .ya-partner_ads-down .ya-partner__ads-link {
+    display: inline-block !important;
+    padding-bottom: 1px !important;
+}
+ .ya-partner_ads_only-arrow .ya-partner__ads {
+    margin-right: 0.5em !important;
+}
+ .ya-partner_margin_yes .ya-partner__icon {
+    margin-left: -20px !important;
+}
+ .ya-partner_margin_yes .ya-partner__item {
+    padding-left: 20px !important;
+}
+ .ya-partner__wrap-fit {
+    display: block !important;
+    zoom: 1 !important;
+    position: relative !important;
+    padding-bottom: 1px !important;
+    font-size: inherit !important;
+    border-radius: 4px 4px 4px 4px !important;
+}
+ .ya-partner_type_vert  {
+    min-width: 50px !important;
+    clear: both !important;
+}
+ :root .ya-partner_type_vert {
+    display: table\0/IE9 !important;
+    width: 100%\0/IE9 !important;
+}
+ :root .ya-partner_type_vert.ya-partner_border.ya-partner_ads-down .ya-partner__ads {
+    bottom: 1px\0/IE9 !important;
+}
+ .ya-partner_type_vert .ya-partner__item,.ya-partner_type_vert .ya-partner__warn,.ya-partner_type_vert .ya-partner__text,.ya-partner_type_vert .ya-partner__url {
+    display: block !important;
+}
+ .ya-partner_type_vert .ya-partner__item {
+    margin: 0 0 0.5em 0 !important;
+    padding: 0.5em !important;
+}
+ .ya-partner_type_vert .ya-partner__text,.ya-partner_type_vert .ya-partner__warn {
+    margin: 0.4em 0 !important;
+}
+ .ya-partner_type_vert .ya-partner__item_pos_last {
+    margin: 0 !important;
+}
+#ya_partner_0 .ya-partner__title-link-text:visited {
+    color: #999999 !important;
+}
+ #ya_partner_0 .ya-partner__title-link-text:link {
+    color: #999999 !important;
+}
+ #ya_partner_0 .ya-partner__title-link-text:hover {
+    color: #0000FF !important;
+}
+ #ya_partner_0 .ya-partner__title-link-text {
+    color: #999999 !important;
+    font-size: 130% !important;
+}
+ #ya_partner_0 .ya-partner__region {
+    color: #000000 !important;
+}
+ #ya_partner_0 .ya-partner__domain {
+    color: #000000 !important;
+}
+ #ya_partner_0 .ya-partner__address {
+    color: #000000 !important;
+}
+ #ya_partner_0 .ya-partner {
+    font-family: inherit !important;
+    color: #000000 !important;
+    font-size: 1em !important;
+    background: undefined !important;
+    border-radius: 0 !important;
+}
+ #ya_partner_0 .ya-partner__text {
+    font-family: inherit !important;
+    color: #000000 !important;
+}
+ #ya_partner_0 .ya-partner_ads-down .ya-partner__ads-l {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+ #ya_partner_0 .ya-partner_ads-up .ya-partner__ads-l {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+ #ya_partner_0 .ya-partner__wrap-fit {
+    border-radius: 0 !important;
+}
+ #ya_partner_0 .ya-partner__item {
+    border-radius: 0 !important;
+}
+ #ya_partner_0 .ya-partner__warn {
+    border: 1px solid #D8D8D8 !important;
+    background-color: #FFFFFF !important;
+}
+ #ya_partner_0 .ya-partner__ads-l {
+    background: none repeat scroll 0 0 undefined !important;
+}
+ #ya_partner_0 .ya-partner__ads-link-l em {
+    background: none repeat scroll 0 0 undefined !important;
+}
+ #ya_partner_0 .ya-partner__ads-arrow-i {
+    border-left-color: undefined !important;
+}
+ #ya_partner_0 a.ya-partner__ads-link-r:link {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_0 a.ya-partner__ads-link-r:hover {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_0 a.ya-partner__ads-link-r:visited {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_0 a.ya-partner__ads-link-l:link {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_0 a.ya-partner__ads-link-l:hover {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_0 a.ya-partner__ads-link-l:visited {
+    text-decoration: underline !important;
+    color: #000 !important;
+}</style><div id="ya_partner_0" style="background:transparent none no-repeat scroll 0 0 !important;border:none !important;border-radius:none !important;border-spacing:0 !important;border-collapse:collapse !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important;clear:none !important;clip:auto !important;color:inherit !important;cursor:auto !important;empty-cells:show !important;float:none !important;font:inherit !important;height:auto !important;letter-spacing:normal !important;line-height:normal !important;margin:0 !important;max-height:none !important;max-width:none !important;min-height:0 !important;min-width:0 !important;outline:none !important;overflow:visible !important;padding:0 !important;position:static !important;table-layout:auto !important;text-align:left !important;text-decoration:none !important;text-indent:0 !important;text-transform:none !important;vertical-align:baseline !important;visibility:visible !important;white-space:normal !important;width:auto !important;word-spacing:normal !important;z-index:auto !important;display:block !important;"><yatag class="ya-partner_ads-up ya-partner_theme_vertical  ya-partner ya-partner_type_vert"><yatag class="ya-partner__ads"><yatag class="ya-partner__ads-l"><a href="http://direct.yandex.ru/?partner" class="ya-partner__ads-link ya-partner__ads-link-l" target="_blank">Яндекс.Директ</a><yatag class="ya-partner__ads-arrow"><yatag class="ya-partner__ads-arrow-i"></yatag>&nbsp;</yatag></yatag><yatag class="ya-partner__ads-r"><a href="http://direct.yandex.ru/search?from=http://arv.radioliga.com/content/view/154/43/&amp;ref-page=64353" class="ya-partner__ads-link ya-partner__ads-link-r" target="_blank">Все объявления</a></yatag></yatag><yatag class="ya-partner__list"><yatag class="ya-partner__item ya-partner__item_pos_first"><a href="http://an.yandex.ru/count/FvN5aT9yr2i40000ZhXhfme5XP6s3vK2cm5kGoi1YBgNGp03YQK60ocOfXUzlfu2dQmZ10MMijZv0m6IfGQSUAOoYgbhO2gg0QMZgLG1aRbAZCS1ZxUTw8a2dx8MkM45auKDcJb2Z93FcQ2G_RklaC-Pb9E29AU8DQYnG5bp1wJ0W08000Yi2gxthsk-2nBTpWImiD6tPGAn0NuH?stat-id=2&amp;test-tag=17825889" class="ya-partner__title-link" target="_blank"><yatag class="ya-partner__title-link-text">iPod Touch на&nbsp;eBay!</yatag></a> <yatag class="ya-partner__text">eBay теперь в&nbsp;России! iPod Touch и&nbsp;аксессуары без&nbsp;посредников. С&nbsp;доставкой!</yatag> <yatag class="ya-partner__url"><yatag class="ya-partner__domain">rover.ebay.com</yatag> <yatag class="ya-partner__region"></yatag></yatag></yatag><yatag class="ya-partner__item"><a href="http://an.yandex.ru/count/FvN5aHd_lve40000ZhXhfme5XP6s3vK2cm5kGoi1CeYsqI6G0ecWLq9Fc8mddWATgVV71fQosFa30PAi3ffLfYYAgxDT8ge1fQ4cCm6HkKgCnm6FlXMqPGAVlk4BcGUJXGsPEKACa2uYe92V9A-GBYAKc_KNfuIggB50MNC7fC200W002AmAhlUlQxuB4jtE1B2mqRTb0h41VH40?stat-id=2&amp;test-tag=17825889" class="ya-partner__title-link" target="_blank"><yatag class="ya-partner__title-link-text">Apple iPhone 4 8 Gb в&nbsp;наличии!</yatag></a> <yatag class="ya-partner__text">Скидки на&nbsp;Apple iPhone 4 8 Gb с&nbsp;22 до&nbsp;5 часов! Доставка утром&nbsp;– бесплатно!</yatag> <yatag class="ya-partner__url"><a class="ya-partner__address" href="http://an.yandex.ru/count/FvN5aNcZTJm40000ZhXhfme5XP6s3vK2cm5kGoi1CeYsqI6G0ecWLq9Fc8mddWATgVV71fQosFa30PAi3ffLfYYAgxDT8ge7fQ4cCm6HkKgCnm6FlXMqPGAVlk4BcGUJXGsPEKACa2uYe92V9A-GBYAKc_KNfuIggB50MNC7fC200W002AmAhlUlQxuB4jtE1B2mqRTb0h41VH40?stat-id=2&amp;test-tag=17825889" target="_blank">Адрес&nbsp;и&nbsp;телефон</a> <yatag class="ya-partner__domain">apple&#8209;ru.ru</yatag> <yatag class="ya-partner__region">Москва</yatag></yatag></yatag><yatag class="ya-partner__item"><a href="http://an.yandex.ru/count/FvN5aSoHg-G40000ZhXhfme5XP6s3vK2cm5kGoi1CuY_0LCW18cZlkgac8mddWATgny41PQosFa30PAXKL2bfa6AhWDGJQe1fPyvrf6vIep70O--5RHb0f--uGkP1vE53PavGeoGYcQWaBY8hv2APfINKX2dYpAeiK1PSmUam8020008h0gkzwzhlWiItSu4iB3HjsK2iG5y4G00?stat-id=2&amp;test-tag=17825889" class="ya-partner__title-link" target="_blank"><yatag class="ya-partner__title-link-text">Магазин Apple на&nbsp;Садовом</yatag></a> <yatag class="ya-partner__text">Весь модельный ряд техники Apple с&nbsp;фирменной гарантией. Доставка бесплатно!</yatag> <yatag class="ya-partner__url"><a class="ya-partner__address" href="http://an.yandex.ru/count/FvN5aI3Ls7i40000ZhXhfme5XP6s3vK2cm5kGoi1CuY_0LCW18cZlkgac8mddWATgny41PQosFa30PAXKL2bfa6AhWDGJQe7fPyvrf6vIep70O--5RHb0f--uGkP1vE53PavGeoGYcQWaBY8hv2APfINKX2dYpAeiK1PSmUam8020008h0gkzwzhlWiItSu4iB3HjsK2iG5y4G00?stat-id=2&amp;test-tag=17825889" target="_blank">Адрес&nbsp;и&nbsp;телефон</a> <yatag class="ya-partner__domain">mcdigital.ru</yatag> <yatag class="ya-partner__region"></yatag></yatag></yatag><yatag class="ya-partner__item ya-partner__item_pos_last"><a href="http://an.yandex.ru/count/FvN5aQMU2XG40000ZhXhfme5XP6s3vK2cm5kGoi1D8YldQRmYQ0itQQOfXUzlfu2dQYXvWIMijZv0m6IfhUNfgOEYgXTbqwg0QMiXBy1aRbAZCS1ZxK7eomDdxp3HKuBauKDcJb2Z92HKA2GSrMla95Gb93h5gU8DQYnG5bp1wJ0W08000Yi2gxthsk-2nBTpWImiD6tPGAn0NuH?stat-id=2&amp;test-tag=17825889" class="ya-partner__title-link" target="_blank"><yatag class="ya-partner__title-link-text">iPod Touch 5 и&nbsp;Nano New в&nbsp;наличии</yatag></a> <yatag class="ya-partner__text">iPod Nano 7 16gb = 8&nbsp;850&nbsp;руб., New iPod Touch 5 32gb = 16&nbsp;450&nbsp;руб. в&nbsp;Москве</yatag> <yatag class="ya-partner__url"><yatag class="ya-partner__domain">m&#8209;gadget.ru</yatag> <yatag class="ya-partner__region">Москва</yatag></yatag></yatag></yatag></yatag></div>
+<script type="text/javascript">
+//<![CDATA[
+if (!window.yandex_ad_is_displayed) {
+document.write('<div align="center"><h2>Место для вашей рекламы</h2></div>');
+}
+//]]>
+</script></div>			</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				<div><!-- Яндекс.Маркет -->
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 64353;
+yandex_site_bg_color = 'FFFFFF';
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'market';
+yandex_font_size = 1;
+yandex_market_type = 'vertical';
+yandex_market_limit = 4;
+yandex_market_title_color = '999999';
+yandex_market_category_color = 'FFFFFF';
+yandex_market_all_color = '999999';
+yandex_market_text_color = '000000';
+yandex_market_hover_color = '0000FF';
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script><script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/context.js"></script><script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/context_static_r582.js" yandex_load_check="yes"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+if (!window.yandex_ad_is_displayed) {
+document.write('<div align="center"><a href="http://arv.radioliga.com/component/option,com_contact/Itemid,3/" title="Оставить заявку">Здесь могла бы быть ваша реклама</a></div>');
+}
+//]]>
+</script><div align="center"><a href="http://arv.radioliga.com/component/option,com_contact/Itemid,3/" title="Оставить заявку">Здесь могла бы быть ваша реклама</a></div></div>			</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+				<th valign="top">
+					Поддержи наш сайт!				</th>
+			</tr>
+					<tr>
+			<td>
+				<div><center>Через <strong>WebMoney
+<br><font color="red">
+<br><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/wmr.png" align="middle" border="0">&nbsp;R785211844650
+<br><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/wmz.png" align="middle" border="0">&nbsp;Z210696637574
+<br><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/wme.png" align="middle" border="0">&nbsp;E368177590409</font></strong>
+<br></center></div>			</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				<!-- РЕКЛАМА -->
+<div align="center"><style type="text/css"> .block_links * { background:transparent none repeat scroll 0 0 !important; border:medium none !important; clear:none !important; clip:rect(auto, auto, auto, auto) !important; font-size:100% !important; font-style:normal !important; font-variant:normal !important; font-weight:normal !important; height:auto !important; letter-spacing:normal !important; line-height:normal !important; margin:0 !important; overflow:visible !important; padding:0 !important; position:static !important; text-align:left !important; text-decoration:none !important; text-indent:0 !important; text-transform:none !important; vertical-align:baseline !important; visibility:visible !important; white-space:normal !important; width:auto; word-spacing:normal !important; z-index:auto !important; cursor: pointer!important; } .block_links li { display:list-item !important; list-style-image:none !important; list-style-position:outside !important; list-style-type:none !important; display: inline; } .block_links li DIV { padding:0.5em !important; } .block_links DIV, .block_links TABLE { padding: 5px !important; } .block_links { width: auto!important; font-family: Verdana!important; font-size: 11px!important; border: 1px solid #DDDDDD!important; background-color: #FFFFFF!important; padding:5px!important; position: relative!important; display:block!important; } .block_links_icnt, .block_links_icnt * { text-align: left!important; } .block_links_text, .block_links_text A, .block_links_text A:hover { color: #000000!important; font-size: 11px!important; } .block_links_url { color: #006600!important; font-size: 11px!important; } .block_links_header, .block_links_header A { color: #000000!important; font-size: 11px!important; font-weight: bold!important; text-decoration: underline!important; } .block_links_sign { color: #999999!important; font-size: 10px!important; text-align: left!important; } .block_links_clear { clear:both!important; } .block_links TABLE { width: 100%!important; border: 0px!important; } </style><div class="block_links"> <ul> <li class="block_links_icnt"><div> <span onclick="window.open('http://drako.ru/', '_blank'); return false;"><p class="block_links_header"> Онлайн игры mmorpg бесплатно и легко </p> <p class="block_links_text"> Очень круто - <a href="http://drako.ru/" target="_blank">онлайн игры mmorpg бесплатно и легко</a> - самые свежие новости. </p><p class="block_links_url"> drako.ru </p></span> </div></li><li class="block_links_icnt"><div> <span onclick="window.open('http://www.wildberries.ru/catalog/128/2/women.aspx', '_blank'); return false;"><p class="block_links_header"> Кожаные куртки в чебоксарах купить кожаную куртку дешево </p> <p class="block_links_text"> <a href="http://www.wildberries.ru/catalog/128/2/women.aspx" target="_blank">Кожаные куртки в чебоксарах купить кожаную куртку дешево</a> </p><p class="block_links_url"> www.wildberries.ru </p></span> </div></li><li class="block_links_icnt"><div> <span onclick="window.open('http://sets.com.ua/', '_blank'); return false;"><p class="block_links_header"> Пеллетные котлы </p> <p class="block_links_text"> <a href="http://sets.com.ua/" target="_blank">пеллетные котлы</a> </p><p class="block_links_url"> sets.com.ua </p></span> </div></li> </ul><div class="block_links_sign">linkanoid.ru</div></div></div><br>
+<div align="center"></div>
+<!-- РЕКЛАМА КОНЧИЛАСЬ -->
+			</td>
+		</tr>
+		</tbody></table>
+		                  </div>              </td>                         <td class="bgline"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/space.gif" alt="" border="0" width="7"></td>                                                <td valign="top" width="100%">    <table style="border-top: 5px solid #ffffff;" border="0" cellpadding="0" cellspacing="0" width="100%">                                             <tbody><tr valign="top">                    <td colspan="3">                         <div>                         		<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				<noindex><div align="center"><a href="http://www.simple-devices.ru/" target="_blank" title="Простые устройства: сайт любителей технического творчества"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/banner.png" title="Простые устройства" alt="Простые устройства" border="0" height="80" width="400"></a><a href="http://www.dinodirect.com/?d=55557777&amp;bannerid=1742a1bf" target="_top"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/beata_logo.gif" alt="Отличные товары по превосходным ценам" title="Отличные товары по превосходным ценам" height="80" width="400"></a><img style="border:0" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/imp.gif" alt="Отличные товары по превосходным ценам" height="1" width="1"></div></noindex>			</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-9355704536449637";
+/* 728x90, создано 05.10.08 */
+google_ad_slot = "6516089535";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" vspace="0" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins></div>			</td>
+		</tr>
+		</tbody></table>
+		                         </div>                    </td>            </tr>                <tr><td colspan="3"></td></tr>                                      <tr align="left" valign="top">                       <td colspan="3" style="border-top: 3px solid #ffffff; padding: 3px;"><div class="main">                       				<table class="contentpaneopen">
+			<tbody><tr>
+								<td class="contentheading" width="100%">
+				Самодокументирование программ								</td>
+				                                <td class="buttonheading" align="right" width="100%">
+					<a href="http://arv.radioliga.com/index2.php?option=com_content&amp;task=view&amp;id=154&amp;pop=1&amp;page=0&amp;Itemid=43" target="_blank" onclick="window.open('http://arv.radioliga.com/index2.php?option=com_content&amp;task=view&amp;id=154&amp;pop=1&amp;page=0&amp;Itemid=43','win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" title="Печать">
+						<img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/printButton.png" alt="Печать" name="Печать" align="middle" border="0"></a>
+                                </td>
+                                			<td class="buttonheading" align="right" width="100%">
+				<a href="http://arv.radioliga.com/index2.php?option=com_content&amp;task=emailform&amp;id=154&amp;itemid=43" target="_blank" onclick="window.open('http://arv.radioliga.com/index2.php?option=com_content&amp;task=emailform&amp;id=154&amp;itemid=43','win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=400,height=250,directories=no,location=no'); return false;" title="E-mail">
+					<img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/emailButton.png" alt="E-mail" name="E-mail" align="middle" border="0"></a>
+			</td>
+						</tr>
+			</tbody></table>
+			<form method="post" action="http://arv.radioliga.com/"><span class="content_rating">Рейтинг:<img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/rating_star.png" alt="" align="middle" border="0"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/rating_star.png" alt="" align="middle" border="0"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/rating_star.png" alt="" align="middle" border="0"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/rating_star_blank.png" alt="" align="middle" border="0"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/rating_star_blank.png" alt="" align="middle" border="0">&nbsp;/&nbsp;7</span>
+<br>
+<span class="content_vote">Худшая<input alt="vote 1 star" name="user_rating" value="1" type="radio"><input alt="vote 2 star" name="user_rating" value="2" type="radio"><input alt="vote 3 star" name="user_rating" value="3" type="radio"><input alt="vote 4 star" name="user_rating" value="4" type="radio"><input alt="vote 5 star" name="user_rating" value="5" checked="checked" type="radio">Лучшая&nbsp;<input class="button" name="submit_vote" value="Оценить" type="submit"><input name="task" value="vote" type="hidden"><input name="pop" value="0" type="hidden"><input name="option" value="com_content" type="hidden"><input name="Itemid" value="43" type="hidden"><input name="cid" value="154" type="hidden"><input name="url" value="/index.php?option=com_content&amp;task=view&amp;id=154&amp;Itemid=43" type="hidden"></span></form>
+		<table class="contentpaneopen">
+				<tbody><tr>
+			<td colspan="2" align="left" valign="top" width="70%">
+			<span class="small">
+			 Автор ARV			</span>
+			&nbsp;&nbsp;
+			</td>
+		</tr>
+					<tr>
+				<td colspan="2" class="createdate" valign="top">
+				 18.02.2009 г.				</td>
+			</tr>
+					<tr>
+			<td colspan="2" valign="top">
+			<p>
+Не секрет, что каждый из тех, кто разрабатывает программы для 
+микроконтроллеров, частенько использует чужие исходные тексты - либо как
+ источник идей для собственных программ, либо непосредственно, как 
+«библиотечку» функций. И так же не является тайной, что большинство 
+добываемых в сети исходников не так-то просто понять. Иной раз программа
+ представляет собой даже не форматированный (то есть без отступов) текст
+ без комментариев!
+</p>
+<p>
+Разумеется, пользоваться такими «библиотеками» довольно неудобно. 
+Спрашивается: если уж решил поделиться исходником с общественностью, 
+почему так неаккуратно оформил его? Или почему не сопроводил подробным 
+описанием?
+</p>
+<p>
+Я понимаю - лень-матушка... Ведь качественное документирование программ 
+требует порой усилий не меньших, чем собственно написание программы. Но 
+есть средства, существенно облегчающие эту задачу, с одним из которых я 
+хочу вас познакомить. Это средство «самодокументирования» под названием <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a>.
+</p>
+
+
+<p>
+Прежде всего, <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a> - это бесплатный проект, распространяемый по лицензии <strong>GNU</strong>,
+ то есть вы можете его скачать с официального сайта и совершенно законно
+ использовать для любых проектов, в том числе коммерческих. На западе 
+этот продукт используется программистами весьма широко, особенно 
+сообществом <strong>GNU</strong>-программистов. Кстати, почти вся документация для <strong>GCC</strong> (многим больше известна версия под названием <a href="http://www.google.com/custom?q=WinAVR&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: WinAVR" target="_blank">WinAVR</a>) сделана именно при помощи этого средства - прямо из комментариев в тексте программ!
+</p>
+<p align="center">
+<!-- Яндекс.Директ -->
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 64353;
+yandex_site_bg_color = 'FFFFFF';
+yandex_stat_id = 2;
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'horizontal';
+yandex_direct_limit = 3;
+yandex_direct_title_color = '999999';
+yandex_direct_url_color = '000000';
+yandex_direct_all_color = '999999';
+yandex_direct_text_color = '000000';
+yandex_direct_hover_color = '0000FF';
+yandex_direct_favicon = false;
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script><script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/context.js"></script><script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/context_static_r582.js" yandex_load_check="yes"></script><style type="text/css">.ya-partner_type_horiz {
+    display: inline-block !important;
+    width: 100% !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+ :root .ya-partner_type_horiz {
+    display: table\0/IE9 !important;
+    width: 100%\0/IE9 !important;
+}
+ :root .ya-partner_type_horiz.ya-partner_border.ya-partner_ads-down .ya-partner__ads {
+    bottom: 1px\0/IE9 !important;
+}
+ .ya-partner_type_horiz:before,.ya-partner_type_horiz:after {
+    content: "" !important;
+    display: table !important;
+    border-spacing: 0 !important;
+    border: 0 !important;
+}
+ .ya-partner_type_horiz .ya-partner__list {
+    display: table !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-spacing: 0 !important;
+    font-size: inherit !important;
+}
+ .ya-partner_ads-down table.ya-partner__list {
+    margin-bottom: 1em !important;
+}
+ body .ya-partner_type_horiz .ya-partner__item {
+    position: static !important;
+}
+ .ya-partner_type_horiz .ya-partner__tr {
+    font-size: inherit !important;
+}
+ .ya-partner_type_horiz .ya-partner__item {
+    padding: 0.5em !important;
+    vertical-align: top !important;
+    border-spacing: 0 !important;
+    font-size: inherit !important;
+    border-collapse: separate !important;
+}
+ .ya-partner_type_horiz .ya-partner__gap {
+    font-size: 10px !important;
+    width: 0.5em !important;
+    margin: 0 !important;
+    border: none !important;
+    background: none !important;
+}
+ .ya-partner_type_horiz table.ya-partner__list, .ya-partner_type_horiz td.ya-partner__item,.ya-partner_type_horiz td.ya-partner__gap {
+    border-collapse: separate !important;
+}
+ .ya-partner_type_horiz .ya-partner__warn,.ya-partner_type_horiz .ya-partner__inner,.ya-partner_type_horiz .ya-partner__text,.ya-partner_type_horiz .ya-partner__url {
+    display: block !important;
+}
+ .ya-partner_type_horiz.ya-partner_ads_inner-down .ya-partner__item_pos_first {
+    border-radius: 4px 4px 4px 0 !important;
+    -moz-border-radius: 4px 4px 4px 0 !important;
+    -webkit-border-radius: 4px 4px 4px 0 !important;
+}
+ .ya-partner_ads_inner-down .ya-partner__item_pos_last, .ya-partner_ads_inner-up-down .ya-partner__item_pos_last {
+    border-radius: 4px !important;
+}
+ .ya-partner_type_horiz .ya-partner__item_pos_last {
+    margin-right: 0 !important;
+}
+ .ya-partner_type_horiz .ya-partner__text, .ya-partner_type_horiz .ya-partner__warn {
+    margin: 0.4em 0 !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_2.ya-context__list_picnum_2 .ya-partner__item {
+    width: 36% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_2.ya-context__list_picnum_2 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 50% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_2.ya-context__list_picnum_1 .ya-partner__item {
+    width: 42% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_2.ya-context__list_picnum_1 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 59% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_2.ya-context__list_picnum_0 .ya-partner__item {
+    width: 50% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_2.ya-context__list_picnum_0 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 70% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_3 .ya-partner__item {
+    width: 24% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_3 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 34% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_2 .ya-partner__item {
+    width: 27% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_2 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 37% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_1 .ya-partner__item {
+    width: 30% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_1 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 42% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_0 .ya-partner__item {
+    width: 34% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_3.ya-context__list_picnum_0 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 47% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_4 .ya-partner__item {
+    width: 18% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_4 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 25% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_3 .ya-partner__item {
+    width: 20% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_3 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 27% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_2 .ya-partner__item {
+    width: 21% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_2 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 30% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_1 .ya-partner__item {
+    width: 23% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_1 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 32% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_0 .ya-partner__item {
+    width: 25% !important;
+}
+ .ya-partner_type_horiz .ya-context__list_item_4.ya-context__list_picnum_0 .ya-partner__item.ya-partner__item_pic_yes {
+    width: 35% !important;
+}
+#ya_partner_2 .ya-partner__title-link-text:visited {
+    color: #999999 !important;
+}
+ #ya_partner_2 .ya-partner__title-link-text:link {
+    color: #999999 !important;
+}
+ #ya_partner_2 .ya-partner__title-link-text:hover {
+    color: #0000FF !important;
+}
+ #ya_partner_2 .ya-partner__title-link-text {
+    color: #999999 !important;
+    font-size: 130% !important;
+}
+ #ya_partner_2 .ya-partner__region {
+    color: #000000 !important;
+}
+ #ya_partner_2 .ya-partner__domain {
+    color: #000000 !important;
+}
+ #ya_partner_2 .ya-partner__address {
+    color: #000000 !important;
+}
+ #ya_partner_2 .ya-partner {
+    font-family: inherit !important;
+    color: #000000 !important;
+    font-size: 1em !important;
+    background: undefined !important;
+    border-radius: 0 !important;
+}
+ #ya_partner_2 .ya-partner__text {
+    font-family: inherit !important;
+    color: #000000 !important;
+}
+ #ya_partner_2 .ya-partner_ads-down .ya-partner__ads-l {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+ #ya_partner_2 .ya-partner_ads-up .ya-partner__ads-l {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+ #ya_partner_2 .ya-partner__wrap-fit {
+    border-radius: 0 !important;
+}
+ #ya_partner_2 .ya-partner__item {
+    border-radius: 0 !important;
+}
+ #ya_partner_2 .ya-partner__warn {
+    border: 1px solid #D8D8D8 !important;
+    background-color: #FFFFFF !important;
+}
+ #ya_partner_2 .ya-partner__ads-l {
+    background: none repeat scroll 0 0 undefined !important;
+}
+ #ya_partner_2 .ya-partner__ads-link-l em {
+    background: none repeat scroll 0 0 undefined !important;
+}
+ #ya_partner_2 .ya-partner__ads-arrow-i {
+    border-left-color: undefined !important;
+}
+ #ya_partner_2 a.ya-partner__ads-link-r:link {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_2 a.ya-partner__ads-link-r:hover {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_2 a.ya-partner__ads-link-r:visited {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_2 a.ya-partner__ads-link-l:link {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_2 a.ya-partner__ads-link-l:hover {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_2 a.ya-partner__ads-link-l:visited {
+    text-decoration: underline !important;
+    color: #000 !important;
+}</style></p><div id="ya_partner_2" style="background:transparent none no-repeat scroll 0 0 !important;border:none !important;border-radius:none !important;border-spacing:0 !important;border-collapse:collapse !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important;clear:none !important;clip:auto !important;color:inherit !important;cursor:auto !important;empty-cells:show !important;float:none !important;font:inherit !important;height:auto !important;letter-spacing:normal !important;line-height:normal !important;margin:0 !important;max-height:none !important;max-width:none !important;min-height:0 !important;min-width:0 !important;outline:none !important;overflow:visible !important;padding:0 !important;position:static !important;table-layout:auto !important;text-align:left !important;text-decoration:none !important;text-indent:0 !important;text-transform:none !important;vertical-align:baseline !important;visibility:visible !important;white-space:normal !important;width:auto !important;word-spacing:normal !important;z-index:auto !important;display:block !important;"><yatag class="ya-partner_ads-up ya-partner_theme_horizontal  ya-partner ya-partner_type_horiz"><yatag class="ya-partner__ads"><yatag class="ya-partner__ads-l"><a href="http://direct.yandex.ru/?partner" class="ya-partner__ads-link ya-partner__ads-link-l" target="_blank">Яндекс.Директ</a><yatag class="ya-partner__ads-arrow"><yatag class="ya-partner__ads-arrow-i"></yatag>&nbsp;</yatag></yatag><yatag class="ya-partner__ads-r"><a href="http://direct.yandex.ru/search?from=http://arv.radioliga.com/content/view/154/43/&amp;ref-page=64353" class="ya-partner__ads-link ya-partner__ads-link-r" target="_blank">Все объявления</a></yatag></yatag><table class="ya-partner__list ya-context__list_item_3 ya-context__list_picnum_0" cellpadding="0" cellspacing="0"><tbody><tr class="ya-partner__tr"><td class="ya-partner__item ya-partner__item_pos_first"><a href="http://an.yandex.ru/count/FvN5aUmgt_a40000ZhXhfme5XP6s3vK2cm5kGoi1DOYxTGaW18caVTchc8SJdWATetyV2fQosFa30PAg1Swffa6AhSJDKQe1fQbBoG6HkKgCnm6FlXMqPGAVlk4BcGUJXGsPEKACa4mTe90k8g-GJ1sKcIGRfu1igB50MNC7fC200W002AmAhlUlQxuB4jtE1B2mqRTb0h41VH40?stat-id=2&amp;test-tag=13437025" class="ya-partner__title-link" target="_blank"><yatag class="ya-partner__title-link-text">Apple iPhone 4 32Gb - 15900&nbsp;руб!</yatag></a> <yatag class="ya-partner__text">Здесь айфон 4 от&nbsp;15400 рублей! В&nbsp;наличии! Гарантия, доставка!</yatag> <yatag class="ya-partner__url"><yatag class="ya-partner__domain">phon&#8209;mir.ru</yatag> <yatag class="ya-partner__region">Москва</yatag></yatag></td><td class="ya-partner__gap">&nbsp;</td><td class="ya-partner__item"><a href="http://an.yandex.ru/count/FvN5aLrI9dq40000ZhXhfme5XP6s3vK2cm5kGoi1DeYq0w500OcYe9bXcA6ElBwU0fsX95C5bhBO-GC1agce99kc4ugirI93gW6beAMW0P6vIep70O-of8Qd0P--ep-T3fE53PbSGeoGjZMWa2Suhv2sDPIQq1MdXZcejT_j606am8020008h0gkzwzhlWiItSu4iB3HjsK2iG5_4G00?stat-id=2&amp;test-tag=13437025" class="ya-partner__title-link" target="_blank"><yatag class="ya-partner__title-link-text">Купи Apple iPhone 4 со&nbsp;скидкой!</yatag></a> <yatag class="ya-partner__text">В&nbsp;фирменном магазин Apple! Доставим сегодня бесплатно! Дарим подарки!</yatag> <yatag class="ya-partner__url"><a class="ya-partner__address" href="http://an.yandex.ru/count/FvN5aJqExDi40000ZhXhfme5XP6s3vK2cm5kGoi1DeYq0w500OcYe9bXcA6ElBwU0fsX95C5bhBO-GC1agce99kc4ugirI93gWUbeAMW0P6vIep70O-of8Qd0P--ep-T3fE53PbSGeoGjZMWa2Suhv2sDPIQq1MdXZcejT_j606am8020008h0gkzwzhlWiItSu4iB3HjsK2iG5_4G00?stat-id=2&amp;test-tag=13437025" target="_blank">Адрес&nbsp;и&nbsp;телефон</a> <yatag class="ya-partner__domain">apples&#8209;msk.ru</yatag> <yatag class="ya-partner__region"></yatag></yatag></td><td class="ya-partner__gap">&nbsp;</td><td class="ya-partner__item ya-partner__item_pos_last"><a href="http://an.yandex.ru/count/FvN5aRkpad040000ZhXhfme5XP6s3vK2cm5kGoi1DuYpKtzW0OcbohsNcA6ElBwU0fscbYqCbhBO-GC1agkwVggc5OgkUNvIgW6bfBVB0P6vIep70O-tpzTg39-ygLHr39E53PavGeoG42UWa10dhv0G9vIGNmgdYageiK1PSmUam8020008h0gkzwzhlWiItSu4iB3HjsK2iG5_4G00?stat-id=2&amp;test-tag=13437025" class="ya-partner__title-link" target="_blank"><yatag class="ya-partner__title-link-text">Apple Iphone 4 16 GB Black</yatag></a> <yatag class="ya-partner__text">Всего 16000&nbsp;руб! Гарантия, качество Apple.Купить популярный смартфон.</yatag> <yatag class="ya-partner__url"><a class="ya-partner__address" href="http://an.yandex.ru/count/FvN5aTllMDO40000ZhXhfme5XP6s3vK2cm5kGoi1DuYpKtzW0OcbohsNcA6ElBwU0fscbYqCbhBO-GC1agkwVggc5OgkUNvIgWUbfBVB0P6vIep70O-tpzTg39-ygLHr39E53PavGeoG42UWa10dhv0G9vIGNmgdYageiK1PSmUam8020008h0gkzwzhlWiItSu4iB3HjsK2iG5_4G00?stat-id=2&amp;test-tag=13437025" target="_blank">Адрес&nbsp;и&nbsp;телефон</a> <yatag class="ya-partner__domain">gadgets4u.ru</yatag> <yatag class="ya-partner__region"></yatag></yatag></td></tr></tbody></table></yatag></div><script type="text/javascript">
+//<![CDATA[
+if (!window.yandex_ad_is_displayed) {
+document.write('<div align="center"><h2>Место для вашей рекламы</h2></div>');
+}
+//]]>
+</script>&nbsp;
+<p></p>
+<p>
+Итак, что, собственно говоря, <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a>
+ делает? Он сканирует исходные тексты программ, выискивает в них 
+комментарии, оформленные особым образом, и строит на основе этих 
+комментариев и исходного текста файлы документации. Т.е. вы получаете 
+сразу готовые к просмотру <strong>HTML</strong> или <strong>RTF</strong>-файлы,
+ содержащие достаточно подробную, грамотно структурированную информацию о
+ константах, макросах, переменных, функциях ваших исходников. Если 
+формат документа поддерживает возможность гиперссылок - они будут 
+интегрированы для удобства навигации по тексту. 
+</p>
+<p>
+Наибольшее достоинство применения этой технологии в том, что практически
+ не делается «лишняя» работа: комментарии в тексте программы сразу же 
+являются и текстом документации. Правда, для получения наилучшей 
+документации придется писать комментарии чуть более тщательнее.
+</p>
+<p>
+Возможностей <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a>
+ очень много, но осваивать сразу все вовсе не обязательно! Минимум, с 
+чего нужно начать - это знакомство с форматом комментариев, 
+воспринимаемых этой системой. В некоторых случаях этого будет уже 
+достаточно для получения приличной документации к программе. Оговорюсь, 
+что <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a> поддерживает большое число языков программирования, но я буду рассказывать только о Си. Но программисты, работающие с <strong>Java</strong>, <strong>PHP</strong>, <strong>Pascal</strong> и другими языками могут использовать <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a> с не меньшим успехом (в качестве примера приведу справочную систему к пакету <a href="http://www.google.com/custom?q=JEDI%20Code%20Library&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: JEDI Code Library" target="_blank">JEDI Code Library</a> для <strong>Delphi</strong>, которая так же получена при помощи <a href="http://www.google.com/custom?q=%5BDoxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: [Doxygen" target="_blank">[Doxygen</a>). Еще одна оговорка: <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a>
+ обычно имеет несколько способов решения одной и той же проблемы, но я 
+буду рассказывать только об одном из вариантов, который с моей 
+субъективной точки зрения наиболее подходящий, а все желающие могут 
+изучить документацию (на английском).
+</p>
+<h4>Виды комментариев.</h4>
+<p>
+<strong>Doxygen</strong> обрабатывает однострочные комментарии, обозначенные тремя символами «косой черты», т.е. <span style="color: #0000ff">///</span>.
+ Идущие подряд однострочные комментарии объединяются в один общий 
+блок-параграф. Однострочные комментарии, разделенные строками операторов
+ программы, попадают в разные параграфы.
+</p>
+<p>
+<span style="color: #0000ff"><em>/// Этот комментарий обработается <strong>Doxygen</strong><br>
+/// Эта строка будет «прилеплена» к предыдущей (и отделена пробелом)<br>
+// эта строка будет проигнорирована <strong>Doxygen</strong></em></span>
+</p>
+<p>
+Так же <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a> обрабатывает многострочные комментарии типа <span style="color: #0000ff">/* */</span>, но необходимо, чтобы число звездочек в начале комментария было не менее двух, т.е. обрамление комментария должно быть таким:
+</p>
+<p>
+<span style="color: #0000ff"><em>/** этот комментарий <br>
+обработается <strong>Doxygen</strong><br>
+*/<br>
+/* этот комментарий<br>
+будет проигнорирован <strong>Doxygen</strong><br>
+*/</em></span> 
+</p>
+<h4>Варианты документирования при помощи комментариев.</h4>
+<p>
+<a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a>
+ анализирует структуру текста программы, выделяя отдельные модули 
+(файлы), глобальные определения (переменные, макросы и т.п.), находит 
+функции и локальные для функций элементы. Комментарии, находящиеся 
+«внутри» функционального блока программы, группируются. То есть 
+комментарии внутри функции будут относиться к документации на эту 
+функцию, а комментарии, разбросанные «между» функциями, будут собраны в 
+документацию на весь файл.
+</p>
+<p>
+Для документирования всего файла целиком лучше всего использовать 
+многострочный комментарий, расположенный в самом начале файла. Такую 
+«шапку» делают почти всегда, остается лишь оформить ее достойно. Для 
+достойного оформления можно использовать внутри многострочного 
+комментария специальные параметры <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a>. Параметром называется определенное ключевое слово (далее - просто ключ), которое служит для уведомления <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a>
+ выполнить особую обработку следующего (или следующих) слов комментария.
+ Чтобы отделить ключевое слово от текста комментария, каждое ключевое 
+слово начинается с <strong>ESC</strong>-символа «обратная косая черта» (аналогично «\n»). Вот несколько наиболее ходовых ключей:
+</p>
+<p>
+<strong><em>\file</em></strong> - все символы в строке после этого ключа
+ будут выделены особо и будут использованы для «заголовка» описания 
+всего файла. Все прочие строки многострочного комментария будут 
+считаться описанием файла. Если таких ключевых слов будут обнаружено 
+несколько, то все строки после ключей будут собраны в один блок, 
+размещаемый в начале описания файла.
+</p>
+<p>
+<strong><em>\mainpage</em></strong> - все символы в строке после этого 
+ключа будут использованы для оформления заголовка всей документации к 
+проекту, а все строки после - в качестве описания всего проекта. 
+Помещаемого на первой (титульной) странице документации. Если эти ключи 
+будут найдены в разных файлах, то все описатели будут собраны в общий 
+«титульный» блок.
+</p>
+<p>
+Следующие ключи служат для аналогичных целей:
+</p>
+<p>
+<strong><em>\autor</em></strong> - обозначает автора проекта<br>
+<strong><em>\note</em></strong> - примечание<br>
+<strong><em>\par</em></strong> - начинает новый параграф<br>
+<strong><em>\n</em></strong> - начинает новую строку<br>
+<strong><em>\date</em></strong> - обозначает дату<br>
+<strong><em>\version</em></strong> - обозначает версию проекта (файла)<br>
+<strong><em>\brief</em></strong> - обозначает начало краткого описания. Отменяет действие блока <strong><em>\file</em></strong>.
+</p>
+<p>
+Для описания отдельной переменной или макроса следует непосредственно 
+перед строкой с определением добавить однострочный комментарий в стиле <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a>, например так:
+</p>
+<p>
+<em><span style="color: #0000ff">/// Переменная-счетчик повторений расчетов<br>
+int Counter = 12;<br>
+/// Максимальное число итераций<br>
+#define MAX_IT 123</span></em>
+</p>
+<p>
+Учтите, что <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a> по умолчанию не документирует <strong>static</strong>-переменные.
+</p>
+<p>
+</p><div align="center"><script language="javascript">
+<!--
+google_ad_client = "pub-9355704536449637";
+google_alternate_ad_url = "http://arv.radioliga.com/mambots/content/google_adsense_script.html";
+google_ad_width = 728; 
+google_ad_height = 90; 
+google_ad_format = "728x90_as"; 
+google_ad_channel = "arv"; 
+google_ad_type = "text_image"; 
+google_color_border = "FFFFFF"; 
+google_color_bg = "FFFFFF"; 
+google_color_link = "7F7F7F"; 
+google_color_url = "008000"; 
+google_color_text = "000000"; 
+//--> 
+</script>
+<script language="javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/show_ads.js"></script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" vspace="0" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins>
+<!-- end of google ads -->
+</div>
+<p></p>
+<p>
+Описание функции (класса и т.п.) более сложное. Желательно делать его 
+при по-мощи многострочного комментария по следующему шаблону:
+</p>
+<p>
+<span style="color: #0000ff"><em>/** заголовок (краткое описание)<br>
+* подробное описание (несколько строк,<br>
+* начинающихся со звездочки)<br>
+* список входных параметров (см. далее)<br>
+* @return описание возвращаемого значения<br>
+*/</em></span>
+</p>
+<p>
+Комментарий по этому шаблону должен размещаться непосредственно перед 
+определение функции. Для прототипа функции в заголовочном файле следует 
+использовать обычный однострочный комментарий (как для переменной), 
+который будет добавлен к подробному описанию функции.
+</p>
+<p>
+Список параметров - нужное количество строк, начинающихся с символа «*» и содержащие ключевое слово <strong>@param</strong>, за которым через пробел следует параметр функции с описанием. Вот пример правильно оформленного описания функции:
+</p>
+<p>
+<span style="color: #0000ff"><em>/** Вычисление куба числа<br>
+* Вычисляет целое значение куба числа<br>
+* @param d - число для возведения в куб<br>
+* @return - возвращает куб числа<br>
+*/<br>
+<strong>long cube(int d){<br>
+}</strong></em></span>
+</p>
+<p>
+Разумеется, любая часть комментария может отсутствовать.
+</p>
+<h4>Использование «интеллектуальных» особенностей Doxygen.</h4>
+<p>
+Одна из очень полезных возможностей <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a>
+ - это способность строить перекрестные ссылки. Например, если в 
+комментарии вы просто упомяните уже прокомментированную функцию, <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a> оформит это упоминание, как гиперссылку на нужный элемент.
+</p>
+<p>
+Если необходимо оформить гиперссылку на макрос или переменную, следует предварять его упоминание символом «<strong><span style="color: #0000ff">#</span></strong>», ибо <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a> автоматически делает гиперссылки только на функции и методы классов.
+</p>
+<p>
+Любое слово можно выделить жирным шрифтом, если перед ним указать ключ <span style="color: #0000ff"><strong><em>\b</em></strong></span>. Если нужно выделить группу слов жирным шрифтом, следует воспользоваться парными html-тегами <strong><em><span style="color: #0000ff">&lt;b&gt;&lt;/b&gt;</span></em></strong>. При помощи парных тегов <span style="color: #0000ff"><strong><em>&lt;i&gt;&lt;/i&gt;</em></strong></span> и <span style="color: #0000ff"><strong><em>&lt;u&gt;&lt;/u&gt;</em></strong></span>
+ &nbsp;можно выделить группу слов наклонным или подчеркнутым шрифтом 
+соответственно. Парные теги могут быть вложены друг в друга.
+</p>
+<p>
+Собственно говоря, уже этих сведений достаточно, чтобы получить вполне 
+приличную документацию к программе. Неупомянутыми остались примерно 90% 
+функций и возможностей <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a> - можете представить себе, что он умеет!<br>
+Однако, как же теперь получить документацию из прокомментированного текста программы? Напомню, что <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a> - это программа по лицензии <strong>GNU</strong>,
+ а история возникновения самого термина приводит нас к 
+unix-программистам (теперь уже *nix), для которых командная строка - 
+мать родная! Но увы, лично мне командная строка не нравится, и 
+необходимость работы с ней я воспринимаю, как неизбежное зло, которого 
+следует избегать всеми силами. Благо, что в случае <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a>
+ для этого особых усилий прилагать не придется - в состав пакета входит 
+«мастер», при помощи которого все можно сделать практически привычным 
+для всех способом.
+</p>
+<p>
+Прежде чем рассмотреть этот самый «мастер», снова оговорюсь, что я не 
+намерен рассматривать все его возможности, а остановлюсь только на тех, 
+которые мне кажутся наиболее важными для повседневных целей обычных 
+людей, и которыми вполне можно ограничиться.
+</p>
+<p>
+<img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/wiz_002.png" alt="Image" title="Image" align="middle" border="0" height="432" hspace="6" width="628"><br>
+<br>
+На рисунке показан скриншот основного окна мастера.
+</p>
+<p align="center">
+<!-- Яндекс.Директ -->
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 64353;
+yandex_site_bg_color = 'FFFFFF';
+yandex_stat_id = 2;
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'horizontal';
+yandex_direct_limit = 3;
+yandex_direct_title_color = '999999';
+yandex_direct_url_color = '000000';
+yandex_direct_all_color = '999999';
+yandex_direct_text_color = '000000';
+yandex_direct_hover_color = '0000FF';
+yandex_direct_favicon = false;
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script><script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/context.js"></script><script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/context_static_r582.js" yandex_load_check="yes"></script><style type="text/css">
+#ya_partner_3 .ya-partner__title-link-text:visited {
+    color: #999999 !important;
+}
+ #ya_partner_3 .ya-partner__title-link-text:link {
+    color: #999999 !important;
+}
+ #ya_partner_3 .ya-partner__title-link-text:hover {
+    color: #0000FF !important;
+}
+ #ya_partner_3 .ya-partner__title-link-text {
+    color: #999999 !important;
+    font-size: 130% !important;
+}
+ #ya_partner_3 .ya-partner__region {
+    color: #000000 !important;
+}
+ #ya_partner_3 .ya-partner__domain {
+    color: #000000 !important;
+}
+ #ya_partner_3 .ya-partner__address {
+    color: #000000 !important;
+}
+ #ya_partner_3 .ya-partner {
+    font-family: inherit !important;
+    color: #000000 !important;
+    font-size: 1em !important;
+    background: undefined !important;
+    border-radius: 0 !important;
+}
+ #ya_partner_3 .ya-partner__text {
+    font-family: inherit !important;
+    color: #000000 !important;
+}
+ #ya_partner_3 .ya-partner_ads-down .ya-partner__ads-l {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+ #ya_partner_3 .ya-partner_ads-up .ya-partner__ads-l {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+ #ya_partner_3 .ya-partner__wrap-fit {
+    border-radius: 0 !important;
+}
+ #ya_partner_3 .ya-partner__item {
+    border-radius: 0 !important;
+}
+ #ya_partner_3 .ya-partner__warn {
+    border: 1px solid #D8D8D8 !important;
+    background-color: #FFFFFF !important;
+}
+ #ya_partner_3 .ya-partner__ads-l {
+    background: none repeat scroll 0 0 undefined !important;
+}
+ #ya_partner_3 .ya-partner__ads-link-l em {
+    background: none repeat scroll 0 0 undefined !important;
+}
+ #ya_partner_3 .ya-partner__ads-arrow-i {
+    border-left-color: undefined !important;
+}
+ #ya_partner_3 a.ya-partner__ads-link-r:link {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_3 a.ya-partner__ads-link-r:hover {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_3 a.ya-partner__ads-link-r:visited {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_3 a.ya-partner__ads-link-l:link {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_3 a.ya-partner__ads-link-l:hover {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+ #ya_partner_3 a.ya-partner__ads-link-l:visited {
+    text-decoration: underline !important;
+    color: #000 !important;
+}</style></p><div id="ya_partner_3" style="background:transparent none no-repeat scroll 0 0 !important;border:none !important;border-radius:none !important;border-spacing:0 !important;border-collapse:collapse !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important;clear:none !important;clip:auto !important;color:inherit !important;cursor:auto !important;empty-cells:show !important;float:none !important;font:inherit !important;height:auto !important;letter-spacing:normal !important;line-height:normal !important;margin:0 !important;max-height:none !important;max-width:none !important;min-height:0 !important;min-width:0 !important;outline:none !important;overflow:visible !important;padding:0 !important;position:static !important;table-layout:auto !important;text-align:left !important;text-decoration:none !important;text-indent:0 !important;text-transform:none !important;vertical-align:baseline !important;visibility:visible !important;white-space:normal !important;width:auto !important;word-spacing:normal !important;z-index:auto !important;display:block !important;"><yatag class="ya-partner_ads-up ya-partner_theme_horizontal  ya-partner ya-partner_type_horiz"><yatag class="ya-partner__ads"><yatag class="ya-partner__ads-l"><a href="http://direct.yandex.ru/?partner" class="ya-partner__ads-link ya-partner__ads-link-l" target="_blank">Яндекс.Директ</a><yatag class="ya-partner__ads-arrow"><yatag class="ya-partner__ads-arrow-i"></yatag>&nbsp;</yatag></yatag><yatag class="ya-partner__ads-r"><a href="http://direct.yandex.ru/search?from=http://arv.radioliga.com/content/view/154/43/&amp;ref-page=64353" class="ya-partner__ads-link ya-partner__ads-link-r" target="_blank">Все объявления</a></yatag></yatag><table class="ya-partner__list ya-context__list_item_2 ya-context__list_picnum_0" cellpadding="0" cellspacing="0"><tbody><tr class="ya-partner__tr"><td class="ya-partner__item ya-partner__item_pos_first"><a href="http://an.yandex.ru/count/FvN5aSU5bqO40000ZhXhfme5XP6s3vK2cm5kGoi1E068jlmyO0E9bpHdc0MU0fshqRi2bhBO-GC1agVHpfUcDOgjASq_gW6bgwgK0P6vIep70O-zvBHP0f-xTSR72fE53PavGeoWuHC1eA3u906leE4J0QU33QYmG5bp1wJ0W08000Yi2gxthsk-2nBTpWImiD6tPGAn0NiH?stat-id=2&amp;test-tag=9275489" class="ya-partner__title-link" target="_blank"><yatag class="ya-partner__title-link-text">Электронная почта с&nbsp;Office 365</yatag></a> <yatag class="ya-partner__text">Электронная почта, планировщик&nbsp;– всё&nbsp;доступно в&nbsp;«облаке» Office 365!</yatag> <yatag class="ya-partner__url"><yatag class="ya-partner__domain">1156.xg4ken.com</yatag> <yatag class="ya-partner__region"></yatag></yatag></td><td class="ya-partner__gap">&nbsp;</td><td class="ya-partner__item ya-partner__item_pos_last"><a href="http://an.yandex.ru/count/FvN5aK2Ymoy40000ZhXhfme5XP6s3vK2cm5kGoi1EG68kj8Fm069e4Wjc9Y74vu2dQYvS06MijZv0m6IgNapdQORYgoYCKMg0QMkVQO1aRbAZCS1ZxuLj6K2dxxX2va7auKDcJb2Z90G9w2G42Ula10db98-DAUCGwYWDw47fC200W002AmAhlUlQxuB4jtE1B2mqRTb0h41VH40?stat-id=2&amp;test-tag=9275489" class="ya-partner__title-link" target="_blank"><yatag class="ya-partner__title-link-text">Телефоны Apple iPhone 4 32GB</yatag></a> <yatag class="ya-partner__text">В&nbsp;наличии! Телефоны Apple iPhone 4 32GB. Только проверенные магазины</yatag> <yatag class="ya-partner__url"><yatag class="ya-partner__domain">torg.mail.ru</yatag> <yatag class="ya-partner__region"></yatag></yatag></td></tr></tbody></table></yatag></div><script type="text/javascript">
+//<![CDATA[
+if (!window.yandex_ad_is_displayed) {
+document.write('<div align="center"><h2>Место для вашей рекламы</h2></div>');
+}
+//]]>
+</script>&nbsp;
+<p></p>
+<p>
+Работа с мастером заключается в трех шагах: <strong>Step1</strong> - конфигурирование, <strong>Step 2</strong> - сохранение настроек и <strong>Step 3</strong> - запуск <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a>.
+</p>
+<p>
+Конфигурирование может производиться при помощи еще одного мастера - кнопка <strong><em>Wizard</em></strong>, что подходит для большинства обычных пользователей. Если требуется более тонкая настройка работы - следует нажать кнопку <strong><em>Expert</em></strong>
+ для работы с массой индивидуально настраиваемых параметров. Эта 
+возможность будет рассмотрена вскользь далее. Наконец, если 
+документирование осуществляется уже не первый раз - можно использовать 
+ранее сохраненные настройки, для чего следует нажать кнопку <strong><em>Load</em></strong> и указать кон-фигурационный файл, обычно имеющий имя «<em>Doxyfile</em>» (без расширения).
+</p>
+<p>
+Рассмотрим мастер конфигурации подробнее.
+</p>
+<p>
+<img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/wiz_003.png" alt="Image" title="Image" align="middle" border="0" height="367" hspace="6" width="397"><br>
+<br>
+Его окно содержит 4 закладки - <strong><em>Project</em></strong>, <strong><em>Mode</em></strong>, <strong><em>Output</em></strong> и <strong><em>Diagrams</em></strong>.
+</p>
+<p>
+На закладке <strong><em>Project</em></strong> настраиваются главные параметры документирования проекта. Можно задать имя проекта (поле <strong><u>Project Name</u></strong>) и его версию (поле <strong><u>Project version id</u></strong>). обязательно следует указать папку, в которой содержатся исходные файлы проекта (поле <strong><u>Source code directory</u></strong>). Если отметить опцию <strong><u>Scan recursively</u></strong>,
+ то будут просканированы все вложенные папки и найденные там исходные 
+тексты программ будут обработаны. Так же необходимо указать папку, в 
+которой <strong>Doxygen</strong> будет формировать результирующие файлы документации (поле <strong><u>Destination directory</u></strong>).
+</p>
+<p>
+</p><div align="center"><script language="javascript">
+<!--
+google_ad_client = "pub-9355704536449637";
+google_alternate_ad_url = "http://arv.radioliga.com/mambots/content/google_adsense_script.html";
+google_ad_width = 728; 
+google_ad_height = 90; 
+google_ad_format = "728x90_as"; 
+google_ad_channel = "arv"; 
+google_ad_type = "text_image"; 
+google_color_border = "FFFFFF"; 
+google_color_bg = "FFFFFF"; 
+google_color_link = "7F7F7F"; 
+google_color_url = "008000"; 
+google_color_text = "000000"; 
+//--> 
+</script>
+<script language="javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/show_ads.js"></script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" vspace="0" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins>
+<!-- end of google ads -->
+</div><br>
+<br>
+На закладке <strong><em>Mode</em></strong> настраивается режим обработки.
+<p></p>
+<p>
+<img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/wiz_004.png" alt="Image" title="Image" align="middle" border="0" height="367" hspace="6" width="397">
+</p>
+<p>
+Можно указать, следует ли включать в документацию элементы программы. 
+которые не прокомментированы должным образом, выбрав опцию <strong><u>All entries</u></strong>.
+ В противном случае в документацию включаются только корректно 
+прокомментированные элементы. Дополнительно можно отметить опцию <strong><u>Include cross-referenced source code in the output</u></strong>, и в документацию будет включен красиво оформленный исходный текст программ с гиперссылками.<br>
+Так же нужно указать язык программы, выбрав из 4-х предлагаемых вариантов.<br>
+<br>
+На закладке <strong><em>Output</em></strong> настраивается формат выходной документации.
+</p>
+<p>
+<img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/wiz_005.png" alt="Image" title="Image" align="middle" border="0" height="367" hspace="6" width="397">
+</p>
+<p>
+<a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a> может создать документацию в нескольких распространенных форматах: <strong>HTML</strong>, <a href="http://www.google.com/custom?q=LaTeX&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: LaTeX" target="_blank">LaTeX</a> , <a href="http://www.google.com/custom?q=Man&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Man" target="_blank">Man</a> , <strong>RTF</strong> и <strong>XML</strong>. Генерация в соответствующем формате осуществляется, если выбрана соответствующая опция. Так как применение <a href="http://www.google.com/custom?q=LaTeX&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: LaTeX" target="_blank">LaTeX</a> представляется мне весьма проблематичным<sup><span style="color: #ff0000">1</span></sup>, рассмотрим параметры генерации только в формате <strong>HTML</strong>.
+</p>
+<p>
+Имеется три способа формирования HTML-документации: в виде обычного HTML (<strong><u>plain HTML</u></strong>), в виде документа с фреймами и деревом навигации (<strong><u>with frames and a navigation tree</u></strong>) и в виде скомпилированного <strong>CHM</strong>-файла.
+ Для распространения наиболее удобным представляется именно третий 
+вариант, однако он подразумевает наличие у вас компилятора CHM-файлов. 
+Вариант с фреймами и деревом навигации имеет некоторые проблемы с 
+кодировкой, т.е. проблемы с отображением русских символов в дереве 
+навигации (возможно, это глюк Internet Explorer).
+</p>
+<p>
+Теоретически можно включить опцию <strong><u>With search function</u></strong>,
+ чтобы внедрить в документацию механизм поиска по ключевым словам, но 
+это опять-таки малоприемлемо, т.к. требует наличия WEB-сервера с 
+поддержкой PHP. В общем, выбор вариантов не велик.
+</p>
+<p>
+Формат <a href="http://www.google.com/custom?q=RTF&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: RTF" target="_blank">RTF</a> удобен тем, что может быть открыт в любом текстовом процессоре и откорректирован вручную.
+</p>
+<p>
+<img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/wiz_006.png" alt="Image" title="Image" align="middle" border="0" height="367" hspace="6" width="397"><br>
+<br>
+Закладка <strong><em>Diagrams</em></strong> позволяет настроить режим 
+внедрения в документацию диаграмм, показывающих иерархию классов и т.п. 
+связи между составными частями проекта. Так как речь идет о 
+документировании программ на Си, а не С++, эти возможности не 
+рассматриваются - рекомендую выбирать опцию <strong><u>No diagaram</u></strong> (без диаграмм).
+</p>
+<p>
+Итак, при помощи мастера сделаны необходимые конфигурации. Но прежде, чем продолжать, сделаю важное примечание: по умолчанию <strong>Doxygen</strong> создает документы в кодировке <strong>UTF-8</strong>, а исходные тексты, как правило, мы создаем в кодировке <strong>Windows-1251</strong>,
+ в результате скорее всего будет получен HTML-документ с кракозямбами 
+вместо русского текста. Исправить эту ситуацию и, заодно, более тонко 
+настроить параметры <strong>Doxygen</strong> можно, воспользовавшись экспертным режимом, т.е. нажав на кнопку <strong><em>Expert</em></strong>.
+</p>
+<p>
+<img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/wiz_007.png" alt="Image" title="Image" align="middle" border="0" height="354" hspace="6" width="966"><br>
+<br>
+Как видите, закладок в мастере экспертных настроек существенно больше, 
+не говоря уже о том, что в каждой закладке параметров столько, что 
+приходится прокручивать содержимое. К счастью, окно мастера может быть 
+распахнуто на весь экран. Еще раз повторюсь: я расскажу лишь о некоторых
+ опциях этого режима!
+</p>
+<p>
+На закладке <strong><em>Project</em></strong> мы сразу же видим поле указания кодировки выходного файла. По умолчанию там указано <strong>UTF-8</strong>, а необходимо ввести вручную <strong>Windows-1251</strong>. Чуть ниже следует указать язык - в списке <strong><u>OUTPUT_LANGUAGE</u></strong> выбрать <strong>Russian</strong>. Остальные опции на этой закладке можно оставить по умолчанию.
+</p>
+<p>
+Теперь следует перейти на закладку <strong><em>Input</em></strong>.
+</p>
+<p>
+<img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/wiz_008.png" alt="Image" title="Image" align="middle" border="0" height="580" hspace="6" width="648"><br>
+<br>
+В первую очередь на этой закладке нас интересует поле <strong><u>INPUT_ENCODING</u></strong> - снова вручную вводим <strong>Windows-1251</strong>. Теперь уже с русским языком проблем не будет.
+</p>
+<p>
+В принципе, назначение всех полей на этой закладке вполне понятно: 
+задаются маски и/или пути поиска файлов, обрабатываемых или наоборот, 
+исключаемых из обработки <strong>Doxygen</strong>. Если вдруг требуется исключить какие-то файлы, надо указать их в поле <strong><u>EXCLUDE</u></strong>, пополнив его при помощи кнопок <strong><em>Select</em></strong>.
+</p>
+<p>
+Из остальных закладок я выделю еще одну: закладку <strong><em>RTF</em></strong>.
+</p>
+<p>
+<img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/wiz_009.png" alt="Image" title="Image" align="middle" border="0" height="317" hspace="6" width="582"><br>
+<br>
+Здесь желательно отметить опции <strong><u>COMPACT_RTF</u></strong> (для получения файла умень-шенного размера) и <strong><u>RTF_HYPERLINKS</u></strong> (для получения гиперссылок внутри RTF-документа).
+</p>
+<p>
+На этом этап настройки может быть завершен. Далее следует сохранить сделанные настройки, а после чего - смело нажать кнопку <strong><em>Start</em></strong>. Несколько секунд ожидания, сопровождаемого сообщениями в окошке <strong><em>Output produced by doxygen</em></strong> - и можно заглянуть по ранее указанному пути в поисках результатов.
+</p>
+<p>
+Надеюсь, вы оцените возможности автоматического самодокументирования 
+программ, и ваши исходные тексты станут образцом для других. В качестве 
+примера предлагаю ознакомиться с include-файлами из комплекта <a href="http://www.google.com/custom?q=WinAVR&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: WinAVR" target="_blank">WinAVR</a> - все они просто нашпигованы комментариями <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a>.
+ Кроме этого, взгляните на мою библиотечку для приема кодов пультов 
+дистанционного управления бытовой техникой - мой первый опыт активного 
+использования <strong>Doxygen</strong> «на публику». 
+</p>
+<p>
+Особенно приятно пользоваться возможностями <a href="http://www.google.com/custom?q=Doxygen&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Doxygen" target="_blank">Doxygen</a> в <a href="http://www.google.com/custom?q=IDE&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: IDE" target="_blank">IDE</a> программиста <a href="http://www.google.com/custom?q=Eclipse%20Ganymede&amp;client=pub-9355704536449637&amp;forid=1&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A44%3BLW%3A214%3BL%3A%3BS%3A%3BFORID%3A1%3B&amp;hl=ru" title="Найти в Google: Eclipse Ganymede" target="_blank">Eclipse Ganymede</a>,
+ которая умеет автоматически создавать шаблоны комментариев для функций,
+ файлов, классов, методов и т.п. Возможно, я когда-нибудь немножко 
+расскажу и об этой IDE, ибо считаю ее очень удобной и, главное, так же 
+абсолютно бесплатной.
+</p>
+<p>
+<sup><span style="color: #ff0000">1)</span></sup> <em>LaTeX - это очень 
+продвинутая система авторской разметки текста, однако, очень громоздкая 
+(распространяется в виде многомегабайтных архивов). Кроме того, во 
+многих случаях это коммерческая система. Все остальное расскажет 
+Internet.</em>
+</p>
+<p>
+<noindex><a rel="nofollow" href="http://www.doxygen.org/" target="_blank" title="Перейти на сайт Doxygen">Скачать doxygen с официального сайта</a></noindex> <br>
+<a href="http://arv.radioliga.com/downloads/html.rar" title="Скачать образец документации, сгенерированной Doxygen">Скачать образец HTML-документации</a> <br>
+<a href="http://arv.radioliga.com/downloads/rtf.rar" title="Скачать образец RTF-документации, сгенерированной Doxygen">Скачать образец RTF-документации</a>
+</p>
+<p align="center">
+<!-- Яндекс.Директ -->
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 64353;
+yandex_site_bg_color = 'FFFFFF';
+yandex_stat_id = 2;
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'horizontal';
+yandex_direct_limit = 3;
+yandex_direct_title_color = '999999';
+yandex_direct_url_color = '000000';
+yandex_direct_all_color = '999999';
+yandex_direct_text_color = '000000';
+yandex_direct_hover_color = '0000FF';
+yandex_direct_favicon = false;
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script><script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/context.js"></script><script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/context_static_r582.js" yandex_load_check="yes"></script><script type="text/javascript">
+//<![CDATA[
+if (!window.yandex_ad_is_displayed) {
+document.write('<div align="center"><h2>Место для вашей рекламы</h2></div>');
+}
+//]]>
+</script></p><div align="center"><h2>Место для вашей рекламы</h2></div>&nbsp;
+<p></p>
+<br> <img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/favoured.gif" style="vertical-align:middle;" alt="" hspace="2"><a class="" href="http://arv.radioliga.com/component/option,com_akocomment/task,favoured/id,154/Itemid,43/">Добавить в любимые</a> (1) | Просмотров: 12796<br><br><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><div class="commenttop" align="left"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/quotetop.gif" alt="" align="bottom">&nbsp;&nbsp;Коментарии (1)</div></td><td><div align="right"></div></td></tr></tbody></table><a name="akocomment171"></a><table border="0" cellpadding="3" cellspacing="3" width="100%"><tbody><tr class=""><td valign="top"><fieldset><legend>&nbsp;1&nbsp;</legend><span class="small">Написал(а) <b>Вадим</b>, в 23:26 20.02.2009 </span><br>Хорошая вещь, когда я в универе учился, эта прога могла быть незаменимой для меня, но я не знал о существовании этого проекта.<br><div align="right"><a href="http://arv.radioliga.com/component/option,com_akocomment/task,report/id,154/cid,171/Itemid,43/">Уведомить админа</a></div></fieldset></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><div class="mag-tovar" align="right"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/quotebottom.gif" alt=""></div></td></tr></tbody></table><p>Только зарегистрированные пользователи могут оставлять коментарии. <br>Пожалуйста зарегистрируйтесь или войдите в ваш аккаунт.</p>			</td>
+		</tr>
+				</tbody></table>
+		
+		<span class="article_seperator">&nbsp;</span>
+
+					<table style="margin-top: 25px;" align="center">
+			<tbody><tr>
+									<th class="pagenav_prev">
+					<a href="http://arv.radioliga.com/content/view/219/43/">
+							« Пред.</a>
+					</th>
+										<td width="50">&nbsp;
+	
+					</td>
+										<th class="pagenav_next">
+					<a href="http://arv.radioliga.com/content/view/125/43/">
+							След. »</a>
+					</th>
+								</tr>
+			</tbody></table>
+			                        <div class="back_button">
+                        <a href="javascript:history.go(-1)">
+					Вернуться</a>
+                        </div>
+                                               </div></td>           </tr>           <tr>                       <td colspan="3" style="border-top: 3px solid #FFFFFF;" valign="top">                        <div>                       		<table class="moduletable" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+				<th valign="top">
+					Полезные материалы по сходным темам				</th>
+			</tr>
+					<tr>
+			<td>
+								<ul>
+									<li>
+						<a href="http://arv.radioliga.com/content/view/40/43/">
+							Простые адаптеры для ISP-программирования</a>
+					</li>
+										<li>
+						<a href="http://arv.radioliga.com/content/view/42/43/">
+							JonisProg 2003 и SPI-Flash</a>
+					</li>
+										<li>
+						<a href="http://arv.radioliga.com/content/view/84/49/">
+							Простая работа с периферийными портами в Windows</a>
+					</li>
+										<li>
+						<a href="http://arv.radioliga.com/content/view/106/49/">
+							Вывод чисел на дисплей</a>
+					</li>
+										<li>
+						<a href="http://arv.radioliga.com/content/view/119/49/">
+							Программа для индикатора типа "шкала светодиодов"</a>
+					</li>
+										<li>
+						<a href="http://arv.radioliga.com/content/view/161/38/">
+							Обновление плагина DS_1WIRE.PPL</a>
+					</li>
+										<li>
+						<a href="http://arv.radioliga.com/content/view/180/38/">
+							Модули для текстового интерфейса пользователя (TUI)</a>
+					</li>
+										<li>
+						<a href="http://arv.radioliga.com/content/view/183/44/">
+							Конвертер русских строк для ЖКИ</a>
+					</li>
+										<li>
+						<a href="http://arv.radioliga.com/content/view/187/49/">
+							1. Как установить в единицу нужный(ые) бит(ы) в переменной, не меняя остальные?</a>
+					</li>
+									</ul>
+							</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+				<div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-9355704536449637";
+/* 728x90, создано 05.10.08 */
+google_ad_slot = "6516089535";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><ins id="aswift_3_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" vspace="0" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins></div>			</td>
+		</tr>
+		</tbody></table>
+		                       </div>                                              </td>           </tr>   </tbody></table>      </td>  <td class="bgline"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/space.gif" alt="" border="0" width="7"></td>                                  </tr>         </tbody></table><noindex>                    <table class="foot" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">                 <tbody><tr>                                       <td class="footer" align="center" width="100%">    	Все права защищены. Использование материалов разрешается только с письменного согласия автора.<br> 	Copyright 2007 © ARV Research<br> 	 Powered by <a href="http://www.joom.ru/" target="_blank">Joomla</a><br>                      Special thanks: <a href="http://mambasana.ru/" target="_blank">rgb(raduga)</a>
+<br>
+<!-- SpyLOG -->
+<script src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/counter_cv.js" id="spylog_code" type="text/javascript" counter="981737" part="" track_links="ext" page_level="0">
+</script><script language="javascript">window.spylog_js=1;</script><script language="javascript1.1">window.spylog_js=1.1;</script><script language="javascript1.2">window.spylog_js=1.2;</script><script language="javascript1.3">window.spylog_js=1.3;</script><script language="javascript1.4">window.spylog_js=1.4;</script><script language="javascript1.5">window.spylog_js=1.5;</script><script language="javascript1.6">window.spylog_js=1.6;</script><script language="javascript1.7">window.spylog_js=1.7;</script><script language="javascript1.8">window.spylog_js=1.8;</script><script language="javascript1.9">window.spylog_js=1.9;</script><script language="javascript"></script><a href="http://u9817.37.spylog.com/cnt?cid=981737&amp;p=0&amp;c=1&amp;fr=1&amp;fl=11.4&amp;px=24&amp;sl=1.8&amp;wh=1680x1050&amp;j=N&amp;t=-240&amp;h5=111111&amp;pg=http%3A//arv.radioliga.com/content/view/154/43/&amp;r=http%3A//www.google.ru/url%3Fsa%3Dt%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dweb%26cd%3D2%26ved%3D0CCsQFjAB%26url%3Dhttp%253A%252F%252Farv.radioliga.com%252Fcontent%252Fview%252F154%252F43%252F%26ei%3DonaqUNP1EIj24QSi74HICg%26usg%3DAFQjCNHmAH2RkvGihiCQveeI8_9pzCTVCA%26sig2%3D8k6HPrZGB9k-jvkNW7k97Q%26cad%3Drja&amp;title=ARV%20Research%20-%20%u0421%u0430%u043C%u043E%u0434%u043E%u043A%u0443%u043C%u0435%u043D%u0442%u0438%u0440%u043E%u0432%u0430%u043D%u0438%u0435%20%u043F%u0440%u043E%u0433%u0440%u0430%u043C%u043C&amp;rn=0.787704442711257&amp;f=3" target="_blank"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/cnt.gif" alt="SpyLOG" border="0"></a>
+<noscript>
+<a href="http://u9817.37.spylog.com/cnt?cid=981737&f=3&p=0" target="_blank">
+<img src="http://u9817.37.spylog.com/cnt?cid=981737&p=0" alt="SpyLOG" border="0" width="88" height="31"></a>
+</noscript>
+<!--/ SpyLOG -->&nbsp;
+<!-- РадиоТОП -->
+<script language="javascript"><!-- 
+d=document;nv=navigator;na=nv.appName;t=top;f=t.frames.length;r_js=10; 
+r_r="rn="+Math.round(Math.random()*10000)+"&r="+escape(d.referrer)+"&pg="+escape(window.location.href); 
+if(self!=parent){r_r+="&tpg="+escape(t.d.location);r_r+="&tr="+escape(t.d.referrer);} 
+d.cookie="rdnt=1";r_r+="&c="+(d.cookie?"y":"n")+"&f="+f; 
+n=(na.substring(0,3)=="Mic")?0:1; 
+//--></script><script language="javascript1.1"><!-- 
+r_js=11;fl2=fl3=fl4=fl5=fl6=false;flv=0; 
+if((nv.appVersion.indexOf("MSIE")!=-1)&&(nv.appVersion.indexOf("Windows")!=-1)){ 
+tf='=(IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.'; 
+d.write('<scr'+'ipt language=VBScript\> \n if ScriptEngineMajorVersion>=2 then\n on error resume next \n'); 
+d.write('fl3'+tf+'3"))) \n fl4'+tf+'4"))) \n'); 
+d.write('fl5'+tf+'5"))) \n fl6'+tf+'6"))) \n'); 
+d.write('end if </scr'+'ipt\> ');for(var i=3;i<=6;i++){if(eval("fl"+i)==true){flv=i;}}} 
+if(nv.plugins){if(nv.plugins["Shockwave Flash 2.0"] || nv.plugins["Shockwave Flash"]){ 
+var v2=nv.plugins["Shockwave Flash 2.0"]?" 2.0":""; 
+var fl_op=nv.plugins["Shockwave Flash"+v2].description; 
+flv=parseInt(fl_op.charAt(fl_op.indexOf(".")-1));}} 
+r_r+="&j="+(nv.javaEnabled()?"y":"n")+"&fl="+flv; 
+//--></script><script language="javascript1.2"><!-- 
+r_js=12;s=screen;px=(n==0)?s.colorDepth:s.pixelDepth; 
+r_r+="&wh="+s.width+'x'+s.height+"&px="+px; 
+//--></script><script language="javascript1.3"><!-- 
+r_js=13; 
+//--></script><script language="javascript"><!-- 
+r_r+="&js="+r_js; 
+d.write("<a href='http://radionet.com.ru/top/c.php?id=6121' target='_top'>" 
++"<img src='http://radionet.com.ru/top/cnt.cgi?id=6121&cnt=2&l=8&"+r_r 
++"' border=0 width=88 height=31 alt='RadioTop'></a>"); 
+if(r_js>11)d.write('<'+'!-- ')//--></script><a href="http://radionet.com.ru/top/c.php?id=6121" target="_top"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/cnt.png" alt="RadioTop" border="0" height="31" width="88"></a><!--  
+<div style='visibility:hidden'><a href="http://radionet.com.ru">radionet</a></div><noscript> 
+<a href="http://radionet.com.ru/top/c.php?id=6121" target="_top"> 
+<img src="http://radionet.com.ru/top/cnt.cgi?id=6121&cnt=2&l=8&js=-1" border=0 width=88 height=31 alt="RadioTop"></a> 
+</noscript><script language="JavaScript"><!-- 
+if(r_js>11)d.write('--'+'>')//-->&nbsp;
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><a href="http://top.mail.ru/jump?from=1415325" target="_top"><img src="ARV%20Research%20-%20%D0%A1%D0%B0%D0%BC%D0%BE%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC_files/counter.gif" alt="Рейтинг@Mail.ru" border="0" height="31" width="88"></a><!-- <noscript><a
+target="_top" href="http://top.mail.ru/jump?from=1415325"><img
+src="http://d8.c9.b5.a1.top.list.ru/counter?js=na;id=1415325;t=57"
+border="0" height="31" width="88"
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--><!--/COUNTER-->
+</td></tr></tbody></table>
+</noindex></body></html>
+<!-- 1353348783 -->
