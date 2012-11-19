@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="dir_13810ee1805991ccbe8ed9f4d1be35ac" kind="dir">
+    <compoundname>C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/get_token 15112012</compoundname>
+    <innerfile refid="get__token_8h">get_token.h</innerfile>
+    <innerfile refid="_globals_8h">Globals.h</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/get_token 15112012/"/>
+  </compounddef>
+</doxygen>

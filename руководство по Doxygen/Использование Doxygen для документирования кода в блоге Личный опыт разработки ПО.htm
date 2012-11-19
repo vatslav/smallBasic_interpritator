@@ -1,0 +1,802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru-RU"><head profile="http://gmpg.org/xfn/11">
+<title>   Использование Doxygen для документирования кода в блоге Личный опыт разработки ПО</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="Сборник рецептов">
+<link href="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/style.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="Личный опыт разработки ПО RSS Feed" href="http://www.devexp.ru/feed/">
+<link rel="shortcut icon" type="image/x-icon" href="http://www.devexp.ru/wp-content/themes/journalist/favicon.ico">
+<link rel="pingback" href="http://www.devexp.ru/xmlrpc.php">
+<link rel="alternate" type="application/rss+xml" title="Личный опыт разработки ПО » Использование Doxygen для документирования кода Лента комментариев" href="http://www.devexp.ru/2010/02/ispolzovanie-doxygen-dlya-dokumentirovaniya-koda/feed/">
+<script type="text/javascript" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/jquery.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.devexp.ru/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.devexp.ru/wp-includes/wlwmanifest.xml"> 
+<link rel="index" title="Личный опыт разработки ПО" href="http://www.devexp.ru/">
+<link rel="start" title="Заводим блог" href="http://www.devexp.ru/2009/11/zavodim-blog/">
+<link rel="prev" title="Скорость CMake" href="http://www.devexp.ru/2010/02/skorost-cmake/">
+<link rel="next" title="Boost Optional" href="http://www.devexp.ru/2010/02/boost-optional/">
+
+
+<script type="text/javascript">var AKPC_IDS = "";</script>
+	
+<link rel="stylesheet" href="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/wp-syntax.css" type="text/css" media="screen">
+</head>
+
+<body>
+<div id="container" class="group">
+
+<h1><a href="http://www.devexp.ru/">Личный опыт разработки ПО</a></h1>
+	<div id="bubble"><p>Сборник рецептов</p></div>
+
+<div id="content">
+<script language="JavaScript" type="text/javascript" charset="utf-8">
+/*<![CDATA[ */
+var myStat_js=1;var myStat_ver='2.6';var js_version= '<scr'+'ipt language="javascr'+'ipt">myStat_js=1;</scr'+'ipt>';js_version += '<scr'+'ipt language="javascr'+'ipt1.1">myStat_js=1.1;</scr'+'ipt>';js_version += '<scr'+'ipt language="javascr'+'ipt1.2">myStat_js=1.2;</scr'+'ipt>';js_version += '<scr'+'ipt language="javascr'+'ipt1.3">myStat_js=1.3;</scr'+'ipt>';js_version += '<scr'+'ipt language="javascr'+'ipt1.4">myStat_js=1.4;</scr'+'ipt>';js_version += '<scr'+'ipt language="javascr'+'ipt1.5">myStat_js=1.5;</scr'+'ipt>';js_version += '<scr'+'ipt language="javascr'+'ipt1.6">myStat_js=1.6;</scr'+'ipt>';document.write(js_version);var myStat_flash='';if (navigator.plugins && navigator.plugins.length) {for (var ii=0;ii<navigator.plugins.length;ii++) {if (navigator.plugins[ii].name.indexOf('Shockwave Flash')!=-1) {myStat_flash=navigator.plugins[ii].description.split('Shockwave Flash ')[1];break;};};}else if (window.ActiveXObject) {for (var ii=10;ii>=2;ii--) {try {var f=eval("new ActiveXObject('ShockwaveFlash.ShockwaveFlash."+ii+"');");if (f) { myStat_flash=ii + '.0'; break; };}catch(ee) {};};if((myStat_flash=="")&&!this.n&&(navigator.appVersion.indexOf("MSIE 5")>-1||navigator.appVersion.indexOf("MSIE 6")>-1)) {FV=clientInformation.appMinorVersion;if(FV.indexOf('SP2') != -1)myStat_flash = '>=7';};};var myStat_cookie = 1;if( !document.cookie ) {document.cookie = "testCookie=1; path=/";myStat_cookie = document.cookie?1:0;};var myStat_n = (navigator.appName.toLowerCase().substring(0, 2) == "mi") ? 0 : 1;var myStat_java=navigator.javaEnabled()?1:0;var myStat_sc=screen.width+'x'+screen.height;var myStat_dth=(myStat_n==0)?screen.colorDepth : screen.pixelDepth;var myStat_title=escape(document.title);myStat_title=myStat_title.replace(/\+/g,'%2B');var myStat_uri='http://www.devexp.ru/wp-content/plugins/mystat/mystat.php';myStat_uri=myStat_uri+ '?act=js&js='+myStat_js+'&java='+myStat_java+'&flash='+myStat_flash+'&id=281765&cookie='+myStat_cookie+'&title='+myStat_title+'&sc='+myStat_sc+'&dth='+myStat_dth+'&rnd='+Math.random()+'';document.write('<img src="'+myStat_uri+'" style="display:none;" width=1 height=1 border=0 />');
+/*]]>*/
+</script><script language="javascript">myStat_js=1;</script><script language="javascript1.1">myStat_js=1.1;</script><script language="javascript1.2">myStat_js=1.2;</script><script language="javascript1.3">myStat_js=1.3;</script><script language="javascript1.4">myStat_js=1.4;</script><script language="javascript1.5">myStat_js=1.5;</script><script language="javascript1.6">myStat_js=1.6;</script><img src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/mystat.htm" style="display:none;" border="0" height="1" width="1">
+<div class="post hentry">
+<h2 id="post-65" class="entry-title"><a href="http://www.devexp.ru/2010/02/ispolzovanie-doxygen-dlya-dokumentirovaniya-koda/" rel="bookmark">Использование Doxygen для документирования кода</a></h2>
+<p class="comments"><a href="http://www.devexp.ru/2010/02/ispolzovanie-doxygen-dlya-dokumentirovaniya-koda/#comments">Комментариев: 11</a></p>
+
+<div class="main entry-content group">
+	<p><a href="http://www.doxygen.org/" target="_blank"><img src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/doxygen.png"></a>
+</p><p>Написание документации к коду задача не самая простая и уж точно 
+не самая приятная, но к счастью существуют инструменты которые могут 
+существенно упростить эту процедуру. Для этих целей я использую 
+инструмент <strong>Doxygen</strong> и именно о нем пойдет речь.</p>
+<h2>Что такое Doxygen?</h2>
+<p>Doxygen – это кроссплатформенная система документирования кода с 
+поддержкой языков C++, C, Java, Objective-C, PHP, C# (список можно 
+уточнить на <a href="http://www.doxygen.org/" target="_blank">сайте проекта</a>).</p>
+<p>Для создания документации достаточно просто писать комментарии в коде, придерживаясь нескольких простых правил. </p>
+<p>Doxygen умеет анализировать исходный код проекта и создавать удобную документацию в формате HTML, Latex, RTF, XML, man, CHM.</p>
+<h2>Общие соображения</h2>
+<ol>
+<li>Написание документации должно быть максимально простым, чтобы 
+разработчики не "забывали" это делать. Отсюда вывод, что сложность 
+форматирования комментариев должна быть минимальной.
+<p>Хорошо:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="cpp" style="font-family:monospace;"><span style="color: #0000ff;">namespace</span> A
+<span style="color: #008000;">{</span>
+<span style="color: #ff0000; font-style: italic;">/**
+Имя класса
+&nbsp;
+Описание класса
+*/</span>
+	<span style="color: #0000ff;">class</span> B
+	<span style="color: #008000;">{</span>
+	<span style="color: #008000;">}</span><span style="color: #008080;">;</span>
+<span style="color: #008000;">}</span></pre></div></div>
+
+<p>Плохо:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="cpp" style="font-family:monospace;"><span style="color: #0000ff;">namespace</span> A
+<span style="color: #008000;">{</span>
+	<span style="color: #ff0000; font-style: italic;">/**
+	 * Имя класса
+	 * 
+	 * Описание класса
+	 */</span>
+	<span style="color: #0000ff;">class</span> B
+	<span style="color: #008000;">{</span>
+	<span style="color: #008000;">}</span><span style="color: #008080;">;</span>
+<span style="color: #008000;">}</span></pre></div></div>
+
+<p>Почему второй вариант хуже? Очевидно, из-за необходимости выравнивать
+ комментарии на одном уровне с комментируемой сущностью, а также из-за 
+избыточных символов <strong>*</strong>. Это может показаться надуманным,
+ но при написании комментариев из нескольких строк проблема проявляется,
+ а при поддержке кода и вовсе становится кошмаром. Вы можете возразить, 
+что подобный стиль делает код "рваным", но в любом случае 
+комментирование интерфейсов делает код менее читаемым. К счастью все 
+современные редакторы кода позволяют легко свернуть блоки с 
+комментариями, что позволит взглянуть на код без помех.</p>
+</li>
+<li>Много документации – плохо, так как мало кто будет читать длинные 
+мануалы. Из этого следует, что документированы должны быть только 
+открытые (public) и защищенные (protected) интерфейсы. Закрытые 
+(private) интерфейсы – часть внутренней реализации и не должны быть в 
+руководстве. </li>
+</ol>
+<p><span id="more-65"></span></p>
+<h2>Что нам понадобится?</h2>
+<p>Нам понадобится сделать две вещи:</p>
+<ol>
+<li>Установить <a href="http://www.doxygen.org/" target="_blank">Doxygen</a>, если он еще не установлен. </li>
+<li>Установить <a href="http://www.graphviz.org/" target="_blank">Graphviz</a>.
+ Graphviz – это свободно распространяемый пакет утилит для визуализации 
+данных. Нам он нужен для того, чтобы Doxygen мог показать в документации
+ отношения наследования, графы вызовов и прочую информацию в виде 
+наглядных изображений. </li>
+</ol>
+<h2>Использование Doxygen</h2>
+<p>Использовать Doxygen просто – для этого надо просто запустить 
+программу указав ей путь к файлу с настройками. Файл с настройками 
+представляет собой простой текстовой файл, который можно редактировать 
+как в текстовом редакторе, так и с помощью специальных программ, 
+например <a href="http://sourceforge.net/projects/doxygate" target="_blank">Doxygate</a>.</p>
+<p>В настройках описывается внешний вид документации, какие сущности и 
+отношения между ними следует включать в нее, имя проекта, путь к 
+анализируемым файлам и так далее.</p>
+<p>Я предпочитаю редактировать этот файл вручную, тем более, что его 
+достаточно настроить один раз под свои потребности и затем в новых 
+проектах изменять одну строку – имя проекта. В конце заметки будет 
+представлен используемый мной конфигурационный файл.</p>
+<h2>Комментирование в стиле Doxygen</h2>
+<p>Doxygen поддерживает несколько стилей комментариев. Я придерживаюсь следующего:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="cpp" style="font-family:monospace;"><span style="color: #ff0000; font-style: italic;">/**
+Комментарии
+*/</span></pre></div></div>
+
+<p>Обратите внимание, что последовательность символов <strong>/**</strong> сообщает программе, что начинается комментарий предназначенный для нее. Начиная с этого места и до завершающих символов <strong>*/</strong> следуют комментарии.</p>
+<p>Есть несколько директив, которые помогают Doxygen составить грамотную документацию. Вот основные:</p>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td valign="top" width="15%"><strong>@brief</strong></td>
+<td valign="top">Краткое описание комментируемой сущности.<br>
+        <br>Пример: <p></p>
+<pre>@brief Функция для поиска пользователя в базе данных</pre>
+<p></p></td>
+</tr>
+<tr>
+<td valign="top" width="15%"><strong>@detailed</strong></td>
+<td valign="top">Подробное описание сущности, то что будет показано, 
+когда вы нажмете в документации рядом с коротким описанием ссылку 
+"Подробней". На мой взгляд использоваться должно как можно реже, в силу 
+того, что короткое описание должно точно отражать идею использования 
+сущности, а использование ее не должно сопровождаться неожиданными 
+предусловиями.<br>
+        <br>Пример: <p></p>
+<pre>@detailed Данная функция делает выборку из базы данных
+по имени пользователя и возвращает структуру с информацией
+о нем. Ожидается, что соединение с базой данных установлено
+и пользователь существует</pre>
+<p></p></td>
+</tr>
+<tr>
+<td valign="top" width="15%"><strong>@param</strong></td>
+<td valign="top">Параметры передаваемые функции.<br>
+        <br>Пример: <p></p>
+<pre>@param name Имя пользователя</pre>
+<p></p></td>
+</tr>
+<tr>
+<td valign="top" width="15%"><strong>@return</strong></td>
+<td valign="top">Возвращаемое функцией значение.<br>
+        <br>Пример: <p></p>
+<pre>@return Информация о пользователе</pre>
+<p></p></td>
+</tr>
+<tr>
+<td valign="top" width="15%"><strong>@throw</strong></td>
+<td valign="top">Исключения выбрасываемые функцией.<br>
+        <br>Пример: <p></p>
+<pre>@throw DatabaseError Если произошла ошибка при подключении
+к базе данных</pre>
+<p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Пример комментариев для класса:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="cpp" style="font-family:monospace;"><span style="color: #ff0000; font-style: italic;">/**
+@brief Класс для работы с базой данных
+@detailed Осуществляет подключение к базе при создании 
+и закрывает соединение при уничтожении
+*/</span>
+<span style="color: #0000ff;">class</span> Database
+<span style="color: #008000;">{</span>
+<span style="color: #0000ff;">public</span><span style="color: #008080;">:</span>
+<span style="color: #ff0000; font-style: italic;">/**
+@brief Конструктор
+@param connectionString Строка подключения к базе данных
+@throw ConnectionError Если подключение не удалось
+*/</span>
+	<span style="color: #0000ff;">explicit</span> Database<span style="color: #008000;">(</span><span style="color: #0000ff;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">string</span><span style="color: #000040;">&amp;</span> connectionString<span style="color: #008000;">)</span><span style="color: #008080;">;</span>
+<span style="color: #ff0000; font-style: italic;">/**
+@brief Поиск пользователя в базе данных
+@detailed Данная функция делает выборку из базы данных 
+по имени пользователя и возвращает структуру с информацией 
+о нем. Ожидается, что соединение с базой данных установлено 
+и пользователь существует
+@param name Имя пользователя
+@return Информация о пользователе
+@throw DatabaseError Если произошла ошибка при подключении 
+к базе данных
+@throw InvalidRequest Если пользоваделя в базе не существует
+*/</span>
+	CustomerPtr GetCustomer<span style="color: #008000;">(</span><span style="color: #0000ff;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">string</span><span style="color: #000040;">&amp;</span> name<span style="color: #008000;">)</span><span style="color: #008080;">;</span>
+<span style="color: #008000;">}</span><span style="color: #008080;">;</span></pre></div></div>
+
+<p>Этого достаточно для 99% кода, но остается вопрос комментирования на 
+уровне проекта, а не файла. Для этого служат следующие директивы:</p>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td valign="top" width="15%"><strong>@mainpage</strong></td>
+<td valign="top">Основная страница проекта, то с чего начинается просмотр документации.<br>
+        <br>Пример: <p></p>
+<pre>@mainpage Приложение для учета пользователей</pre>
+<p></p></td>
+</tr>
+<tr>
+<td valign="top" width="15%"><strong>@page</strong></td>
+<td valign="top">Дополнительные страницы проекта. Я рассматриваю их как логически обособленные части проекта.<br>
+        <br>Пример: <p></p>
+<pre>@page Database Database
+Утилиты для работы с базой данных</pre>
+<p></p></td>
+</tr>
+<tr>
+<td valign="top" width="15%"><strong>@ref</strong></td>
+<td valign="top">Ссылки на страницы проекта, с их помощью можно организовать например ссылки с главной страницы проекта на страницы подпроектов.<br>
+        <br>Пример: <p></p>
+<pre>@ref Database Утилиты для работы с базой данных</pre>
+<p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Для организации четкой структуры я рекомендую в каждом подпроекте создавать файл <strong>description.h</strong> в котором будет директива <strong>@page</strong>, описание для чего нужен этот подпроект и принципы работы с ним.</p>
+<p>В свою очередь в корне проекта я также создаю файл <strong>description.h</strong> в котором немного рассказано о проекте в целом и приведены ссылки на его части:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="cpp" style="font-family:monospace;"><span style="color: #ff0000; font-style: italic;">/**
+@mainpage Приложение для учета пользователей
+Состоит из следующих частей:
+- @ref Database Утилиты для работы с базой данных
+*/</span></pre></div></div>
+
+<p>Чтобы привести фрагмент кода (например пример работы с классом) используется конструкция <strong>@code</strong> – <strong>@endcode</strong>:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="cpp" style="font-family:monospace;"><span style="color: #ff0000; font-style: italic;">/**
+Пример использования Foo:
+@code
+Foo f();
+f.Run();
+@endcode
+*/</span></pre></div></div>
+
+<p>Списки можно создавать с помощью символа <strong>-</strong> (минус). Пример:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="cpp" style="font-family:monospace;"><span style="color: #ff0000; font-style: italic;">/**
+Список:
+- Первый пункт
+- Второй пункт
+*/</span></pre></div></div>
+
+<p>Перечисления я оформляю так:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="cpp" style="font-family:monospace;"><span style="color: #ff0000; font-style: italic;">/**
+@brief Режимы устройства
+*/</span>
+<span style="color: #0000ff;">enum</span> Mode
+<span style="color: #008000;">{</span>
+	Mode_On,	<span style="color: #ff0000; font-style: italic;">/**&lt; Включено */</span>
+	Mode_Off	<span style="color: #ff0000; font-style: italic;">/**&lt; Выключено */</span>
+<span style="color: #008000;">}</span><span style="color: #008080;">;</span></pre></div></div>
+
+<p>В большинстве случаев приведенных директив достаточно, с полным списком вы можете ознакомиться в <a href="http://www.stack.nl/%7Edimitri/doxygen/commands.html" target="_blank">руководстве</a>.</p>
+<h2>Ложка дегтя</h2>
+<p>Обратите внимание! Очень ВАЖНО перед объявлением пространства имен 
+повторять его имя в комментарии Doxygen. Похоже на баг (версия 1.6.2), 
+но без этого содержимое пространства не попадет в документацию. Пример:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="cpp" style="font-family:monospace;"><span style="color: #ff0000; font-style: italic;">/**
+namespace A
+@brief Пространство имен A
+*/</span>
+<span style="color: #0000ff;">namespace</span> A
+<span style="color: #008000;">{</span>
+<span style="color: #008000;">}</span></pre></div></div>
+
+<p>Символ @ в конструкции namespace отсутствует!</p>
+<h2>Файл с настройками Doxygen</h2>
+<p>Как уже упоминалось, для работы Doxygen нужен файл с настройками. Программа умеет создавать файл с параметрами по умолчанию:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="bash" style="font-family:monospace;">doxygen <span style="color: #660033;">-g</span></pre></div></div>
+
+<p>После этого будет сгенерирован файл с именем Doxyfile содержащий 
+настройки по умолчанию. Вы можете отредактировать его под свои нужды, 
+что сделать довольно просто благодаря содержащимся в нем пояснениям.</p>
+<p>Рассмотрю некоторые из пунктов которые я изменяю:</p>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td valign="top" width="25%"><strong>PROJECT_NAME</strong></td>
+<td valign="top">Имя проекта.<br>
+        </td>
+</tr>
+<tr>
+<td valign="top" width="25%"><strong>QUIET</strong></td>
+<td valign="top">Допустимые значения YES и NO. Я ставлю YES, для того 
+чтобы предупреждения не терялись среди обилия информации о работе 
+программы.<br>
+        </td>
+</tr>
+<tr>
+<td valign="top" width="25%"><strong>WARN_NO_PARAMDOC</strong></td>
+<td valign="top">YES для вывода предупреждений о недокументированных аргументах функции.<br>
+        </td>
+</tr>
+<tr>
+<td valign="top" width="25%"><strong>INPUT</strong></td>
+<td valign="top">Путь к анализируемому коду. Я рекомендую в корне проекта создать директорию <strong>docs </strong>содержащую <strong>Doxyfile</strong> с настройками, в таком случае значение этого параметра будет <strong>../</strong><p></p>
+<p></p></td>
+</tr>
+<tr>
+<td valign="top" width="25%"><strong>FILE_PATTERNS</strong></td>
+<td valign="top">Шаблон для имени анализируемых файлов. Поскольку 
+документироваться должны только открытые интерфейсы, то очевидно, что 
+следует анализировать только заголовочные файлы: <strong>*.h</strong><p></p>
+<p></p></td>
+</tr>
+<tr>
+<td valign="top" width="25%"><strong>RECURSIVE</strong></td>
+<td valign="top">Рекурсивно анализировать файлы в поддиректориях – YES.</td>
+</tr>
+<tr>
+<td valign="top" width="25%"><strong>EXCLUDE_PATTERNS</strong></td>
+<td valign="top">Исключение из анализа директорий соответствующих маске.<br>
+        <br>Пример: <p></p>
+<pre>EXCLUDE_PATTERNS = */.svn/* */build/* */tests/* */sources/*</pre>
+</td>
+</tr>
+<tr>
+<td valign="top" width="25%"><strong>HAVE_DOT</strong></td>
+<td valign="top">YES, если установлен Graphviz и требуется визуализация связей.<br>
+        </td>
+</tr>
+</tbody>
+</table>
+<p>Очень разумно будет один раз написать свою конфигурацию для Doxygen и в новых проектах менять лишь один параметр – <strong>PROJECT_NAME</strong>.</p>
+<p>Мой конфигурационный файл приведен чуть ниже. Он настроен на вывод 
+предупреждений если не были документированы какие-либо сущности.</p>
+<h2>Файлы к заметке</h2>
+<p>Мой <a href="http://www.devexp.ru/wp-content/uploads/2010/02/Doxyfile.zip" target="_blank">Doxyfile</a>.</p>
+<p><a href="http://www.devexp.ru/wp-content/uploads/2010/02/doxygen_demo.zip" target="_blank">Проект</a> с комментариями для Doxygen.</p>
+<p><a href="http://www.devexp.ru/wp-content/uploads/2010/02/doxygen_demo_html.zip" target="_blank">Пример готовой документации в формате HTML</a> сгенерированной Doxygen. </p>
+<p>Для создания документации перейдите в директорию <strong>docs </strong>и запустите <strong>doxygen</strong>.</p>
+<script type="text/javascript">AKPC_IDS += "65,";</script></div>
+
+<div class="meta group">
+<div class="signature">
+  <p><abbr class="updated" title="2010-02-07T23:00:51">7 февраля 2010<br>23:00</abbr>
+      </p>
+</div>	
+<div class="tags">
+    <p>Рубрика: <a href="http://www.devexp.ru/category/razrabotka/documentation/" title="Просмотреть все записи в Документирование" rel="category tag">Документирование</a>, <a href="http://www.devexp.ru/category/razrabotka/" title="Просмотреть все записи в Разработка" rel="category tag">Разработка</a></p>
+    <p>Метки: <a href="http://www.devexp.ru/tag/doxygen/" rel="tag">Doxygen</a>, <a href="http://www.devexp.ru/tag/documentation/" rel="tag">Документирование</a></p></div>
+</div>
+</div><!-- END .hentry -->
+
+<div class="navigation group">
+    <div class="alignleft">« <a href="http://www.devexp.ru/2010/02/skorost-cmake/">Скорость CMake</a></div>
+    <div class="alignright"><a href="http://www.devexp.ru/2010/02/boost-optional/">Boost Optional</a> »</div>
+</div>
+
+
+<!-- You can start editing here. -->
+
+<a name="comments" id="comments"></a>
+
+<h3 class="reply">11 коммент. к 'Использование Doxygen для документирования кода'</h3> 
+<p class="comment_meta">Подписаться на комментарии по <a href="http://www.devexp.ru/2010/02/ispolzovanie-doxygen-dlya-dokumentirovaniya-koda/feed/">RSS</a> 
+	или <a href="http://www.devexp.ru/2010/02/ispolzovanie-doxygen-dlya-dokumentirovaniya-koda/trackback/" rel="trackback">TrackBack</a>.
+</p>
+
+<ol class="commentlist">
+
+
+<li id="comment-266" class="">
+	<div class="comment_mod">
+		</div>
+	
+	<div class="comment_text">
+	<p>Спасибо! Очень полезная инфа.</p>
+	</div>
+	
+	<div class="comment_author vcard">
+		<img alt="" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/77c7d4543b997540dfcf22cb2efac736.png" class="avatar avatar-32 photo" height="32" width="32">		<p><strong class="fn"><a href="http://apple4all.ru/" rel="external nofollow" class="url">Apple</a></strong></p>
+	<p><small>25 февраля 10 <a href="#comment-266">20:52</a> </small></p>
+	</div>
+	<div class="clear"></div>
+</li>
+
+
+<li id="comment-268" class="">
+	<div class="comment_mod">
+		</div>
+	
+	<div class="comment_text">
+	<p>Спасибо! Хоть и использовал doxygen, некоторые вещи делал криво.</p>
+<p>Только в листингах исправьте &amp;</p>
+	</div>
+	
+	<div class="comment_author vcard">
+		<img alt="" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/dd30ca54241191fb181b05ca29d4657e.png" class="avatar avatar-32 photo" height="32" width="32">		<p><strong class="fn"><a href="http://obey.su/" rel="external nofollow" class="url">Obey-Kun</a></strong></p>
+	<p><small>26 февраля 10 <a href="#comment-268">2:23</a> </small></p>
+	</div>
+	<div class="clear"></div>
+</li>
+
+
+<li id="comment-272" class="">
+	<div class="comment_mod">
+		</div>
+	
+	<div class="comment_text">
+	<p>Благодарю за внимательность!</p>
+	</div>
+	
+	<div class="comment_author vcard">
+		<img alt="" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/ed11406fdc574757a4defd961b67d16f.jpg" class="avatar avatar-32 photo" height="32" width="32">		<p><strong class="fn"><a href="http://www.devexp.ru/" rel="external nofollow" class="url">Максим Тремпольцев</a></strong></p>
+	<p><small>26 февраля 10 <a href="#comment-272">20:49</a> </small></p>
+	</div>
+	<div class="clear"></div>
+</li>
+
+
+<li id="comment-319" class="">
+	<div class="comment_mod">
+		</div>
+	
+	<div class="comment_text">
+	<p>Спасибо, за хороший материал</p>
+	</div>
+	
+	<div class="comment_author vcard">
+		<img alt="" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/b4e3cdabffc11c6e44c99e0aff86aced.png" class="avatar avatar-32 photo" height="32" width="32">		<p><strong class="fn"><a href="http://www.migdala.net/" rel="external nofollow" class="url">Академик</a></strong></p>
+	<p><small>4 марта 10 <a href="#comment-319">5:28</a> </small></p>
+	</div>
+	<div class="clear"></div>
+</li>
+
+
+<li id="comment-850" class="">
+	<div class="comment_mod">
+		</div>
+	
+	<div class="comment_text">
+	<p>Есть вопрос как к специалисту, пользующемуся doxygen. При генерации 
+документации, если в проекте наряду с классами присутствуют статические 
+структуры, doxygen включает перечень структур в раздел описания классов.
+ Может быть подскажете значение какого ключа в конфигурационном файле 
+следует поменять для того чтобы перечень структур не появлялся в перечне
+ описания классов?</p>
+	</div>
+	
+	<div class="comment_author vcard">
+		<img alt="" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/6c424718ec69ea6d983c8bc144aa684c.png" class="avatar avatar-32 photo" height="32" width="32">		<p><strong class="fn">Дмитрий</strong></p>
+	<p><small>1 июня 10 <a href="#comment-850">15:10</a> </small></p>
+	</div>
+	<div class="clear"></div>
+</li>
+
+
+<li id="comment-978" class="">
+	<div class="comment_mod">
+		</div>
+	
+	<div class="comment_text">
+	<p>Дякую за хорошу інформацію. Дуже допомогло</p>
+	</div>
+	
+	<div class="comment_author vcard">
+		<img alt="" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/69014758d7408433185fc1971d5fd15d.png" class="avatar avatar-32 photo" height="32" width="32">		<p><strong class="fn">traveller</strong></p>
+	<p><small>3 июля 10 <a href="#comment-978">19:30</a> </small></p>
+	</div>
+	<div class="clear"></div>
+</li>
+
+
+<li id="comment-1072" class="">
+	<div class="comment_mod">
+		</div>
+	
+	<div class="comment_text">
+	<p>Спасибо, мне было полезно это почитать!</p>
+	</div>
+	
+	<div class="comment_author vcard">
+		<img alt="" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/be037804c22937655e5e3c029d473e4d.png" class="avatar avatar-32 photo" height="32" width="32">		<p><strong class="fn"><a href="http://jtimv.wordpress.com/" rel="external nofollow" class="url">Tim</a></strong></p>
+	<p><small>6 августа 10 <a href="#comment-1072">0:10</a> </small></p>
+	</div>
+	<div class="clear"></div>
+</li>
+
+
+<li id="comment-1544" class="">
+	<div class="comment_mod">
+		</div>
+	
+	<div class="comment_text">
+	<p>Абсолютно ублюдочный стиль комментариев. За такое надо бить ногами.</p>
+<p>Просто какая-то рубрика “вредные советы”.</p>
+<p>Если чо,</p>
+<p>1) @brief можно явно не писать, да и @detailed при определенной настройке тоже;</p>
+<p>2) doxygen убирает лишние пробелы, так что никакой необходимости 
+писать комментарий от начала строки нет, так что спокойно можно 
+выравнивать комментарии вместе с кодом, как все нормальные люди и 
+делают.</p>
+	</div>
+	
+	<div class="comment_author vcard">
+		<img alt="" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/e56f2494707d5b181aa71a81877ea007.png" class="avatar avatar-32 photo" height="32" width="32">		<p><strong class="fn">Kerbadun</strong></p>
+	<p><small>24 января 11 <a href="#comment-1544">4:00</a> </small></p>
+	</div>
+	<div class="clear"></div>
+</li>
+
+
+<li id="comment-1545" class=" byuser comment-author-mtrempoltsev bypostauthor">
+	<div class="comment_mod">
+		</div>
+	
+	<div class="comment_text">
+	<p>Если ты попробуешь прочесть статью, то узнаешь почему выбран именно такой стиль.</p>
+	</div>
+	
+	<div class="comment_author vcard">
+		<img alt="" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/ed11406fdc574757a4defd961b67d16f.jpg" class="avatar avatar-32 photo" height="32" width="32">		<p><strong class="fn"><a href="http://www.devexp.ru/" rel="external nofollow" class="url">Максим Тремпольцев</a></strong></p>
+	<p><small>24 января 11 <a href="#comment-1545">11:28</a> </small></p>
+	</div>
+	<div class="clear"></div>
+</li>
+
+
+<li id="comment-2567" class="">
+	<div class="comment_mod">
+		</div>
+	
+	<div class="comment_text">
+	<blockquote><p>Почему второй вариант хуже? Очевидно, из-за 
+необходимости выравнивать комментарии на одном уровне с комментируемой 
+сущностью, а также из-за избыточных символов *.</p></blockquote>
+<p>Все нормальные редакторы делают это за программиста :)</p>
+	</div>
+	
+	<div class="comment_author vcard">
+		<img alt="" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/5e34ac523855c5849ddcd723c94b5ada.jpg" class="avatar avatar-32 photo" height="32" width="32">		<p><strong class="fn"><a href="http://www.kalnitsky.org/" rel="external nofollow" class="url">ikalnitsky</a></strong></p>
+	<p><small>28 августа 11 <a href="#comment-2567">12:24</a> </small></p>
+	</div>
+	<div class="clear"></div>
+</li>
+
+
+<li id="comment-2716" class="">
+	<div class="comment_mod">
+		</div>
+	
+	<div class="comment_text">
+	<p>Хорошая статья, спасибо! Сам только сел с ним разбираться)</p>
+	</div>
+	
+	<div class="comment_author vcard">
+		<img alt="" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/c520b32840fd5a923cbb567fd0e7e378.png" class="avatar avatar-32 photo" height="32" width="32">		<p><strong class="fn"><a href="http://zendframeworknotes.ru/" rel="external nofollow" class="url">zendframework</a></strong></p>
+	<p><small>3 октября 11 <a href="#comment-2716">15:26</a> </small></p>
+	</div>
+	<div class="clear"></div>
+</li>
+
+
+</ol>
+
+
+
+
+<a name="respond" id="respond"></a>
+
+<h3 class="reply">Оставить комментарий</h3>
+
+
+<form action="http://www.devexp.ru/wp-comments-post.php" method="post" id="commentform">
+<div class="postinput">
+<p><input class="comment" name="author" id="author" size="22" tabindex="1" type="text">
+<label for="author"><small>Имя (обязательно)</small></label></p>
+
+<p><input class="comment" name="email" id="email" size="22" tabindex="2" type="text">
+<label for="email"><small>Почта (не публикуется) (обязательно)</small></label></p>
+
+<p><input class="comment" name="url" id="url" size="22" tabindex="3" type="text">
+<label for="url"><small>Сайт</small></label><div id="dcaptcha"><p>
+
+		<input class="dcaptcha_red" id="dcaptcha_captcha1" onclick="dcaptcha_change();" value="Я - человек!" type="checkbox">
+		Я не робот!<br>
+	</p></div></p>
+
+
+<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+<p><input class="submit" name="submit" id="submit" tabindex="5" value="Отправить" type="submit">
+<input name="comment_post_ID" value="65" type="hidden">
+</p>
+	<style>
+	.dcaptcha_red{
+		display: inline-block;
+		font-family: arial;
+		font-size: 12px;
+    margin: 15px 0 0 0;
+	}
+
+	.dcaptcha_yellow{
+		display: inline-block;
+		font-family: arial;
+		font-size: 12px;
+    margin: 15px 0 0 0;
+	}
+	</style>
+
+	<script language="javascript">
+	function dcaptcha_change(){
+		if (document.getElementById('dcaptcha_captcha1').className == "dcaptcha_yellow"){
+			document.getElementById('dcaptcha_captcha1').className = "dcaptcha_red";
+			document.getElementById('dcaptcha_sess').value = 0;
+		}
+		else{
+			document.getElementById('dcaptcha_captcha1').className = "dcaptcha_yellow";
+			document.getElementById('dcaptcha_sess').value = 1;
+		}
+	}
+
+	</script>
+
+	
+	<input name="dcaptcha_sess" id="dcaptcha_sess" value="0" type="hidden">
+
+	<script>
+	var commentField = document.getElementById("url");
+    var submitp = commentField.parentNode;
+    var answerDiv = document.getElementById("dcaptcha");	    
+    submitp.appendChild(answerDiv, commentField);
+</script>
+	</div>
+</form>
+
+
+
+<img style="margin:0;padding:0;border:0;" src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/mystat.png" height="1px" width="1px">
+</div> 
+
+<div id="sidebar">
+
+  <form id="searchform" method="get" action="/index.php">
+    <table>
+      <tbody><tr>
+        <td>
+          <input class="searchfield" name="s" id="s" title="Введите фразу для поиска" type="text">
+        </td>
+        <td valign="middle">
+          <input class="submit" value="Искать" type="submit">
+        </td>
+      </tr>
+    </tbody></table>
+  </form>
+
+
+<h3>Мета</h3>
+<ul>
+<li><a href="http://www.devexp.ru/wp-login.php?action=register">Регистрация</a></li><li><a href="http://www.devexp.ru/wp-login.php">Вход</a></li>
+</ul>
+
+
+<div id="pages">
+<h3>Страницы</h3>
+<ul>
+    <li class="page_item page-item-2"><a href="http://www.devexp.ru/about/" title="Обо мне и моём сайте">Обо мне и моём сайте</a></li>
+</ul>
+</div>
+
+<h3>Мои проекты</h3>
+<ul>
+<li><a href="http://www.autopublish.ru/" rel="me" title="Мой первый крупный самостоятельный проект — программа для автоматизированной подготовки флэт-плана издания." target="_blank">Easy Flatplan</a></li>
+</ul>
+
+<h3>Рубрики</h3>
+<ul>
+    	<li class="cat-item cat-item-22"><a href="http://www.devexp.ru/category/c/" title="Все, что имеет отношение к C++">C++</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://www.devexp.ru/category/cmake/" title="Просмотреть все записи в рубрике CMake">CMake</a>
+</li>
+	<li class="cat-item cat-item-29"><a href="http://www.devexp.ru/category/algoritmy/" title="Просмотреть все записи в рубрике Алгоритмы">Алгоритмы</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="http://www.devexp.ru/category/instrumenty/" title="Полезные программы и сайты">Инструменты</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.devexp.ru/category/internet/" title="Сайты, почта и все что может быть полезно в сети Интернет">Интернет</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.devexp.ru/category/novosti/" title="Просмотреть все записи в рубрике Новости">Новости</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://www.devexp.ru/category/razrabotka/" title="Процессы разработки ПО: автоматизация сборки, хранение кода и так далее">Разработка</a>
+<ul class="children">
+	<li class="cat-item cat-item-25"><a href="http://www.devexp.ru/category/razrabotka/documentation/" title="Средства и приемы документирования кода">Документирование</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="http://www.devexp.ru/category/razrabotka/configuration/" title="Хранение и разбор конфигураций программ">Конфигурирование</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://www.devexp.ru/category/razrabotka/sborka/" title="Автоматизация сборки проектов">Сборка</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://www.devexp.ru/category/razrabotka/testirovanie/" title="Юнит-тестирование, регрессивное тестирование и прочее">Тестирование</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.devexp.ru/category/razrabotka/xranenie-koda/" title="О культуре хранения исходных кодов проекта">Хранение кода</a>
+</li>
+</ul>
+</li>
+</ul>	
+
+<h3>Метки</h3>
+<ul>
+    <a href="http://www.devexp.ru/tag/boost/" class="tag-link-21" title="7 записей" rel="tag" style="font-size: 17.333333333333pt;">Boost</a>
+<a href="http://www.devexp.ru/tag/c/" class="tag-link-22" title="10 записей" rel="tag" style="font-size: 22pt;">C++</a>
+<a href="http://www.devexp.ru/tag/cmake/" class="tag-link-18" title="8 записей" rel="tag" style="font-size: 18.888888888889pt;">CMake</a>
+<a href="http://www.devexp.ru/tag/cppcheck/" class="tag-link-28" title="1 запись" rel="tag" style="font-size: 8pt;">Cppcheck</a>
+<a href="http://www.devexp.ru/tag/ctest/" class="tag-link-24" title="1 запись" rel="tag" style="font-size: 8pt;">CTest</a>
+<a href="http://www.devexp.ru/tag/doxygen/" class="tag-link-26" title="1 запись" rel="tag" style="font-size: 8pt;">Doxygen</a>
+<a href="http://www.devexp.ru/tag/mystat/" class="tag-link-14" title="1 запись" rel="tag" style="font-size: 8pt;">myStat</a>
+<a href="http://www.devexp.ru/tag/qt/" class="tag-link-20" title="1 запись" rel="tag" style="font-size: 8pt;">Qt</a>
+<a href="http://www.devexp.ru/tag/subversion/" class="tag-link-11" title="3 записи" rel="tag" style="font-size: 11.111111111111pt;">Subversion</a>
+<a href="http://www.devexp.ru/tag/svn/" class="tag-link-10" title="3 записи" rel="tag" style="font-size: 11.111111111111pt;">SVN</a>
+<a href="http://www.devexp.ru/tag/unit-testing/" class="tag-link-23" title="1 запись" rel="tag" style="font-size: 8pt;">Unit testing</a>
+<a href="http://www.devexp.ru/tag/wordpress/" class="tag-link-8" title="2 записи" rel="tag" style="font-size: 9.5555555555556pt;">WordPress</a>
+<a href="http://www.devexp.ru/tag/algoritmy/" class="tag-link-29" title="1 запись" rel="tag" style="font-size: 8pt;">Алгоритмы</a>
+<a href="http://www.devexp.ru/tag/blog/" class="tag-link-9" title="1 запись" rel="tag" style="font-size: 8pt;">Блог</a>
+<a href="http://www.devexp.ru/tag/vetvi/" class="tag-link-17" title="1 запись" rel="tag" style="font-size: 8pt;">Ветви</a>
+<a href="http://www.devexp.ru/tag/documentation/" class="tag-link-25" title="1 запись" rel="tag" style="font-size: 8pt;">Документирование</a>
+<a href="http://www.devexp.ru/tag/instrumenty/" class="tag-link-15" title="1 запись" rel="tag" style="font-size: 8pt;">Инструменты</a>
+<a href="http://www.devexp.ru/tag/internet/" class="tag-link-3" title="1 запись" rel="tag" style="font-size: 8pt;">Интернет</a>
+<a href="http://www.devexp.ru/tag/configuration/" class="tag-link-27" title="1 запись" rel="tag" style="font-size: 8pt;">Конфигурирование</a>
+<a href="http://www.devexp.ru/tag/mnogopotochnost/" class="tag-link-30" title="1 запись" rel="tag" style="font-size: 8pt;">Многопоточность</a>
+<a href="http://www.devexp.ru/tag/struktura-repozitoriya/" class="tag-link-13" title="1 запись" rel="tag" style="font-size: 8pt;">Структура репозитория</a></ul>	
+
+  <h3>Популярные заметки</h3>
+  <ul>
+  <li><a href="http://www.devexp.ru/2010/01/cmake-i-qt/">CMake и Qt</a></li><li><a href="http://www.devexp.ru/2010/01/sborka-proektov-s-cmake-vvedenie/">Сборка проектов с CMake. Введение</a></li><li><a href="http://www.devexp.ru/2010/01/boost-test-yunit-testirovanie-i-cmake/">Boost Test, юнит-тестирование и CMake</a></li><li><a href="http://www.devexp.ru/2010/02/ispolzovanie-doxygen-dlya-dokumentirovaniya-koda/">Использование Doxygen для документирования кода</a></li><li><a href="http://www.devexp.ru/2011/02/konechnye-avtomaty-v-c/">Конечные автоматы в C++</a></li><li><a href="http://www.devexp.ru/2010/02/chtenie-nastroek-prilozheniya/">Чтение настроек приложения</a></li><li><a href="http://www.devexp.ru/2010/01/cmake-i-boost/">CMake и Boost</a></li><li><a href="http://www.devexp.ru/2010/03/poleznye-peremennye-cmake/">Полезные переменные CMake</a></li><li><a href="http://www.devexp.ru/2010/03/arxivirovanie-s-bibliotekami-zlib-i-bzip2libbzip2-ispolzuya-boost-iostreams/">Архивирование с библиотеками zlib и bzip2/libbzip2 используя Boost Iostreams</a></li><li><a href="http://www.devexp.ru/2010/02/opredelenie-versii-sistemy-s-cmake/">Определение операционной системы с CMake</a></li>  </ul>
+
+
+<h3>Архив блога</h3>
+<ul>
+	<li><a href="http://www.devexp.ru/2012/06/" title="Июнь 2012">Июнь 2012</a></li>
+	<li><a href="http://www.devexp.ru/2011/11/" title="Ноябрь 2011">Ноябрь 2011</a></li>
+	<li><a href="http://www.devexp.ru/2011/03/" title="Март 2011">Март 2011</a></li>
+	<li><a href="http://www.devexp.ru/2011/02/" title="Февраль 2011">Февраль 2011</a></li>
+	<li><a href="http://www.devexp.ru/2011/01/" title="Январь 2011">Январь 2011</a></li>
+	<li><a href="http://www.devexp.ru/2010/03/" title="Март 2010">Март 2010</a></li>
+	<li><a href="http://www.devexp.ru/2010/02/" title="Февраль 2010">Февраль 2010</a></li>
+	<li><a href="http://www.devexp.ru/2010/01/" title="Январь 2010">Январь 2010</a></li>
+	<li><a href="http://www.devexp.ru/2009/12/" title="Декабрь 2009">Декабрь 2009</a></li>
+	<li><a href="http://www.devexp.ru/2009/11/" title="Ноябрь 2009">Ноябрь 2009</a></li>
+</ul>
+
+<h3>Подписка</h3>
+<ul>
+<p><a href="http://feeds.feedburner.com/devexp" rel="alternate" type="application/rss+xml">Подписаться по RSS</a>&nbsp;<a href="http://feeds.feedburner.com/devexp" rel="alternate" type="application/rss+xml"><img src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"></a></p>
+
+<li><p><a href="http://feedburner.google.com/fb/a/mailverify?uri=devexp&amp;loc=ru_RU">Подписаться по Email</a></p></li>
+
+<li><p><a href="http://feeds.feedburner.com/devexp"><img src="%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20Doxygen%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B2%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B5%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BF%D1%8B%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%9F%D0%9E_files/devexp.gif" style="border:0" alt="" height="26" width="88"></a></p></li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="footer">
+	<p class="vcard">Сайт работает на <a href="http://wordpress.org/">WordPress</a> Дизайн основан на теме Journalist от <a href="http://lucianmarin.com/" class="fn url" rel="designer">Lucian E. Marin</a><br>
+  <a href="mailto:mt@devexp.ru">Максим Тремпольцев</a> © 2009-2012</p>
+</div>
+
+<script type="text/javascript">
+jQuery(function() {
+	
+	jQuery.post("index.php",{ak_action:"api_record_view", ids: AKPC_IDS, type:"single"}, false, "json");
+});
+</script>
+	
+
+
+
+
+
+</body></html>
+<!-- Dynamic Page Served (once) in 0.543 seconds -->
+<!-- Cached page generated by WP-Super-Cache on 2012-11-19 16:02:18 -->

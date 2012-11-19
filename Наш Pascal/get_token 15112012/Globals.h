@@ -1,24 +1,24 @@
-#ifndef GLOBALS_H_INCLUDED
+п»ї#ifndef GLOBALS_H_INCLUDED
 #define GLOBALS_H_INCLUDED
 
 #include <string.h>
 
-///Типы лексем (token_type)
+///РўРёРїС‹ Р»РµРєСЃРµРј (token_type)
 
-   #define DELIMITER  1 //Разделитель: . , : ; ( ) [ ] \r \0
-   #define VARIABLE   2 //Переменная
-   #define CONSTANT   3 //Константа
-   #define OPERATOR   4 //Оператор: := + - * / = < > <= >= <> if thrn else for to downto read write writeln begin end
-   #define SYSTEM     5 //Служебное слово: program var const integer real array of true false
-   #define QUOTE      6 //Кавычки:
-   #define INTEGER    7 //Целое число: 15, -3
-   #define REAL       8 //Вещественное число: 35.35, -13.9
-   #define ERROR      9 //Ошибка
+   #define DELIMITER  1 //Р Р°Р·РґРµР»РёС‚РµР»СЊ: . , : ; ( ) [ ] \r \0
+   #define VARIABLE   2 //РџРµСЂРµРјРµРЅРЅР°СЏ
+   #define CONSTANT   3 //РљРѕРЅСЃС‚Р°РЅС‚Р°
+   #define OPERATOR   4 //РћРїРµСЂР°С‚РѕСЂ: := + - * / = < > <= >= <> if thrn else for to downto read write writeln begin end
+   #define SYSTEM     5 //РЎР»СѓР¶РµР±РЅРѕРµ СЃР»РѕРІРѕ: program var const integer real array of true false
+   #define QUOTE      6 //РљР°РІС‹С‡РєРё:
+   #define INTEGER    7 //Р¦РµР»РѕРµ С‡РёСЃР»Рѕ: 15, -3
+   #define REAL       8 //Р’РµС‰РµСЃС‚РІРµРЅРЅРѕРµ С‡РёСЃР»Рѕ: 35.35, -13.9
+   #define ERROR      9 //РћС€РёР±РєР°
 
-///Внутренне представление лексем (tok)
-///Если tok=0, то представления нет
+///Р’РЅСѓС‚СЂРµРЅРЅРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ Р»РµРєСЃРµРј (tok)
+///Р•СЃР»Рё tok=0, С‚Рѕ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ РЅРµС‚
 
-   ///Служебные слова
+   ///РЎР»СѓР¶РµР±РЅС‹Рµ СЃР»РѕРІР°
 
    #define PROGRAMM   10
    #define VAR        11
@@ -30,9 +30,9 @@
    #define TRUE       1
    #define FALSE      -1
 
-   ///Операторы
+   ///РћРїРµСЂР°С‚РѕСЂС‹
 
-   #define ASSIGNMENT 19 //Оператор присваивания :=
+   #define ASSIGNMENT 19 //РћРїРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ :=
    #define IF         20
    #define THEN       21
    #define ELSE       22
@@ -45,10 +45,10 @@
    #define WRITE      29
    #define WRITELN    30
 
-   ///Оставшиеся разделители
+   ///РћСЃС‚Р°РІС€РёРµСЃСЏ СЂР°Р·РґРµР»РёС‚РµР»Рё
 
-   #define EOL        17 //Конец строки: \n
-   #define FINISHED   18 //Конец файла (кода программы): \0
+   #define EOL        17 //РљРѕРЅРµС† СЃС‚СЂРѕРєРё: \n
+   #define FINISHED   18 //РљРѕРЅРµС† С„Р°Р№Р»Р° (РєРѕРґР° РїСЂРѕРіСЂР°РјРјС‹): \0
 
 struct commands
 {
@@ -56,7 +56,7 @@ struct commands
     char tok;
 };
 
-//Служебные слова
+//РЎР»СѓР¶РµР±РЅС‹Рµ СЃР»РѕРІР°
 struct commands SYSTEM_table[] =
 {
 	{ "program", PROGRAMM },
@@ -68,10 +68,10 @@ struct commands SYSTEM_table[] =
 	{ "of", OF },
 	{ "true", TRUE },
 	{ "false", FALSE },
-	{ "", 0 }//просто признак конца массива
+	{ "", 0 }//РїСЂРѕСЃС‚Рѕ РїСЂРёР·РЅР°Рє РєРѕРЅС†Р° РјР°СЃСЃРёРІР°
 };
 
-//Операторы
+//РћРїРµСЂР°С‚РѕСЂС‹
 struct commands OPERATORS_table[] =
 {
 	{ "if", IF },
@@ -88,16 +88,16 @@ struct commands OPERATORS_table[] =
 	{ "writeln", WRITELN },
 	{ "begin", BEGIN },
 	{ "end", END },
-	{ "", 0 }//просто признак конца массива
+	{ "", 0 }//РїСЂРѕСЃС‚Рѕ РїСЂРёР·РЅР°Рє РєРѕРЅС†Р° РјР°СЃСЃРёРІР°
 };
 
 char token[80];
 char token_type, tok;
 
-char *prog; /* содержит выражение для анализа */
-//jmp_buf e_buf; /* содержит среду для longjmp() */
+char *prog; /* СЃРѕРґРµСЂР¶РёС‚ РІС‹СЂР°Р¶РµРЅРёРµ РґР»СЏ Р°РЅР°Р»РёР·Р° */
+//jmp_buf e_buf; /* СЃРѕРґРµСЂР¶РёС‚ СЃСЂРµРґСѓ РґР»СЏ longjmp() */
 
-/* Возвращает 1, если "с" пробел или табуляция */
+/* Р’РѕР·РІСЂР°С‰Р°РµС‚ 1, РµСЃР»Рё "СЃ" РїСЂРѕР±РµР» РёР»Рё С‚Р°Р±СѓР»СЏС†РёСЏ */
 bool iswhite(char c)
 {
   if(c == ' ' || c == '\t' || c == '\n' || c == '\r')
@@ -106,7 +106,7 @@ bool iswhite(char c)
      return 0;
 }
 
-/* Возвращает "истину", если "c" разделитель */
+/* Р’РѕР·РІСЂР°С‰Р°РµС‚ "РёСЃС‚РёРЅСѓ", РµСЃР»Рё "c" СЂР°Р·РґРµР»РёС‚РµР»СЊ */
 bool isdelim(char c)
 {
 	if(strchr(".,:;()[]+-*/<>=\r\n\t ", c) || c == 0)
@@ -115,41 +115,41 @@ bool isdelim(char c)
 		return 0;
 }
 
-/* Возвращает "истину", если "c" является чем-то из { a..z, A..Z, 0..9, "_" } */
+/* Р’РѕР·РІСЂР°С‰Р°РµС‚ "РёСЃС‚РёРЅСѓ", РµСЃР»Рё "c" СЏРІР»СЏРµС‚СЃСЏ С‡РµРј-С‚Рѕ РёР· { a..z, A..Z, 0..9, "_" } */
 bool is_good_name (char c)
 {
     return (isalpha(c) or isdigit(c) or c == '_' );
 }
 
-/* Поиск соответствия внутреннего формата для
-   текущей лексемы в таблицах лексем.
+/* РџРѕРёСЃРє СЃРѕРѕС‚РІРµС‚СЃС‚РІРёСЏ РІРЅСѓС‚СЂРµРЅРЅРµРіРѕ С„РѕСЂРјР°С‚Р° РґР»СЏ
+   С‚РµРєСѓС‰РµР№ Р»РµРєСЃРµРјС‹ РІ С‚Р°Р±Р»РёС†Р°С… Р»РµРєСЃРµРј.
 */
 char look_up(char *s, char *token_type)
 {
   register int i;
   char *p;
 
-  /* преобразование к нижнему регистру */
+  /* РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ Рє РЅРёР¶РЅРµРјСѓ СЂРµРіРёСЃС‚СЂСѓ */
   p = s;
   while(*p) { *p = tolower(*p); p++; }
 
-  //Поиск лексемы среди служебных слов
+  //РџРѕРёСЃРє Р»РµРєСЃРµРјС‹ СЃСЂРµРґРё СЃР»СѓР¶РµР±РЅС‹С… СЃР»РѕРІ
   for( i = 0; *SYSTEM_table[i].command; i++ )
     if( !strcmp(SYSTEM_table[i].command, s) )
     {
-        *token_type = SYSTEM; //Тип "СЛЕЖЕБНОЕ СЛОВО"
+        *token_type = SYSTEM; //РўРёРї "РЎР›Р•Р–Р•Р‘РќРћР• РЎР›РћР’Рћ"
         return SYSTEM_table[i].tok;
     }
 
-  //Поиск лексемы среди операторов
+  //РџРѕРёСЃРє Р»РµРєСЃРµРјС‹ СЃСЂРµРґРё РѕРїРµСЂР°С‚РѕСЂРѕРІ
   for( i = 0; *OPERATORS_table[i].command; i++ )
     if( !strcmp( OPERATORS_table[i].command, s ) )
     {
-        *token_type = OPERATOR; //Тип "ОПЕРАТОР"
+        *token_type = OPERATOR; //РўРёРї "РћРџР•Р РђРўРћР "
         return OPERATORS_table[i].tok;
     }
   *token_type = 0;
-  return 0; /* нераспознанная команда */
+  return 0; /* РЅРµСЂР°СЃРїРѕР·РЅР°РЅРЅР°СЏ РєРѕРјР°РЅРґР° */
 }
 
 
