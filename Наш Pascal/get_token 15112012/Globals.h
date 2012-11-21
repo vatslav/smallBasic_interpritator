@@ -65,13 +65,9 @@ struct varData
   ///содержимое
   void *content;
 };
-void in(){
-//map <string, varData> var;
-map <int,int> words2; //ПОЧЕМУ если тут объявить мап, то он не компилиться
-}
-in()
 
-///Служебные слова
+//map <string, varData> var;
+//map <int,int> words2; //ПОЧЕМУ если тут объявить мап, то он не компилиться///Служебные слова
 struct commands SYSTEM_table[] =
 {
 	{ "program", PROGRAMM },
