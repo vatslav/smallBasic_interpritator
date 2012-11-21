@@ -1,7 +1,8 @@
 ﻿#include <iostream>
 #include <locale.h>
 #include "get_token.h"
-
+#include <string.h>
+#include <map>
 using namespace std;
 int main()
 {/**@function main функция для тестирования
@@ -25,15 +26,17 @@ int main()
     "    for i:=1 to a do i:=i*j;\n"
     "    while (i>0) i:= i - 2\n"
     "End.";
+    map <int,int> words;
     //" (1243+236)bsg+43.36";
     printf("%s\n\nToken\t\tToken_type\tTok\n\n",prog);
     while(1)
 	{
 	  int result = get_token();
-	  ///если ошибки или конец программы.
-		if (result==9 || result==18)
+
+		if (result==9 || result==18) //если ошибки или конец программы.
 		{
 		  //int a;
+
 		  break;
 
 		}

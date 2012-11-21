@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Паскаль: Титульная страница</title>
+<title>Паскаль: Структура var</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,8 +43,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
       <li><a href="files.html"><span>Файлы</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -64,6 +64,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -76,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('structvar.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -94,15 +101,71 @@ $(document).ready(function(){initNavTree('index.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structvar-members.html">Полный список членов класса</a>  </div>
   <div class="headertitle">
-<div class="title">Паскаль Документация</div>  </div>
+<div class="title">Структура var</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_globals_8h_source.html">Globals.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a14c4c9123249048c30deb013acefa352"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvar.html#a14c4c9123249048c30deb013acefa352">type</a></td></tr>
+<tr class="memdesc:a14c4c9123249048c30deb013acefa352"><td class="mdescLeft">&#160;</td><td class="mdescRight">тип переменной  <a href="#a14c4c9123249048c30deb013acefa352"></a><br/></td></tr>
+<tr class="separator:a14c4c9123249048c30deb013acefa352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d02272f906583373bbe5a2513d3ba5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvar.html#a73d02272f906583373bbe5a2513d3ba5">content</a></td></tr>
+<tr class="memdesc:a73d02272f906583373bbe5a2513d3ba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">содержимое  <a href="#a73d02272f906583373bbe5a2513d3ba5"></a><br/></td></tr>
+<tr class="separator:a73d02272f906583373bbe5a2513d3ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>струтура хранения переменных (массивы и переменные) - числовые. Только хранение без логики работы!1! </p>
+
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00060">60</a></p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a class="anchor" id="a73d02272f906583373bbe5a2513d3ba5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* var::content</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>содержимое </p>
+
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00065">65</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a14c4c9123249048c30deb013acefa352"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int var::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>тип переменной </p>
+
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00063">63</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/get_token 15112012/<a class="el" href="_globals_8h_source.html">Globals.h</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="structvar.html">var</a></li>
     <li class="footer">Документация по Паскаль. Последние изменения: Ср 21 Ноя 2012 23:35:53. Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>

@@ -117,6 +117,8 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
 Классы</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcommands.html">commands</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvar.html">var</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Макросы</h2></td></tr>
@@ -192,7 +194,6 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
 <tr class="memitem:a1e4ca7bb7c46ebaa20afce215047fbc3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_globals_8h.html#a1e4ca7bb7c46ebaa20afce215047fbc3">iswhite</a> (char c)</td></tr>
-<tr class="memdesc:a1e4ca7bb7c46ebaa20afce215047fbc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">jmp_buf e_buf; /** содержит среду для longjmp() */  <a href="#a1e4ca7bb7c46ebaa20afce215047fbc3"></a><br/></td></tr>
 <tr class="separator:a1e4ca7bb7c46ebaa20afce215047fbc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa445aae84aa989afc7a6b00ccf567951"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_globals_8h.html#aa445aae84aa989afc7a6b00ccf567951">isdelim</a> (char c)</td></tr>
 <tr class="separator:aa445aae84aa989afc7a6b00ccf567951"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -704,7 +705,7 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>true если "c" является чем-то из { a..z, A..Z, 0..9, "_" }, false - иначе </dd></dl>
 
-<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00122">122</a></p>
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00133">133</a></p>
 
 </div>
 </div>
@@ -721,9 +722,16 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Возвращает "истину", если "c" разделитель </p>
+<pre class="fragment">Возвращает "истину", если "c" разделитель
+</pre> <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>c NETNET! </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true DADADA!!!! </dd></dl>
 
-<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00110">110</a></p>
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00121">121</a></p>
 
 </div>
 </div>
@@ -740,11 +748,9 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
         </tr>
       </table>
 </div><div class="memdoc">
+<p>содержит выражение для анализа Возвращает 1, если "с" пробел или табуляция </p>
 
-<p>jmp_buf e_buf; /** содержит среду для longjmp() */ </p>
-<p>содержит выражение для анализаВозвращает 1, если "с" пробел или табуляция </p>
-
-<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00101">101</a></p>
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00110">110</a></p>
 
 </div>
 </div>
@@ -771,7 +777,8 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
         </tr>
       </table>
 </div><div class="memdoc">
-<p>look_up Поиск соответствия внутреннего формата для текущей лексемы в таблицах лексем. </p>
+<pre class="fragment">@fucntion look_up()
+</pre><p> Поиск соответствия внутреннего формата для текущей лексемы в таблицах лексем. </p>
 <p>преобразование к нижнему регистру</p>
 <p>Поиск лексемы среди служебных слов</p>
 <p>Тип "СЛЕЖЕБНОЕ СЛОВО"</p>
@@ -779,7 +786,7 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
 <p>Тип "ОПЕРАТОР"</p>
 <p>нераспознанная команда </p>
 
-<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00130">130</a></p>
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00141">141</a></p>
 
 </div>
 </div>
@@ -798,7 +805,7 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
 </div><div class="memdoc">
 <p>typeToName возвращает человеское имя по внутреннему представлению для наглядной демонстрации в тестах </p>
 
-<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00160">160</a></p>
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00171">171</a></p>
 
 </div>
 </div>
@@ -833,7 +840,7 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
 </div><!-- fragment -->
 <p>Операторы </p>
 
-<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00075">75</a></p>
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00084">84</a></p>
 
 </div>
 </div>
@@ -849,7 +856,7 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
 
 <p>тип токена и внутрение представление </p>
 
-<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00097">97</a></p>
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00106">106</a></p>
 
 </div>
 </div>
@@ -878,7 +885,7 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
 </div><!-- fragment -->
 <p>Служебные слова </p>
 
-<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00060">60</a></p>
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00069">69</a></p>
 
 </div>
 </div>
@@ -892,7 +899,7 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00095">95</a></p>
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00104">104</a></p>
 
 </div>
 </div>
@@ -906,7 +913,7 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00094">94</a></p>
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00103">103</a></p>
 
 </div>
 </div>
@@ -922,7 +929,7 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
 
 <p>строка, в которой содержится текущая анализируемая строка </p>
 
-<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00095">95</a></p>
+<p>См. определение в файле <a class="el" href="_globals_8h_source.html">Globals.h</a> строка <a class="el" href="_globals_8h_source.html#l00104">104</a></p>
 
 </div>
 </div>
@@ -932,7 +939,7 @@ $(document).ready(function(){initNavTree('_globals_8h.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_9897a24ec43a626f2fa6918ccb967572.html">Наш Pascal</a></li><li class="navelem"><a class="el" href="dir_13810ee1805991ccbe8ed9f4d1be35ac.html">get_token 15112012</a></li><li class="navelem"><a class="el" href="_globals_8h.html">Globals.h</a></li>
-    <li class="footer">Документация по Паскаль. Последние изменения: Пн 19 Ноя 2012 23:03:24. Создано системой
+    <li class="footer">Документация по Паскаль. Последние изменения: Ср 21 Ноя 2012 23:35:53. Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

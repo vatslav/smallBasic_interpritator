@@ -6,5 +6,6 @@ var searchData=
   ['token',['token',['../_globals_8h.html#a350ca8ca917a98467c041ff86e436eb3',1,'Globals.h']]],
   ['token_5ftype',['token_type',['../_globals_8h.html#a77b00b3774e3256cd84cce3df237ec0a',1,'Globals.h']]],
   ['true',['TRUE',['../_globals_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d',1,'Globals.h']]],
+  ['type',['type',['../structvar.html#a14c4c9123249048c30deb013acefa352',1,'var']]],
   ['typetoname',['typeToName',['../_globals_8h.html#ac0c636a09193e8786ea4452329252d78',1,'Globals.h']]]
 ];

@@ -71,3 +71,19 @@
 1353049501 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Наш pascal\get_token 15112012\globals.h
 	<string.h>
 
+1353527461 source:c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\get_token 15112012\main.cpp
+	<locale.h>
+	"get_token.h"
+	<string.h>
+	<map>
+
+1353527524 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\get_token 15112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+	<string.h>
+	<map>
+
+1353527549 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\get_token 15112012\globals.h
+	<string.h>
+	<map>
+

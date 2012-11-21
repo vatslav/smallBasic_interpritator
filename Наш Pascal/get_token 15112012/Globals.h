@@ -2,6 +2,7 @@
 #define GLOBALS_H_INCLUDED
 
 #include <string.h>
+#include <map>
 
 ///Типы лексем (token_type)
 
@@ -55,6 +56,20 @@ struct commands
     char command[20];
     char tok;
 };
+/**струтура хранения переменных (массивы и переменные) - числовые.
+Только хранение без логики работы!1!*/
+struct varData
+{
+   ///тип переменной
+  int type;
+  ///содержимое
+  void *content;
+};
+void in(){
+//map <string, varData> var;
+map <int,int> words2; //ПОЧЕМУ если тут объявить мап, то он не компилиться
+}
+in()
 
 ///Служебные слова
 struct commands SYSTEM_table[] =
@@ -95,7 +110,7 @@ char token[80]; ///строка, в которой содержится теку
 char token_type, tok; ///тип токена и внутрение представление
 
 char *prog; /** содержит выражение для анализа */
-///jmp_buf e_buf; /** содержит среду для longjmp() */
+//jmp_buf e_buf; /*содержит среду для longjmp() */
 
 /** Возвращает 1, если "с" пробел или табуляция */
 bool iswhite(char c)
@@ -106,7 +121,9 @@ bool iswhite(char c)
      return 0;
 }
 
-/** Возвращает "истину", если "c" разделитель */
+/** Возвращает "истину", если "c" разделитель
+@param char c NETNET!
+@result true DADADA!!!!*/
 bool isdelim(char c)
 {
 	if(strchr(".,:;()[]+-*/<>=\r\n\t ", c) || c == 0)
@@ -124,7 +141,7 @@ bool is_good_name (char c)
     return (isalpha(c) or isdigit(c) or c == '_' );
 }
 
-/**@fucntion look_up
+/** @fucntion look_up()
 Поиск соответствия внутреннего формата для текущей лексемы в таблицах лексем.
 */
 char look_up(char *s, char *token_type)

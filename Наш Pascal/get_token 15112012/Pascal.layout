@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="Globals.h" open="1" top="0" tabpos="3">
-		<Cursor position="4718" topLine="0" />
+	<File name="Globals.h" open="1" top="1" tabpos="3">
+		<Cursor position="4039" topLine="122" />
 	</File>
-	<File name="get_token.h" open="1" top="1" tabpos="1">
-		<Cursor position="7492" topLine="159" />
+	<File name="get_token.h" open="1" top="0" tabpos="1">
+		<Cursor position="853" topLine="9" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="756" topLine="10" />
+		<Cursor position="623" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

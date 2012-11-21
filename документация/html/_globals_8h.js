@@ -1,6 +1,7 @@
 var _globals_8h =
 [
     [ "commands", "structcommands.html", "structcommands" ],
+    [ "var", "structvar.html", "structvar" ],
     [ "ARRAY", "_globals_8h.html#af579248b8d4c16c0aeba3dff9ee8b10a", null ],
     [ "ASSIGNMENT", "_globals_8h.html#ad1cd2dc32d6952fc25d047025d3e2351", null ],
     [ "BEGIN", "_globals_8h.html#ab766bbbee08d04b67e3fe599d6900873", null ],

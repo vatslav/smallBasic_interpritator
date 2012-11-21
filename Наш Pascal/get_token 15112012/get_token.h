@@ -3,13 +3,17 @@
 
 #include "Globals.h"
 #include <stdio.h>
-
+#include <string.h>
+#include <map>
 
 char get_token()
 /**get_token
 
  Чтение лексемы. Сюда надол написать еще много бла-бла-бла*/
 {
+
+//map <string, varData> var;
+// map <string,int> words;
   register char *temp; ///не помню чо она делает
   token_type = 0; tok = 0;
   temp = token;
@@ -18,16 +22,21 @@ char get_token()
 
   if (*prog == '{') /** КОММЕНТАРИИ */
   {
-    bool close = false; /// Признак завершения комментария
-    while (close != true)
+    bool close = false; // Признак завершения комментария
+    int cnt = 1;
+    while ( cnt>0)
     {
-      prog++; //prog = prog + 1 // prog += 1
-      //if (*prog == '{')
-        // cnt ++;
+      prog++;
+      if (*prog == '{')
+         cnt ++;
       if (*prog == '}')
-         close = true;
+         cnt--;
       else if (*prog == '\0')
-         break;      /// У комментариев нет внутреннего представления и типа. Они просто пропускаются
+        {
+         printf("Error: Отсутствует парный символ к '{'");
+
+         break;      // У комментариев нет внутреннего представления и типа. Они просто пропускаются
+        }
     }
     if ( *prog ) prog++;
 	while(iswhite(*prog)) ++prog; /** Пропуск пробелов */
@@ -42,7 +51,8 @@ char get_token()
 
   if (strchr(".,:;()[]", *prog)) /** РАЗДЕЛИТЕЛЬ */
   {
-    bool assign = false; ///Признак присваивания
+    ///Признак присваивания
+    bool assign = false;
     *temp = *prog;
 
     if (*temp == ':')  ///Если наткнулись на ":",
