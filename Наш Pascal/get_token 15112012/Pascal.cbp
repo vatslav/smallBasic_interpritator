@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Globals.h" />
+		<Unit filename="Vars&amp;Arrays.h" />
 		<Unit filename="get_token.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>

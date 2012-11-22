@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="get__token_8h" kind="file">
+    <compoundname>get_token.h</compoundname>
+    <includes refid="_globals_8h" local="yes">Globals.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includedby refid="main_8cpp" local="yes">C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/get_token 15112012/main.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>string.h</label>
+      </node>
+      <node id="0">
+        <label>C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/get_token 15112012/get_token.h</label>
+        <link refid="get_token.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Globals.h</label>
+        <link refid="_globals_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/get_token 15112012/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/get_token 15112012/get_token.h</label>
+        <link refid="get_token.h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="get__token_8h_1a7ac49ba4b6df30dab438789ef00a8da0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char get_token</definition>
+        <argsstring>()</argsstring>
+        <name>get_token</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>как вообще тут чо происходит, что за магия почему если temp не двигать, то = не двигается??</para><para>Надо обдумать</para><para>по идее надо бы сообщить об ошибки, что неверное имя переменной (оператора</para><para>это наше<ndash/> </para>        </inbodydescription>
+        <location file="C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/get_token 15112012/get_token.h" line="9" bodyfile="C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/get_token 15112012/get_token.h" bodystart="8" bodyend="186"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">﻿#ifndef<sp/>GET_TOKEN_H_INCLUDED</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_TOKEN_H_INCLUDED</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_globals_8h" kindref="compound">Globals.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Чтение<sp/>лексемы.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="get__token_8h_1a7ac49ba4b6df30dab438789ef00a8da0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="get__token_8h_1a7ac49ba4b6df30dab438789ef00a8da0" kindref="member">get_token</ref>()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">register</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*temp;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/>0;<sp/><ref refid="_globals_8h_1adfaf215b90dd21c87037e04f1c5ffffb" kindref="member">tok</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>temp<sp/>=<sp/><ref refid="_globals_8h_1a350ca8ca917a98467c041ff86e436eb3" kindref="member">token</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="_globals_8h_1a1e4ca7bb7c46ebaa20afce215047fbc3" kindref="member">iswhite</ref>(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>))<sp/>++<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Пропуск<sp/>пробелов<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;{&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">/*<sp/>КОММЕНТАРИИ<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>close<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Признак<sp/>завершения<sp/>комментария</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(close<sp/>!=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>++;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>(*prog<sp/>==<sp/>&apos;{&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cnt<sp/>++;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;}&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>У<sp/>комментариев<sp/>нет<sp/>внутреннего<sp/>представления<sp/>и<sp/>типа.<sp/>Они<sp/>просто<sp/>пропускаются</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref><sp/>)<sp/><ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>++;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="_globals_8h_1a1e4ca7bb7c46ebaa20afce215047fbc3" kindref="member">iswhite</ref>(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>))<sp/>++<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Пропуск<sp/>пробелов<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">/*<sp/>КОНЕЦ<sp/>ФАЙЛА<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>*<ref refid="_globals_8h_1a350ca8ca917a98467c041ff86e436eb3" kindref="member">token</ref>=0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_globals_8h_1adfaf215b90dd21c87037e04f1c5ffffb" kindref="member">tok</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref>=<ref refid="_globals_8h_1a6a1e3fd193b6dd39939b3c436d1014ce" kindref="member">FINISHED</ref>);<sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strchr(</highlight><highlight class="stringliteral">&quot;.,:;()[]&quot;</highlight><highlight class="normal">,<sp/>*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>))<sp/></highlight><highlight class="comment">/*<sp/>РАЗДЕЛИТЕЛЬ<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>assign<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Признак<sp/>присваивания</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/>*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*temp<sp/>==<sp/></highlight><highlight class="charliteral">&apos;:&apos;</highlight><highlight class="normal">)<sp/><sp/></highlight><highlight class="comment">//Если<sp/>наткнулись<sp/>на<sp/>&quot;:&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assign<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>возможно<sp/>это<sp/>присваивание</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>++;<sp/></highlight><highlight class="comment">//<sp/>Переход<sp/>на<sp/>следующую<sp/>позицию</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>temp++;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal"><sp/>and<sp/>assign<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/><sp/></highlight><highlight class="comment">//Если<sp/>встретили<sp/>&quot;=&quot;<sp/>после<sp/>&quot;:&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>значит<sp/>это<sp/>точно<sp/>присваивание</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/>*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>++;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp++;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_globals_8h_1adfaf215b90dd21c87037e04f1c5ffffb" kindref="member">tok</ref><sp/>=<sp/><ref refid="_globals_8h_1ad1cd2dc32d6952fc25d047025d3e2351" kindref="member" tooltip="Операторы">ASSIGNMENT</ref>;<sp/><sp/></highlight><highlight class="comment">//Внутреннее<sp/>представление<sp/>присваивания.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1adbebd8d1e72680a1abc369bf0ea849c0" kindref="member">OPERATOR</ref><sp/>);<sp/></highlight><highlight class="comment">//<sp/>Тип<sp/>&quot;ОПЕРАТОР&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1a23195218eef2cf21e2beae685a041783" kindref="member" tooltip="Типы лексем (token_type)">DELIMITER</ref>);<sp/><sp/></highlight><highlight class="comment">//<sp/>Тип<sp/>&quot;РАЗДЕЛИТЕЛЬ&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strchr(</highlight><highlight class="stringliteral">&quot;+-*/=&lt;&gt;&quot;</highlight><highlight class="normal">,<sp/>*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>))<sp/></highlight><highlight class="comment">/*<sp/>ОПЕРАТОР<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>two_symb<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Признак<sp/>двухсимвольного<sp/>оператора<sp/>&quot;&lt;=&quot;,<sp/>&quot;&gt;=&quot;<sp/>или<sp/>&quot;&lt;&gt;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/>*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(*temp<sp/>==<sp/></highlight><highlight class="charliteral">&apos;&lt;&apos;</highlight><highlight class="normal"><sp/>or<sp/>*temp<sp/>==<sp/></highlight><highlight class="charliteral">&apos;&gt;&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">//Если<sp/>наткнулись<sp/>на<sp/>&quot;&lt;&quot;<sp/>или<sp/>&quot;&gt;&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>two_symb<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>возможно<sp/>это<sp/>двухсимвольный<sp/>оператор<sp/>&quot;&lt;=&quot;,<sp/>&quot;&gt;=&quot;<sp/>или<sp/>&quot;&lt;&gt;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>++;<sp/></highlight><highlight class="comment">//<sp/>Переход<sp/>на<sp/>следующую<sp/>позицию</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>temp++;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(two_symb<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(*temp<sp/>==<sp/></highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal">)<sp/>or<sp/>(*(temp-1)<sp/>==<sp/></highlight><highlight class="charliteral">&apos;&lt;&apos;</highlight><highlight class="normal"><sp/>and<sp/>*temp<sp/>==<sp/></highlight><highlight class="charliteral">&apos;&gt;&apos;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Если<sp/>встретили<sp/>&quot;=&quot;<sp/>после<sp/>&quot;&lt;&quot;<sp/>или<sp/>&quot;&gt;&quot;<sp/>(&quot;&lt;=&quot;,&quot;&gt;=&quot;)<sp/>или</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/>*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;&gt;&quot;<sp/>после<sp/>&quot;&lt;&quot;<sp/>(&quot;&lt;&gt;&quot;),<sp/>значит<sp/>оператор<sp/>двухсимвольный</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>++;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp++;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1adbebd8d1e72680a1abc369bf0ea849c0" kindref="member">OPERATOR</ref>);<sp/><sp/></highlight><highlight class="comment">//<sp/>Тип<sp/>&quot;ОПЕРАТОР&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isdigit(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>)<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">/*<sp/>ЧИСЛО<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(isdigit(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>)<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">//Пока<sp/>встречаем<sp/>числа,<sp/>считываем</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*temp++=*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>++;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">//Если<sp/>наткнулись<sp/>на<sp/>точку,<sp/>то<sp/>это<sp/>либо<sp/>вещественное<sp/>число<sp/>&quot;REAL&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//либо<sp/>диапазон<sp/>индексов<sp/>внутри<sp/>массива</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*(<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>+1)<sp/>==<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)</highlight><highlight class="comment">//Если<sp/>2<sp/>точки<sp/>подряд,<sp/>значит</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//это<sp/>диапазон<sp/>индексов<sp/>внутри<sp/>массива<sp/>&quot;A:array<sp/>[3..12]&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1a91d43eadec33c80149f92e5abf5df58c" kindref="member">INTEGER</ref>);<sp/></highlight><highlight class="comment">//Тип<sp/>&quot;ЦЕЛОЕ<sp/>ЧИСЛО&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*temp++<sp/>=<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>++;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(isdigit(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>)<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">//Пока<sp/>встречаем<sp/>числа,<sp/>считываем</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*temp++<sp/>=<sp/>*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>++;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(*(<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>-1)<sp/>==<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Если<sp/>цикл<sp/>ни<sp/>разу<sp/>не<sp/>выполнился,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>значит<sp/>некорректное<sp/>выражение<sp/>типа<sp/>&quot;17.a&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="_globals_8h_1a350ca8ca917a98467c041ff86e436eb3" kindref="member">token</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ERROR!<sp/>Expected<sp/>REAL<sp/>number\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1a8fe83ac76edc595f6b98cd4a4127aed5" kindref="member">ERROR</ref>);<sp/></highlight><highlight class="comment">//Тип<sp/>&quot;ОШИБКА&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_globals_8h_1aa445aae84aa989afc7a6b00ccf567951" kindref="member">isdelim</ref>(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>)<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/><sp/></highlight><highlight class="comment">//Если<sp/>не<sp/>встретили<sp/>разделителя<sp/>или<sp/>оператора,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>значит<sp/>некорректное<sp/>выражение<sp/>типа<sp/>&quot;17.23a&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="_globals_8h_1a350ca8ca917a98467c041ff86e436eb3" kindref="member">token</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ERROR!<sp/>Expected<sp/>REAL<sp/>number\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1a8fe83ac76edc595f6b98cd4a4127aed5" kindref="member">ERROR</ref>);<sp/><sp/></highlight><highlight class="comment">//Тип<sp/>&quot;ОШИБКА&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(<ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1a4b654506f18b8bfd61ad2a29a7e38c25" kindref="member">REAL</ref>);<sp/></highlight><highlight class="comment">//Тип<sp/>&quot;ВЕЩЕСТВЕННОЕ<sp/>ЧИСЛО&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_globals_8h_1aa445aae84aa989afc7a6b00ccf567951" kindref="member">isdelim</ref>(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>)<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">//Если<sp/>не<sp/>встретили<sp/>разделителя<sp/>или<sp/>оператора,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>значит<sp/>некорректное<sp/>выражение<sp/>типа<sp/>&quot;17a&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="_globals_8h_1a350ca8ca917a98467c041ff86e436eb3" kindref="member">token</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ERROR!<sp/>Expected<sp/>INTEGER<sp/>number\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1a8fe83ac76edc595f6b98cd4a4127aed5" kindref="member">ERROR</ref>);<sp/><sp/></highlight><highlight class="comment">//Тип<sp/>&quot;ОШИБКА&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(<ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1a91d43eadec33c80149f92e5abf5df58c" kindref="member">INTEGER</ref>);<sp/></highlight><highlight class="comment">//Тип<sp/>&quot;ЦЕЛОЕ<sp/>ЧИСЛО&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isalpha(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>)<sp/>or<sp/>*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">/*<sp/>Имя<sp/>&quot;ИДЕНТИФИКАТОРА&quot;,<sp/>&quot;ОПЕРАТОРА&quot;<sp/>или<sp/>&quot;СЛУЖЕБНОЕ<sp/>СЛОВО&quot;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Правила<sp/>построения<sp/>имен<sp/>идентификаторов:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>1)<sp/>Имя<sp/>начинается<sp/>с<sp/>латинской<sp/>буквы<sp/>или<sp/>символа<sp/>&apos;_&apos;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>2)<sp/>Остальными<sp/>символами<sp/>могут<sp/>быть<sp/>латинские<sp/>буквы,<sp/>цифры<sp/>и<sp/>&apos;_&apos;:<sp/>_A2_B,<sp/>A2.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Имена<sp/>операторов<sp/>и<sp/>служ.<sp/>слова<sp/>состоят<sp/>только<sp/>из<sp/>латинских<sp/>букв:<sp/>IF,<sp/>For<sp/>и<sp/>т.д.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Cчитываем<sp/>имя<sp/>пока<sp/>встречаем<sp/>буквы,<sp/>цифры<sp/>или<sp/>&apos;_&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ptr=0;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="_globals_8h_1a62e7f181cb96768c9680872caed84aea" kindref="member">is_good_name</ref><sp/>(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>))</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*temp++<sp/>=<sp/>*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>++;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ptr++;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Eсли<sp/>встретили<sp/>неподходящий<sp/>символ<sp/>вместо<sp/>разделителя,<sp/>выдаем<sp/>ошибку</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="_globals_8h_1aa445aae84aa989afc7a6b00ccf567951" kindref="member">isdelim</ref><sp/>(*<ref refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kindref="member">prog</ref>))<sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="_globals_8h_1a350ca8ca917a98467c041ff86e436eb3" kindref="member">token</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ERROR!<sp/>Uncorrect<sp/>IDENTIFIER<sp/>or<sp/>OPERATOR<sp/>name\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1a8fe83ac76edc595f6b98cd4a4127aed5" kindref="member">ERROR</ref><sp/>);<sp/></highlight><highlight class="comment">//Тип<sp/>&quot;ОШИБКА&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr&gt;8)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="_globals_8h_1a350ca8ca917a98467c041ff86e436eb3" kindref="member">token</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ERROR!<sp/>name<sp/>of<sp/>variable<sp/>&gt;<sp/>8\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1a8fe83ac76edc595f6b98cd4a4127aed5" kindref="member">ERROR</ref><sp/>);<sp/></highlight><highlight class="comment">//Тип<sp/>&quot;ОШИБКА&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>type;<sp/></highlight><highlight class="comment">//Тип<sp/>лексемы</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_globals_8h_1adfaf215b90dd21c87037e04f1c5ffffb" kindref="member">tok</ref><sp/>=<sp/><ref refid="_globals_8h_1a9014f033328f1817b7707a6ef588d938" kindref="member">look_up</ref>(<ref refid="_globals_8h_1a350ca8ca917a98467c041ff86e436eb3" kindref="member">token</ref>,<sp/>&amp;type);<sp/></highlight><highlight class="comment">//<sp/>Преобразование<sp/>во<sp/>внутренний<sp/>формат.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>type<sp/>!=<sp/>0<sp/>)<sp/></highlight><highlight class="comment">//Если<sp/>нашли<sp/>лексему<sp/>среди<sp/>&quot;ОПЕРАТОРОВ&quot;<sp/>или<sp/>&quot;СЛУЖЕБНЫХ<sp/>СЛОВ&quot;,<sp/>возвращаем<sp/>тип<sp/>лексемы</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/>type<sp/>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//Иначе<sp/>имеем<sp/>дело<sp/>с<sp/>&quot;ИДЕНТИФИКАТОРОМ&quot;:<sp/>переменной<sp/>или<sp/>константой</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1a86626d4d161f4c3958ce1cd99c5b974e" kindref="member">VARIABLE</ref><sp/>);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="_globals_8h_1a350ca8ca917a98467c041ff86e436eb3" kindref="member">token</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ERROR!<sp/>Uncorrect<sp/>IDENTIFIER<sp/>or<sp/>OPERATOR<sp/>name\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kindref="member">token_type</ref><sp/>=<sp/><ref refid="_globals_8h_1a8fe83ac76edc595f6b98cd4a4127aed5" kindref="member">ERROR</ref><sp/>);<sp/></highlight><highlight class="comment">//Тип<sp/>&quot;ОШИБКА&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>GET_TOKEN_H_INCLUDED</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/get_token 15112012/get_token.h"/>
+  </compounddef>
+</doxygen>

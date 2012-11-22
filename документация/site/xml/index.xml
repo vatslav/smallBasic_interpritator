@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.2">
+  <compound refid="structcommands" kind="struct"><name>commands</name>
+    <member refid="structcommands_1a8a9b33c07bbe0d690879af7acc1e0c67" kind="variable"><name>command</name></member>
+    <member refid="structcommands_1a142499c28c9e2b02a0cc72bd9f325a00" kind="variable"><name>tok</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="get__token_8h" kind="file"><name>get_token.h</name>
+    <member refid="get__token_8h_1a7ac49ba4b6df30dab438789ef00a8da0" kind="function"><name>get_token</name></member>
+  </compound>
+  <compound refid="_globals_8h" kind="file"><name>Globals.h</name>
+    <member refid="_globals_8h_1a23195218eef2cf21e2beae685a041783" kind="define"><name>DELIMITER</name></member>
+    <member refid="_globals_8h_1a86626d4d161f4c3958ce1cd99c5b974e" kind="define"><name>VARIABLE</name></member>
+    <member refid="_globals_8h_1aa07f83a2de5a158b8643cdc36541b711" kind="define"><name>CONSTANT</name></member>
+    <member refid="_globals_8h_1adbebd8d1e72680a1abc369bf0ea849c0" kind="define"><name>OPERATOR</name></member>
+    <member refid="_globals_8h_1a21b97df85e65556468b28a576311271c" kind="define"><name>SYSTEM</name></member>
+    <member refid="_globals_8h_1a87978601e53a12294c82624e90c46b76" kind="define"><name>QUOTE</name></member>
+    <member refid="_globals_8h_1a91d43eadec33c80149f92e5abf5df58c" kind="define"><name>INTEGER</name></member>
+    <member refid="_globals_8h_1a4b654506f18b8bfd61ad2a29a7e38c25" kind="define"><name>REAL</name></member>
+    <member refid="_globals_8h_1a8fe83ac76edc595f6b98cd4a4127aed5" kind="define"><name>ERROR</name></member>
+    <member refid="_globals_8h_1af0be866e1c88f14c14592125da5d1854" kind="define"><name>PROGRAMM</name></member>
+    <member refid="_globals_8h_1abca8dfa78652bc61165262af4fade766" kind="define"><name>VAR</name></member>
+    <member refid="_globals_8h_1a0c33b494a68ce28497e7ce8e5e95feff" kind="define"><name>CONST</name></member>
+    <member refid="_globals_8h_1af579248b8d4c16c0aeba3dff9ee8b10a" kind="define"><name>ARRAY</name></member>
+    <member refid="_globals_8h_1a37666c9af451b99166c96df28aec5395" kind="define"><name>OF</name></member>
+    <member refid="_globals_8h_1ab766bbbee08d04b67e3fe599d6900873" kind="define"><name>BEGIN</name></member>
+    <member refid="_globals_8h_1a29fd18bed01c4d836c7ebfe73a125c3f" kind="define"><name>END</name></member>
+    <member refid="_globals_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kind="define"><name>TRUE</name></member>
+    <member refid="_globals_8h_1aa93f0eb578d23995850d61f7d61c55c1" kind="define"><name>FALSE</name></member>
+    <member refid="_globals_8h_1ad1cd2dc32d6952fc25d047025d3e2351" kind="define"><name>ASSIGNMENT</name></member>
+    <member refid="_globals_8h_1ac138c68a0709c57bc5f7567abc1558eb" kind="define"><name>IF</name></member>
+    <member refid="_globals_8h_1ad9884c43f4f50a5852711a614f2343ac" kind="define"><name>THEN</name></member>
+    <member refid="_globals_8h_1a0a70ee0cbf5b1738be4c9463c529ce72" kind="define"><name>ELSE</name></member>
+    <member refid="_globals_8h_1a4e6edb897a7a0bb16aa6d80aef24326a" kind="define"><name>WHILE</name></member>
+    <member refid="_globals_8h_1a89f8701562ac09bf5c1e58516124c500" kind="define"><name>DO</name></member>
+    <member refid="_globals_8h_1a6634515171060cf2f7afd70a96cb9bde" kind="define"><name>FOR</name></member>
+    <member refid="_globals_8h_1af75a3636100d46e8e30e2797e2ec7471" kind="define"><name>TO</name></member>
+    <member refid="_globals_8h_1ab6a0ab51db886283330f7fb8a46b6166" kind="define"><name>DOWNTO</name></member>
+    <member refid="_globals_8h_1ada74e7db007a68e763f20c17f2985356" kind="define"><name>READ</name></member>
+    <member refid="_globals_8h_1aa10f470e996d0f51210d24f442d25e1e" kind="define"><name>WRITE</name></member>
+    <member refid="_globals_8h_1aab32f8a23894dda1fb3e74213921f7a4" kind="define"><name>WRITELN</name></member>
+    <member refid="_globals_8h_1a4e67e9429d48a2ba8f833ee3b1dceb5d" kind="define"><name>EOL</name></member>
+    <member refid="_globals_8h_1a6a1e3fd193b6dd39939b3c436d1014ce" kind="define"><name>FINISHED</name></member>
+    <member refid="_globals_8h_1acfbb7831b3781dbeb64135227605d494" kind="variable"><name>SYSTEM_table</name></member>
+    <member refid="_globals_8h_1a2087a943b36f3382beac90d70ffc31cb" kind="variable"><name>OPERATORS_table</name></member>
+    <member refid="_globals_8h_1a350ca8ca917a98467c041ff86e436eb3" kind="variable"><name>token</name></member>
+    <member refid="_globals_8h_1a77b00b3774e3256cd84cce3df237ec0a" kind="variable"><name>token_type</name></member>
+    <member refid="_globals_8h_1adfaf215b90dd21c87037e04f1c5ffffb" kind="variable"><name>tok</name></member>
+    <member refid="_globals_8h_1acc6113e98e7cd24d9dcfa520749a5d3f" kind="variable"><name>prog</name></member>
+    <member refid="_globals_8h_1a1e4ca7bb7c46ebaa20afce215047fbc3" kind="function"><name>iswhite</name></member>
+    <member refid="_globals_8h_1aa445aae84aa989afc7a6b00ccf567951" kind="function"><name>isdelim</name></member>
+    <member refid="_globals_8h_1a62e7f181cb96768c9680872caed84aea" kind="function"><name>is_good_name</name></member>
+    <member refid="_globals_8h_1a9014f033328f1817b7707a6ef588d938" kind="function"><name>look_up</name></member>
+    <member refid="_globals_8h_1ac0c636a09193e8786ea4452329252d78" kind="function"><name>typeToName</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="dir_13810ee1805991ccbe8ed9f4d1be35ac" kind="dir"><name>C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/get_token 15112012</name>
+  </compound>
+  <compound refid="dir_9897a24ec43a626f2fa6918ccb967572" kind="dir"><name>C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal</name>
+  </compound>
+</doxygenindex>
