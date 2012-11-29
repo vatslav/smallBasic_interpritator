@@ -2,9 +2,12 @@
 #include <locale.h>
 #include "get_token.h"
 #include "Vars&Arrays.h"
+//##include "expressions.h"
 
 using namespace std;
-
+/**@function main на данный момент служит для запуска всех остальных функций
+впоследствие должна делать загрузку из файла и запускать рекурсивную обработку программы
+@return 0 если программа завершилось успешно, иначе код ошибки.*/
 int main()
 {
     setlocale (LC_ALL,"RUS");
@@ -28,7 +31,7 @@ int main()
     while(1)
 	{
 	  int result = get_token();
-	  ///если ошибки или конец программы.
+	  ///еслkи ошибки или конец программы.
 		if (result==9 || result==18)
 		{
 		  //int a;
@@ -46,8 +49,10 @@ int main()
 	//AddVar ("awf3",REAL,0.53,false);
 
 	//PrintMap ();
-    prog = "array [_s..35";//] of integer;";
+    prog = "array [_s..35] of integer;";
     AddArray ("a");
+
+    //getchar();
 
     return 0;
 }

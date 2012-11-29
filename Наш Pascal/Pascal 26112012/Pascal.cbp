@@ -34,6 +34,9 @@
 		</Compiler>
 		<Unit filename="Globals.h" />
 		<Unit filename="Vars&amp;Arrays.h" />
+		<Unit filename="expressions.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="get_token.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>

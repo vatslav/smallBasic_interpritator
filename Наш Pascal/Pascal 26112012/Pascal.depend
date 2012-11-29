@@ -199,23 +199,49 @@
 	<string>
 	<stdlib.h>
 
-1354006063 source:c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\main.cpp
+1354187146 source:c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\main.cpp
 	<iostream>
 	<locale.h>
 	"get_token.h"
 	"Vars&Arrays.h"
+	"expressions.h"
 
-1353578506 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\get_token.h
+1354008214 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\get_token.h
 	"Globals.h"
 	<stdio.h>
 
-1353943274 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\globals.h
+1354189748 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\globals.h
 	<string.h>
 
-1354006341 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\vars&arrays.h
+1354187026 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\vars&arrays.h
 	"Globals.h"
 	"get_token.h"
 	<map>
 	<string>
 	<stdlib.h>
+
+1354187145 source:d:\smallbasic_interpritator-master\pascal\pascal 26112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+	"expressions.h"
+
+1354008214 d:\smallbasic_interpritator-master\pascal\pascal 26112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1354189747 d:\smallbasic_interpritator-master\pascal\pascal 26112012\globals.h
+	<string.h>
+
+1354187024 d:\smallbasic_interpritator-master\pascal\pascal 26112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+	<stdlib.h>
+
+1354190198 d:\smallbasic_interpritator-master\pascal\pascal 26112012\expressions.h
+
+1354212386 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\expressions.h
 

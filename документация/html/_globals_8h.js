@@ -1,7 +1,6 @@
 var _globals_8h =
 [
     [ "commands", "structcommands.html", "structcommands" ],
-    [ "var", "structvar.html", "structvar" ],
     [ "ARRAY", "_globals_8h.html#af579248b8d4c16c0aeba3dff9ee8b10a", null ],
     [ "ASSIGNMENT", "_globals_8h.html#ad1cd2dc32d6952fc25d047025d3e2351", null ],
     [ "BEGIN", "_globals_8h.html#ab766bbbee08d04b67e3fe599d6900873", null ],
@@ -25,6 +24,8 @@ var _globals_8h =
     [ "QUOTE", "_globals_8h.html#a87978601e53a12294c82624e90c46b76", null ],
     [ "READ", "_globals_8h.html#ada74e7db007a68e763f20c17f2985356", null ],
     [ "REAL", "_globals_8h.html#a4b654506f18b8bfd61ad2a29a7e38c25", null ],
+    [ "RESERVED", "_globals_8h.html#a56701f18aaad537f7fc0e9be309503c3", null ],
+    [ "STRING", "_globals_8h.html#a0f4d394a3ab4e09bff60f714c66dc5ee", null ],
     [ "SYSTEM", "_globals_8h.html#a21b97df85e65556468b28a576311271c", null ],
     [ "THEN", "_globals_8h.html#ad9884c43f4f50a5852711a614f2343ac", null ],
     [ "TO", "_globals_8h.html#af75a3636100d46e8e30e2797e2ec7471", null ],
@@ -38,6 +39,8 @@ var _globals_8h =
     [ "isdelim", "_globals_8h.html#aa445aae84aa989afc7a6b00ccf567951", null ],
     [ "iswhite", "_globals_8h.html#a1e4ca7bb7c46ebaa20afce215047fbc3", null ],
     [ "look_up", "_globals_8h.html#a9014f033328f1817b7707a6ef588d938", null ],
+    [ "putback", "_globals_8h.html#a968822d98a344ef6aeb0bbcd36c1a66f", null ],
+    [ "serror", "_globals_8h.html#a3ec668a6f0ecd1a19fff7f4586bd0647", null ],
     [ "typeToName", "_globals_8h.html#ac0c636a09193e8786ea4452329252d78", null ],
     [ "OPERATORS_table", "_globals_8h.html#a2087a943b36f3382beac90d70ffc31cb", null ],
     [ "prog", "_globals_8h.html#acc6113e98e7cd24d9dcfa520749a5d3f", null ],

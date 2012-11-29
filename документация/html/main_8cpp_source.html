@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Паскаль: Исходный файл C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/get_token 15112012/main.cpp</title>
+<title>Паскаль: Исходный файл C:/Users/Vatslav/Documents/GitHub/smallBasic_interpritator/Наш Pascal/Pascal 26112012/main.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Паскаль
-   &#160;<span id="projectnumber">1.5</span>
+   &#160;<span id="projectnumber">3.2</span>
    </div>
    <div id="projectbrief">Интерпритатор Паскали</div>
   </td>
@@ -104,54 +104,67 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div class="title">main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="main_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;﻿#include &lt;iostream&gt;</div>
+<a href="main_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;locale.h&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="get__token_8h.html">get_token.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    6</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    setlocale (LC_ALL,<span class="stringliteral">&quot;RUS&quot;</span>);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="_globals_8h.html#acc6113e98e7cd24d9dcfa520749a5d3f" title="тип токена и внутрение представление">prog</a> = <span class="stringliteral">&quot;Program Test\n&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="stringliteral">&quot;c:=3 &quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="stringliteral">&quot;{const a%=5, b=3;\n}&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="stringliteral">&quot;var\n&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="stringliteral">&quot;i,j:integer;\n&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="stringliteral">&quot;y:array [1..a,1..b] of integer;\n&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="stringliteral">&quot;Begin\n&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="stringliteral">&quot;    write (a);\n&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="stringliteral">&quot;    read (k);\n&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="stringliteral">&quot;{ Комментарий     \n&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="stringliteral">&quot;    Продолжение  }\n&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="stringliteral">&quot;    if a&gt;=b then i:=a+1 else j:=b+1\n&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="stringliteral">&quot;    for i:=1 to a do i:=i*j;\n&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="stringliteral">&quot;    while (i&gt;0) i:= i - 2\n&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="stringliteral">&quot;End.&quot;</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//&quot; (1243+236)bsg+43.36&quot;;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    printf(<span class="stringliteral">&quot;%s\n\nToken\t\tToken_type\tTok\n\n&quot;</span>,<a class="code" href="_globals_8h.html#acc6113e98e7cd24d9dcfa520749a5d3f" title="тип токена и внутрение представление">prog</a>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">while</span>(1)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      <span class="keywordtype">int</span> result = <a class="code" href="get__token_8h.html#a7ac49ba4b6df30dab438789ef00a8da0">get_token</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (result==9 || result==18) </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;          <span class="comment">//int a;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        printf(<span class="stringliteral">&quot;%s \t\t%d - %s \t\t%d - %s&quot;</span>, <a class="code" href="_globals_8h.html#a350ca8ca917a98467c041ff86e436eb3">token</a>, <a class="code" href="_globals_8h.html#a77b00b3774e3256cd84cce3df237ec0a" title="строка, в которой содержится текущая анализируемая строка">token_type</a>,<a class="code" href="_globals_8h.html#ac0c636a09193e8786ea4452329252d78">typeToName</a>(<a class="code" href="_globals_8h.html#a77b00b3774e3256cd84cce3df237ec0a" title="строка, в которой содержится текущая анализируемая строка">token_type</a>), <a class="code" href="_globals_8h.html#adfaf215b90dd21c87037e04f1c5ffffb">tok</a>,<a class="code" href="_globals_8h.html#ac0c636a09193e8786ea4452329252d78">typeToName</a>(<a class="code" href="_globals_8h.html#adfaf215b90dd21c87037e04f1c5ffffb">tok</a>) );</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        getchar();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vars_6_arrays_8h.html">Vars&amp;Arrays.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//##include &quot;expressions.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   11</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    setlocale (LC_ALL,<span class="stringliteral">&quot;RUS&quot;</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   <span class="comment">/* prog = &quot;Program Test\n&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    &quot;c:=3 &quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    &quot;const a=5, b=3;\n&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    &quot;var\n&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    &quot;i,j:integer;\n&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    &quot;y:array [1..a,1..b] of integer;\n&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    &quot;Begin\n&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    &quot;    write (a);\n&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    &quot;    read (k);\n&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    &quot;{ �����������     \n&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    &quot;    �����������  }\n&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    &quot;    if a&gt;=b then i:=a+1 else j:=b+1\n&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    &quot;    for i:=1 to a do i:=i*j;\n&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    &quot;    while (i&gt;0) i:= i - 2\n&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    &quot;End.&quot;;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    //&quot; (1243+236)bsg+43.36&quot;;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    printf(&quot;%s\n\nToken\t\tToken_type\tTok\n\n&quot;,prog);</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    while(1)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    {</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">      int result = get_token();</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">        if (result==9 || result==18)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">        {</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">          //int a;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">          break;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">        printf(&quot;%s \t\t%d - %s \t\t%d - %s&quot;, token, token_type,typeToName(token_type), tok,typeToName(tok) );</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">        getchar();</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    }*/</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    AddVar (<span class="stringliteral">&quot;_s&quot;</span>,<a class="code" href="_globals_8h.html#a91d43eadec33c80149f92e5abf5df58c">INTEGER</a>,10,<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">//AddVar (&quot;sesgse3&quot;,INTEGER,5,false);</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <span class="comment">//AddVar (&quot;se3&quot;,REAL,112.75,false);</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">//AddVar (&quot;awf3&quot;,REAL,0.53,false);</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">//PrintMap ();</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="_globals_8h.html#acc6113e98e7cd24d9dcfa520749a5d3f">prog</a> = <span class="stringliteral">&quot;array [_s..35] of integer;&quot;</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    AddArray (<span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">//getchar();</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_9897a24ec43a626f2fa6918ccb967572.html">Наш Pascal</a></li><li class="navelem"><a class="el" href="dir_13810ee1805991ccbe8ed9f4d1be35ac.html">get_token 15112012</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Документация по Паскаль. Последние изменения: Ср 21 Ноя 2012 23:35:53. Создано системой
+    <li class="navelem"><a class="el" href="dir_9897a24ec43a626f2fa6918ccb967572.html">Наш Pascal</a></li><li class="navelem"><a class="el" href="dir_f0a476525b45374e2163e87680c410d1.html">Pascal 26112012</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
+    <li class="footer">Документация по Паскаль. Последние изменения: Чт 29 Ноя 2012 23:19:08. Создано системой
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

@@ -1,5 +1,4 @@
 var annotated =
 [
-    [ "commands", "structcommands.html", "structcommands" ],
-    [ "var", "structvar.html", "structvar" ]
+    [ "commands", "structcommands.html", "structcommands" ]
 ];

@@ -12,13 +12,14 @@ using std::map;
 using std::cout;
 using std::cin;
 using std::endl;
-/**
+
+
+/**@struct array
+ Структура для переменных типа INTEGER/REAL
 int type - Тип идентификатора
 float value - Значение идентификатора
 bool isConst - Константа/переменная
 */
-
-//Структура для переменных типа INTEGER/REAL
 struct Var
 {
     int type;
@@ -26,79 +27,79 @@ struct Var
     bool isConst;
 };
 
-/**
+/**@struct array
+Структура для массивов типа INTEGER/REAL
 int type - Тип массива
 bool isBig - Многомерный/одномерный массив
 int from - нижняя граница массива
 int to - верхняя граница массива
-float *el - элементы массива
+float *el - указатель на 1 элемент массива
+};
 */
-//Структура для массивов типа INTEGER/REAL
 struct Array
 {
     int type;
     bool isBig;
     int from;
     int to;
-    float *el; ///указатель на 1 элемент массива
-};
+    float *el;
 
 //Для хранения переменных/констант и массивов используем
 //ассоциативные массивы (карты/контейнеры)
+///Карта для идентификаторов типа INTEGER/REAL
+map <string, Var> Vars;
+///Карта для массивов типа INTEGER/REAL
+map <string, Array> Arrays;
 
-map <string, Var> Vars; //Карта для идентификаторов типа INTEGER/REAL
-map <string, Array> Arrays; //Карта для массивов типа INTEGER/REAL
-
-//Итераторы для работы с картами в цикле
+///Итераторы для работы с картами в цикле
 map <string, Var>::iterator start = Vars.begin ();
 map <string, Array>::iterator start2 = Arrays.begin ();
 
-//Временные объекты наших структур
-Var temp;
-Array temp2;
+//Временные объекты наших структур удалил т.к. используем локальные
+//Var temp;
+//Array temp2;
 
-/**
+/**@fuction AddVar
 Функция добавления переменной/константы в карту
 
-name - Имя переменной/константы
-type - Тип переменной/константы
-value - Значение переменой/константы
-constant - Характеристика (true - константа, false - переменная)
+@param name - Имя переменной/константы
+@param type - Тип переменной/константы
+@param value - Значение переменой/константы
+@param constant - Характеристика (true - константа, false - переменная)
+@result сообщает 1, в случае успешного добавления
 */
 bool AddVar (char* name, int type, float value, bool constant)
 {
+   Var temp;
    if (Vars.count(name) == 0) //Если в карте нет переменной с таким именем
    {
        temp.isConst = constant;
        temp.type = type;
-       if (type == INTEGER)     //Если тип переменной/константы INTEGER
-           temp.value = (int)value; //Приводим к типу INTEGER
-       else if (type == REAL)   //Если тип переменной/константы REAL
-           temp.value = value;  //Оставляем тип REAL
+       temp.value = value; //Приводим к типу INTEGER
        Vars[name] = temp;   //Кидаем в карту новую пееменную/константу
        return 1;
    }
    else //Иначе сообщаем, что в карте есть переменная/константа с таким именем
        {
-            printf ("The variable/constant with this name is already exists");
+            serror("The variable/constant with this name is already exists");
            return 0;
        }
 
 
 }
 
-/**
-Функция получения типа переменной/константы
-
-name - Имя переменной/константы
-return - Тип переменной/константы
+/**@fuction GetTypeVar
+Функция получения типа переменной/константы по ее символьному имени
+@param name - Имя переменной/константы
+@return - Тип переменной/константы
 */
 int GetTypeVar (const char* name)
 {
     if (Vars.count(name) != 0) //Находим переменную/константу в карте
     {
-        start->second = Vars[name]; //Ставим итератор на нашу находку
-        return start->second.type;  //Возвращаем тип
+        //start->second = Vars[name]; //Ставим итератор на нашу находку
+        //return start->second.type;  //Возвращаем тип
+        return Vars[name].type;
     }
     else //Иначе оповещаем о том, что не нашли ничего с таким именем
     {
@@ -107,18 +108,19 @@ int GetTypeVar (const char* name)
     }
 }
 
-/**
-Функция получения значения переменной/константы
+/**@fuction getValue
+Функция получения значения переменной/константы по ее символьному имени
 
-name - Имя переменной/константы
-return - Значение переменной/константы
+@param name - Имя переменной/константы
+@return - Значение переменной/константы
 */
 float getValue (const char* name)
 {
     if (Vars.count(name) != 0) //Находим переменную/константу в карте
     {
-        start->second = Vars[name]; //Ставим итератор на нашу находку
-        return start->second.value;  //Возвращаем значение
+        //start->second = Vars[name]; //Ставим итератор на нашу находку
+        //return start->second.value;  //Возвращаем значение
+        return Vars[name].value;
     }
     else //Иначе оповещаем о том, что не нашли ничего с таким именем
     {
@@ -127,18 +129,20 @@ float getValue (const char* name)
     }
 }
 
-/**
+/**@fuction isConst
 Функция проверки на константу
 
-name - Имя переменной/константы
-return - Характеристика (true - константа, false - переменная)
+@param name - Имя переменной/константы
+@return - Характеристика (true - константа, false - переменная)
 */
 bool isConst (const char* name)
 {
     if (Vars.count(name) != 0) //Находим переменную/константу в карте
     {
-        start->second = Vars[name]; //Ставим итератор на нашу находку
-        return start->second.isConst; //Возвращаем характеристику (true - константа, false - переменная)
+        //start->second = Vars[name]; //Ставим итератор на нашу находку
+        //return start->second.isConst; //Возвращаем характеристику (true - константа, false - переменная)
+
+        return Vars[name].isConst;
     }
     else //Иначе оповещаем о том, что не нашли ничего с таким именем
     {
@@ -147,8 +151,9 @@ bool isConst (const char* name)
     }
 }
 
-///Функция вывода содержания всех карт на экран (для теста)
-void PrintMap ()
+/**@fuction fuction
+Функция вывода содержания всех карт на экран (для теста)*/
+void fuction ()
 {
     printf ("Name\t\tValue\t\tType\n\n");
     for (start = Vars.begin (); start != Vars.end (); start++)
@@ -160,10 +165,13 @@ void PrintMap ()
             printf ("%s\t\t%5.3f\t\t%d - %s\n", start->first.c_str(), getValue(start->first.c_str()), GetTypeVar (start->first.c_str() ), typeToName(GetTypeVar (start->first.c_str() )) );
 
 }
-
+/**@function ReadFromTo
+чтение границы массива (любой)
+@result возвращает границу или -1, в случае ошибки*/
 int ReadFromTo ()
 {
     get_token(); //Считываем границу массива
+    ///если границ - число
 	if (token_type == INTEGER)
     {
         if (atoi(token) < 0)
@@ -176,7 +184,7 @@ int ReadFromTo ()
             return atoi(token);
         //temp2.from = atoi(token);
     }
-
+    ///если граница - переменнвя
     if (token_type == VARIABLE)
     {
 
@@ -199,20 +207,23 @@ int ReadFromTo ()
             return -1;
         }
             //std::cout<<5;//getValue(token);
-        std::cout<<(int) getValue(token)<<std::endl;
-
+        //std::cout<<"call "<<(int) getValue(token)<<std::endl;
 
         return (int) getValue(token);
 
                     //temp2.from = atoi(token)
 
-
+//
     }
 }
-
+/**@function AddArray
+добавляет переменные в карту переменных
+@param name - символьное имя переменной
+@result не чего, но не стоит ли сделать bool?
+*/
 void AddArray (const char* name)
 {
-    int from, to;
+   int from, to;
 
     get_token();  //Считываем служебное слово "array"
 
@@ -230,24 +241,11 @@ void AddArray (const char* name)
 		return;
 	}
 
-	//get_token(); //Считываем границу массива
-
-	/*
-	if (token_type == INTEGER)
-        if (atoi(token) >= 1)
-
-            std::cout<<token;
-            //return atoi(token);
-            //temp2.from = atoi(token);
-     //   else*/
-      //  {
-      //      printf ("Граница массива должна быть >= 1\n");
-      //      return;// -1;
-      //  }
-
 	from = ReadFromTo (); //Считывание нижней границы массива
-	cout<<"Мы все еще живы!";
-	//std::cout<<from;
+	std::cout<<from;
+
+
+
 
     get_token(); //Считываем разделители границ массива ".."
 	if ( ! ((token_type == DELIMITER) && (token[0] == '.' ) ) )
@@ -269,11 +267,10 @@ void AddArray (const char* name)
     if (to <= from)
     {
         printf("Верхняя граница массива должна быть больше нижней");
-		return;
+        return;
     }
     else
-    printf ("Все ОК!");
-    cout<<"Мы все еще живы!";
+
     return;
 }
 
