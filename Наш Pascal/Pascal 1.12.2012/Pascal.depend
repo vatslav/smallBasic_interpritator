@@ -344,3 +344,23 @@
 	<string>
 	<stdlib.h>
 
+1354392674 source:c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 1.12.2012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1354008214 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 1.12.2012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1354354093 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 1.12.2012\globals.h
+	<string.h>
+
+1354392674 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 1.12.2012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+	<stdlib.h>
+

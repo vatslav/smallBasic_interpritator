@@ -203,7 +203,7 @@ void printVars ()
             printf ("%s\t\t%5.3f\t\t%d - %s\n", start->first.c_str(), getValue(start->first.c_str()), GetTypeVar (start->first.c_str() ), typeToName(GetTypeVar (start->first.c_str() )) );
 
 }
-
+/**выводит содержимое массивов, для отладки*/
 void printArrays()
 {
    /*
@@ -227,7 +227,7 @@ void printArrays()
     for (int i=0;i<Arrays["a"].to-Arrays["a"].from;i++)
         cout<<Arrays["a"].el[i]<<"|";
 
-
+/*Олег, тут надо проходить итератором по всем именам, потом используя имя и помня о isBig выводить содержимое*/
 
 }
 
@@ -393,16 +393,19 @@ int AddArray (const char* name)
         for (int i=0; i<to-from; i++)
             {
             temp.el2[i] = new float [to2-from2];
-            //если отладка, то заполняем индексами, иначе нулями
+//            если отладка, то заполняем индексами, иначе нулями
             if (testing)
                 for (int j=0; j<to-from;j++)
-                    temp.el[j]=j;
+                    temp.el2[i][j]=j;
+                    //тут было temp.el[j]=j; - найди, 2 отличия :)
             else
                 for (int j=0; j<to-from;j++)
-                    temp.el[j]=0;
+                    temp.el2[i][j]=0;
 
-            memset(temp.el2[i], 0, to2-from2);
+//                memset(temp.el2[i], 0, to2-from2);
             }
+
+
         Arrays[name] = temp;
 
         get_token(); //Считываем "["

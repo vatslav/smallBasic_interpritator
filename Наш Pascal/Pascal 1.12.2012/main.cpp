@@ -47,11 +47,11 @@ int main()
 	AddVar ("awf3",REAL,0.53,false);
 
 
-    prog = "array [_s..s] of integer";
+    prog = "array [_s..s,0..10] of integer";
     AddArray ("a");
 
     try{
-       pres((int)getValue("a",2),"getValue");
+       pres((int)getValue("a",2,2),"getValue");
     }
     catch (const char * exc)
     {
