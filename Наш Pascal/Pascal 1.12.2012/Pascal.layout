@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="Globals.h" open="1" top="0" tabpos="3">
+		<Cursor position="3120" topLine="96" />
+	</File>
+	<File name="Vars&amp;Arrays.h" open="1" top="0" tabpos="2">
+		<Cursor position="14252" topLine="375" />
+	</File>
+	<File name="expressions.h" open="1" top="0" tabpos="5">
+		<Cursor position="4104" topLine="440" />
+	</File>
+	<File name="get_token.h" open="1" top="0" tabpos="4">
+		<Cursor position="62" topLine="137" />
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="1152" topLine="35" />
+	</File>
+</CodeBlocks_layout_file>

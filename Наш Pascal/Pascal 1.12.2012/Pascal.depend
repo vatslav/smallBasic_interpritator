@@ -1,0 +1,346 @@
+# depslib dependency file v1.0
+1352657402 source:d:\Универ\7 семестр\ТВПиС\pascal\main.cpp
+	<iostream>
+	"get_token.h"
+
+1352656221 d:\Универ\7 семестр\ТВПиС\pascal\get_token.h
+	<string.h>
+	<stdio.h>
+
+1352657404 source:c:\users\student\desktop\get_token\main.cpp
+	<iostream>
+	"get_token.h"
+
+1352815080 c:\users\student\desktop\get_token\get_token.h
+	<string.h>
+	<stdio.h>
+
+1352657404 source:f:\get_token 13112012\main.cpp
+	<iostream>
+	"get_token.h"
+
+1352815082 f:\get_token 13112012\get_token.h
+	<string.h>
+	<stdio.h>
+
+1352991674 source:c:\users\Олег\desktop\get_token 13112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+
+1352990503 c:\users\Олег\desktop\get_token 13112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1352990377 c:\users\Олег\desktop\get_token 13112012\globals.h
+	<string.h>
+
+1352993573 source:c:\users\Олег\desktop\Интерпретатор\get_token 15112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+
+1352990503 c:\users\Олег\desktop\Интерпретатор\get_token 15112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1352990377 c:\users\Олег\desktop\Интерпретатор\get_token 15112012\globals.h
+	<string.h>
+
+1353046823 source:c:\users\student\documents\вацлав\Интерпретатор\Наш pascal\get_token 15112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+
+1353045543 c:\users\student\documents\вацлав\Интерпретатор\Наш pascal\get_token 15112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1353047076 c:\users\student\documents\вацлав\Интерпретатор\Наш pascal\get_token 15112012\globals.h
+	<string.h>
+
+1353049384 source:z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Наш pascal\get_token 15112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+
+1353049359 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Наш pascal\get_token 15112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1353049501 z:\ФИПМ\7 семестр\Теория вычислительных процессов и структур\Наш pascal\get_token 15112012\globals.h
+	<string.h>
+
+1353235069 source:c:\users\Олег\desktop\get_token 15112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+
+1353235099 c:\users\Олег\desktop\get_token 15112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1353233836 c:\users\Олег\desktop\get_token 15112012\globals.h
+	<string.h>
+
+1353597516 source:c:\users\Олег\desktop\get_token 19112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1353578505 c:\users\Олег\desktop\get_token 19112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1353233836 c:\users\Олег\desktop\get_token 19112012\globals.h
+	<string.h>
+
+1353604885 c:\users\Олег\desktop\get_token 19112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+
+1353597516 source:c:\users\Олег\desktop\pascal 22112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1353578505 c:\users\Олег\desktop\pascal 22112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1353233836 c:\users\Олег\desktop\pascal 22112012\globals.h
+	<string.h>
+
+1353609164 c:\users\Олег\desktop\pascal 22112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+
+1353662895 source:c:\users\student\desktop\pascal 22112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1353578506 c:\users\student\desktop\pascal 22112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1353233838 c:\users\student\desktop\pascal 22112012\globals.h
+	<string.h>
+
+1353666555 c:\users\student\desktop\pascal 22112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+
+1353778148 source:c:\users\Олег\desktop\pascal 23112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1353578506 c:\users\Олег\desktop\pascal 23112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1353233838 c:\users\Олег\desktop\pascal 23112012\globals.h
+	<string.h>
+
+1353783959 c:\users\Олег\desktop\pascal 23112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+
+1353791681 source:c:\users\Олег\desktop\pascal 24112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1353578506 c:\users\Олег\desktop\pascal 24112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1353233838 c:\users\Олег\desktop\pascal 24112012\globals.h
+	<string.h>
+
+1353792686 c:\users\Олег\desktop\pascal 24112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+	<stdlib.h>
+
+1353944719 source:c:\users\student\desktop\pascal 25112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1353578506 c:\users\student\desktop\pascal 25112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1353943273 c:\users\student\desktop\pascal 25112012\globals.h
+	<string.h>
+
+1353944812 c:\users\student\desktop\pascal 25112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+	<stdlib.h>
+
+1354006063 source:c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1353578506 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1353943274 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\globals.h
+	<string.h>
+
+1354006341 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 26112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+	<stdlib.h>
+
+1354187145 source:d:\smallbasic_interpritator-master\pascal\pascal 26112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+	"expressions.h"
+
+1354008214 d:\smallbasic_interpritator-master\pascal\pascal 26112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1354189747 d:\smallbasic_interpritator-master\pascal\pascal 26112012\globals.h
+	<string.h>
+
+1354187024 d:\smallbasic_interpritator-master\pascal\pascal 26112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+	<stdlib.h>
+
+1354190198 d:\smallbasic_interpritator-master\pascal\pascal 26112012\expressions.h
+
+1354204892 source:c:\users\Олег\desktop\pascal 26112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1354008214 c:\users\Олег\desktop\pascal 26112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1354189747 c:\users\Олег\desktop\pascal 26112012\globals.h
+	<string.h>
+
+1354214161 c:\users\Олег\desktop\pascal 26112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+	<stdlib.h>
+
+1354190314 c:\users\Олег\desktop\pascal 26112012\expressions.h
+
+1354204892 source:c:\users\Олег\desktop\pascal 29112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1354008214 c:\users\Олег\desktop\pascal 29112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1354189747 c:\users\Олег\desktop\pascal 29112012\globals.h
+	<string.h>
+
+1354224744 c:\users\Олег\desktop\pascal 29112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+	<stdlib.h>
+
+1354262347 source:c:\users\student\desktop\pascal 29112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1354008214 c:\users\student\desktop\pascal 29112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1354260664 c:\users\student\desktop\pascal 29112012\globals.h
+	<string.h>
+
+1354262332 c:\users\student\desktop\pascal 29112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+	<stdlib.h>
+
+1354293144 source:c:\users\student\desktop\pascal 30112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1354008214 c:\users\student\desktop\pascal 30112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1354260666 c:\users\student\desktop\pascal 30112012\globals.h
+	<string.h>
+
+1354293997 c:\users\student\desktop\pascal 30112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+	<stdlib.h>
+
+1354354063 source:c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 30112012\main.cpp
+	<iostream>
+	<locale.h>
+	"get_token.h"
+	"Vars&Arrays.h"
+
+1354008214 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 30112012\get_token.h
+	"Globals.h"
+	<stdio.h>
+
+1354354093 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 30112012\globals.h
+	<string.h>
+
+1354354004 c:\users\vatslav\documents\github\smallbasic_interpritator\наш pascal\pascal 30112012\vars&arrays.h
+	"Globals.h"
+	"get_token.h"
+	<map>
+	<string>
+	<stdlib.h>
+
